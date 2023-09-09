@@ -13,16 +13,16 @@ $(document).ready(function() {
     	 var id = $("#input_info02").val();
         $.ajax({
         	type : "POST",
-            url : "./abc.jsp",
+            url : "./influ_check.jsp",
             data : {
             	id : id
             },
             success : function(jj) {
                 var data = jj.trim();
                 console.log(data);
-                if (data === "false") {
+                if (data === "true") {
                 	$("#result").html("사용가능한 아이디입니다.");
-                } else if (data === "true") {
+                } else if (data === "false") {
                 	$("#result").html("중복된 아이디입니다. 다시 수정해주세요");
                 } else if (data === "check") {
                 	$("#result").html("아이디를 입력해주세요.");

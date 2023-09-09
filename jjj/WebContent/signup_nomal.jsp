@@ -21,6 +21,22 @@
 		String input_phone = request.getParameter("input_phone");
 		String email = request.getParameter("email");
 		
+		if(gender.equalsIgnoreCase("man")) {
+			gender = "man";
+		} else {
+			gender = "woman";
+		}
+
+		if(phone.equalsIgnoreCase("SKT")) {
+			phone = "SKT";
+		} else if(phone.equalsIgnoreCase("KT")) {
+			phone = "KT";
+		} else if(phone.equalsIgnoreCase("LG")) {
+			phone = "LG";
+		} else {
+			phone = "good";
+		}
+
 		Connection connection = null;
 		Statement statement = null;
 		
