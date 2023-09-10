@@ -5,7 +5,7 @@
 	String id = request.getParameter("id");
 	String isAvailable = "true";
 	if (id == null || id.trim().isEmpty()) {
-		out.println("아이디를 입력해주세요.");
+		isAvailable = "check";
 	}
 	Connection connection = null;
 	Statement statement = null;
