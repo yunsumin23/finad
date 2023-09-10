@@ -189,7 +189,67 @@ nav ul li:nth-child(5) a:after {
 }
 
 
+
+
+
+.login-wrapper{
+  margin: 0 auto;
+  margin-top: 100px;
+  width: 400px;
+  height: 450px;
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+.login-wrapper > h2{
+  font-size: 24px;
+  color: #6A24FE;
+  margin-bottom: 20px;
+}
+#login-form > input{
+  width: 100%;
+  height: 48px;
+  padding: 0 10px;
+  box-sizing: border-box;
+  margin-bottom: 16px;
+  border-radius: 6px;
+  background-color: #F8F8F8;
+}
+#login-form > input::placeholder{
+  color: #D2D2D2;
+}
+#login-form > input[type="submit"]{
+  color: #fff;
+  font-size: 16px;
+  background-color: #6A24FE;
+  margin-top: 20px;
+}
+
+
+#login-form > input[type="checkbox"]{
+  display: none;
+}
+#login-form > label{
+  color: #999999;
+  
+}
+#login-form input[type="checkbox"] + label{
+  cursor: pointer;
+  padding-left: 26px;
+  
+}
+#login-form input[type="checkbox"]:checked + label{
+  /* background-image: url("checkbox-active.png"); */
+  background-repeat: no-repeat;
+  background-size: contain;
+  
+}
+#remember-check{
+  margin-right: 8px;
+}
+
 /* 푸터 시작 */
+
 footer {
     position: absolute;
     width: 100%;
@@ -213,142 +273,4 @@ footer a {
 footer p {
     color: #aaa;
     font-weight: 400;
-}
-
-#signup_input {
-    margin: 100px auto;
-    width: 550px;
-    margin-bottom: 100px;
-    font-size: 20px;
-    height: 1100px;
-}
-
-#input_title {
-    width: 550px;
-    height: 50px;
-    border-radius: 15px;
-    border: 1px solid #f8f8f8;
-    text-align: center;
-    float: left;
-    background-color: #f8f8f8;
-    padding: 10px;
-}
-
-.input_info {
-    width: 200px;
-    height: 50px;
-    margin-top: 30px;
-    margin-right: 50px;
-    border-radius: 15px;
-    border: 1px solid #f8f8f8;
-    text-align: center;
-    float: left;
-    background-color: #f8f8f8;
-    padding: 10px;
-}
-
-#input_info02 {
-    width: 300px;
-    height: 50px;
-    margin-top: 30px;
-    border-radius: 15px;
-    border: 1px solid #f8f8f8;
-    float: left;
-    background-color: #f8f8f8;
-    padding: 10px;
-    font-size: 20px;
-}
-
-.input_info2 {
-    width: 300px;
-    height: 50px;
-    margin-top: 30px;
-    border-radius: 15px;
-    border: 1px solid #f8f8f8;
-    float: left;
-    background-color: #f8f8f8;
-    padding: 10px;
-    font-size: 20px;
-}
-
-#input_info3 {
-    width: 550px;
-    height: 200px;
-    margin-top: 30px;
-    border-radius: 15px;
-    border: 1px solid #f8f8f8;
-    float: left;
-    background-color: #f8f8f8;
-    padding: 10px;
-    font-size: 15px;
-}
-
-.input_phone {
-    height: 30px;
-    font-size: 18px;
-}
-
-#input_final {
-    width: 400px;
-    height: 61px;
-    font-size: 25px;
-    border: 1px solid #c9c9ff;
-    background-color: #c9c9ff;
-    border-radius: 25px;
-}
-
-.subnit_div {
-	text-align: center;
-}
-
-#addr_btn {
-    width: 550px;
-    height: 135px;
-    margin-top: 30px;
-    border-radius: 15px;
-    border: 1px solid #f8f8f8;
-    float: left;
-    background-color: #f8f8f8;
-    padding: 10px;
-    font-size: 20px;
-}
-
-#sample6_postcode {
-    width: 270px;
-    height: 30px;
-    font-size: 17px;
-}
-
-#sample6_address {
-    width: 513px;
-    height: 30px;
-    font-size: 17px;
-}
-
-#sample6_detailAddress {
-    width: 200px;
-    height: 30px;
-    font-size: 17px;
-}
-
-#sample6_extraAddress {
-    width: 300px;
-    height: 30px;
-    font-size: 17px;
-}
-
-#addr_btn input {
-    padding: 5px;
-    margin: 3px;
-}
-#check{
-	margin-left: 250px;
-	font-size: 20px;
-	width: 300px;
-	padding-top: 3px;
-	padding-bottom: 3px;
-	float: left;
-}
-#check_header{
-	float: left;
 }
