@@ -15,14 +15,17 @@ $(document).ready(function() {
 			$("#result").html("아이디를 입력해주세요.");
 			$("#result").css("color", "red");
 			$("#result").css("font-size", "15px");
+			$("#result").css("text-align", "center");
 		} else if (id.length < 6 || id.length > 16) {
 			$("#result").html("아이디는 6글자에서 16글자 사이로 입력해주세요.");
 			$("#result").css("color", "red");
 			$("#result").css("font-size", "15px");
+			$("#result").css("text-align", "center");
 		} else if (!/^[a-zA-Z0-9]+$/.test(id)) { // 영문 대소문자, 숫자 제외 불가능한거임
 			$("#result").html("아이디는 영문 대소문자와 숫자만 입력 가능합니다.");
 			$("#result").css("color", "red");
 			$("#result").css("font-size", "15px");
+			$("#result").css("text-align", "center");
 		} else {
 			$.ajax({
 				type : "POST",
@@ -37,10 +40,12 @@ $(document).ready(function() {
 						$("#result").html("사용가능한 아이디입니다.");
 						$("#result").css("color", "blue");
 						$("#result").css("font-size", "15px");
+						$("#result").css("text-align", "center");
 					} else if (data === "false") {
 						$("#result").html("중복된 아이디입니다. 다시 수정해주세요");
 						$("#result").css("color", "red");
 						$("#result").css("font-size", "15px");
+						$("#result").css("text-align", "center");
 					}
 				}
 			});
@@ -121,22 +126,26 @@ function checkPW() {
 		check_pw.innerHTML = '비밀번호는 8글자 이상, 32글자 이하만 이용 가능합니다.';
 		check_pw.style.color = 'red';
 		check_pw.style.fontSize = '15px';
+		check_pw.style.textAlign = 'center';
 		return;
 	}
 	if (pw === pwcheck) { // 엄격하게 비교하므로 예기치 않은 형변환을 방지하고 정확한 비교를 수행합니다.
 		check_pw.innerHTML = '비밀번호가 일치합니다.';
 		check_pw.style.color = 'blue';
 		check_pw.style.fontSize = '15px';
+		check_pw.style.textAlign = 'center';
 	} else {
 		check_pw.innerHTML = '비밀번호가 일치하지 않습니다.';
 		check_pw.style.color = 'red';
 		check_pw.style.fontSize = '15px';
+		check_pw.style.textAlign = 'center';
 		return;
 	}
 	if(pw.length == "" && pwcheck.length == "") {
 		check_pw.innerHTML = '비밀번호 또는 비밀번호 확인을 입력해주세요.';
 		check_pw.style.color = 'red';
 		check_pw.style.fontSize = '15px';
+		check_pw.style.textAlign = 'center';
 	}
 }
 function checkName() {
@@ -145,7 +154,8 @@ function checkName() {
 	if (name.length == "") {
 		check_name.innerHTML = '이름을 입력해주세요.';
 		check_name.style.color = 'red';
-		check_pw.style.fontSize = '15px';
+		check_name.style.fontSize = '15px';
+		check_name.style.textAlign = 'center';
 		return;
 	} else {
 		check_name.innerHTML = '';
@@ -154,6 +164,7 @@ function checkName() {
 		check_name.innerHTML = '이름에 특수문자는 사용할 수 없습니다.';
 		check_name.style.color = 'red';
 		check_name.style.fontSize = '15px';
+		check_name.style.textAlign = 'center';
         return;
     }
 	console.log(name);
@@ -175,6 +186,7 @@ function checkSex() {
 		check_sex.innerHTML = "성별을 선택해주세요.";
 		check_sex.style.color = 'red';
 		check_sex.style.fontSize = '15px';
+		check_sex.style.textAlign = 'center';
 	} else {
 		check_sex.innerHTML = "";
 	}
@@ -189,6 +201,7 @@ function checkAddr() {
 		check_addr.innerHTML = '주소를 입력해주세요.';
 		check_addr.style.color = 'red';
 		check_addr.style.fontSize = '15px';
+		check_addr.style.textAlign = 'center';
 	} else {
 		check_addr.innerHTML = '';
 	}
@@ -196,6 +209,7 @@ function checkAddr() {
         check_addr.innerHTML = '주소에 특수문자는 사용할 수 없습니다.';
         check_addr.style.color = 'red';
         check_addr.style.fontSize = '15px';
+        check_addr.style.textAlign = 'center';
         return;
     }
 }
@@ -207,13 +221,15 @@ function checkPhone() {
 		check_phone.innerHTML = '전화번호를 입력해주세요.';
 		check_phone.style.color = 'red';
 		check_phone.style.fontSize = '15px';
+		check_phone.style.textAlign = 'center';
 	} else {
 		check_phone.innerHTML = '';
 	}
 	if (/[!@#$%^&*_+{}\[\]:;<>,.?~\\|-]/.test(phone)) {
-		check_phone.innerHTML = '(-)빼고 번호만 입력해주세요.';
+		check_phone.innerHTML = '(-,.)빼고 번호만 입력해주세요.';
 		check_phone.style.color = 'red';
 		check_phone.style.fontSize = '15px';
+		check_phone.style.textAlign = 'center';
         return;
     }
 }
@@ -225,6 +241,7 @@ function checkEmail() {
 		check_email.innerHTML = '이메일을 입력해주세요.';
 		check_email.style.color = 'red';
 		check_email.style.fontSize = '15px';
+		check_email.style.textAlign = 'center';
 	} else {
 		check_email.innerHTML = '';
 	}
