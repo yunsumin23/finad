@@ -1,11 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8"%>
 <%@page import="java.sql.*"%>
 <%
 	String id = request.getParameter("id");
 	String isAvailable = "true";
 	if (id == null || id.trim().isEmpty()) {
-		out.println("아이디를 입력해주세요.");
+		isAvailable = "check";
 	}
 	Connection connection = null;
 	Statement statement = null;
@@ -17,7 +17,7 @@
 		}
 		statement = connection.createStatement();
 		ResultSet resultSet = statement
-				.executeQuery("select nomalUserId from project.nomal_user where nomalUserId = '" + id + "';");
+				.executeQuery("select companyId from project.company where companyId = '" + id + "';");
 		while (resultSet.next()) {
 			isAvailable = "false";
 		}

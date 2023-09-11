@@ -23,7 +23,32 @@
 		String email = request.getParameter("email");
 		String category[]	= request.getParameterValues("category");
 		String tag = request.getParameter("tag");
+		String category2 = "";
 		
+		if(gender.equalsIgnoreCase("man")) {
+			gender = "man";
+		} else {
+			gender = "woman";
+		}
+
+		if(phone.equalsIgnoreCase("SKT")) {
+			phone = "SKT";
+		} else if(phone.equalsIgnoreCase("KT")) {
+			phone = "KT";
+		} else if(phone.equalsIgnoreCase("LG")) {
+			phone = "LG";
+		} else {
+			phone = "good";
+		}
+		
+		if(category != null) {
+			for(int j = 0; j < category.length; j++) {
+				category2 += category[j];
+				if (j < category.length - 1) {
+					category2 += ",";
+	            }
+			}
+		}
 		Connection connection = null;
 		Statement statement = null;
 		
@@ -34,7 +59,7 @@
 				throw new Exception("데이터베이스 연결 안됨<br>");
 			}
 			statement = connection.createStatement();
-			int i = statement.executeUpdate("insert into user(influ_user, password, name, sex, eMail, nickName, newsAgency, mobileNumber, category, tag1, tag2, tag3, post, address, addr_more, reference) values ('" + id + "','" + pw + "','" + name + "','" + gender + "','" + nickname + "','"  + "','" + phone + "','" + input_phone + "','" + email + "','" + category + "','" + tag + "','" + post + "','" + addr + "','" + addr_more + "','" + reference)");
+			int i = statement.executeUpdate("insert into user(influ_user, password, name, sex, eMail, nickName, newsAgency, mobileNumber, category, post, address, addr_more, reference) values ('" + id + "','" + pw + "','" + name + "','" + gender + "','" + email + "','" + nickname + "','" + phone + "','" + input_phone + "','" + category + "','" + post + "','" + addr + "','" + addr_more + "','" + reference + "');");
 			
 		} finally {
 			try {

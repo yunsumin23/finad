@@ -4,11 +4,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>기업 유저 회원가입</title>
-<link rel="stylesheet" href="css/signup_nomal.css">
+<title>로그인</title>
+<link rel="stylesheet" href="css/login.css">
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-<script src="js/signup_company.js"></script>
+<script src="js/login.js"></script>
 </head>
 
 <body>
@@ -204,38 +204,18 @@
 			</div>
 		</nav>
 	</div>
-	<form action="signup_company.jsp" name="form" method="post" onsubmit="return checkForm();">
-		<div id="signup_input">
-			<div id="input_title">기업 회원가입</div>
-			<div class="input_info">아이디</div>
-			<input type="text" id="input_info02" name="id" maxlength="16"><br>
-			<p id="result"></p>
-			<div class="input_info">비밀번호</div>
-			<input type="password" class="input_info2" name="pw" onblur="checkPW();" maxlength="32"><br>
-			<div class="input_info">비밀번호 확인</div>
-			<input type="password" class="input_info2" name="pwcheck" onblur="checkPW();" maxlength="32"><br>
-			<p id="check_pw"></p>
-			<div class="input_info">회사명</div>
-			<input type="text" class="input_info2" name="company_name" onblur="checkComName();" maxlength="50"><br>
-			<p id="check_comname"></p>
-			<div class="input_info">담담자 이름</div>
-			<input type="text" class="input_info2" name="company_person" onblur="checkName();" maxlength="16"><br>
-			<p id="check_name"></p>
-			<div class="input_info">담당자 전화번호</div>
-			<input type="text" class="input_info2" name="company_phone" onblur="checkPhone();" maxlength="13"><br>
-			<p id="check_phone"></p>
-			<div class="input_info">담당자 이메일</div>
-			<input type="text" class="input_info2" name="company_email" onblur="checkEmail();" maxlength="32"><br>
-			<p id="check_email"></p>
-			<div class="input_info">사업자 / 법인번호</div>
-			<input type="text" class="input_info2" name="company_number" onblur="checkNumber();" maxlength="40"><br>
-			<p id="check_number"></p>
-			<div class="subnit_div">
-				<input type="submit" value="회원가입" id="input_final"
-					name="submit">
-			</div>
-		</div>
-	</form>
+
+
+	<div class="login-wrapper">
+		<h2>로그인</h2>
+		<form method="post" action="서버의url 넣어야댐" id="login-form">
+			<input type="text" name="userName" placeholder="아이디"> <input type="password" name="userPassword" placeholder="비밀번호"> 
+			<label for="remember-check"> <input type="checkbox" id="remember-check">아이디 저장하기</label>
+			<input type="submit" value="확인">
+		</form>
+	</div>
+
+
 	<footer>
 		<div class="footer_class">
 			<a href="#" target="_blank"><b>개인정보처리방침</b></a> | <a href="#"
@@ -243,10 +223,11 @@
 			| <a href="#" target="_blank">고객문의</a> | <a href="#" target="_blank">사이트맵</a>
 			<p>
 				법인명: (주) FINAD 대표자: 김유상 사업자등록번호 000-00-00000 통신판매업: 제0000-서울종로-0000호
-				<br> 주소 : 서울 성동구 광나루로 130 1101호
+				<br /> 주소 : 서울 성동구 광나루로 130 1101호
 			</p>
 			<p>COPYRIGHT (C) FINAD. All Rights Reserved.</p>
 		</div>
 	</footer>
 </body>
+
 </html>
