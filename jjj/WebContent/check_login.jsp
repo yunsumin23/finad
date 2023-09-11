@@ -4,13 +4,10 @@
 <%
 	String id = request.getParameter("id");
 	String password = request.getParameter("password");
-	
-	
-	
-	
-	
+	String userType = request.getParameter("user_grade");
 	Connection connection = null;
 	Statement statement = null;
+	ResultSet resultSet = null;
 	try {
 		Class.forName("com.mysql.jdbc.Driver");
 		connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/project", "root", "simpsons514!");
@@ -18,10 +15,18 @@
 			throw new Exception("데이터베이스 연결 안됨");
 		}
 		statement = connection.createStatement();
-		ResultSet resultSet = statement.executeQuery("select nomalUserId, password from project.nomal_user where nomalUserId = '" + id + "' and password = '" + password + "';");
-		ResultSet resultSet2 = statement.executeQuery("select influ_user, password from project.user where influ_user = '" + id + "' and password = '" + password + "';");
-		ResultSet resultSet3 = statement.executeQuery("select companyId, password from project.company where companyId = '" + id + "' and password = '" + password + "';");
-		if(resultSet.next()) {
+		String check = "";
+		if("nomal".equals(userType)) {
+			check = "select nomalUserId, password from project.nomal_user where nomalUserId = '" + id + "' and password = '" + password + "';";
+		} else if("influencer".equals(userType)) {
+			check = "select influ_user, password from project.user where influ_user = '" + id + "' and password = '" + password + "';";
+		} else if("company".equals(userType)) {
+			check = "select companyId, password from project.company where companyId = '" + id + "' and password = '" + password + "';";
+		}
+		
+		resultSet = statement.executeQuery(check);
+		
+	    if(resultSet.next()) {
 %>
 		<script>
 		location.href="loginsuc.html";
