@@ -5,6 +5,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Do Hyeon', sans-serif;
+    
 }
 
 header {
@@ -233,6 +234,19 @@ footer p {
     padding: 10px;
 }
 
+#input_info02 {
+	width: 300px;
+    height: 50px;
+    margin-top: 30px;
+    border-radius: 15px;
+    border: 1px solid #f8f8f8;
+    float: left;
+    background-color: #f8f8f8;
+    padding: 10px;
+    font-size: 20px;
+}
+
+
 .input_info {
     width: 200px;
     height: 50px;
@@ -324,6 +338,7 @@ input:checked + label:before{
     border: 1px solid #c9c9ff;
     background-color: #c9c9ff;
     border-radius: 25px;
+    cursor: pointer;
 }
 
 #addr_btn {
@@ -365,4 +380,11 @@ input:checked + label:before{
 #addr_btn input {
     padding: 5px;
     margin: 3px;
+   	
+}
+#check_email {
+	width: 250px;
+	height: 50px;
+
+	
 }
