@@ -380,7 +380,6 @@ input:checked + label:before{
 #addr_btn input {
     padding: 5px;
     margin: 3px;
-   	
 }
 #check_email {
 	width: 250px;
