@@ -233,6 +233,7 @@ footer p {
     display: flex;
     justify-content: right;
     /* margin-right: 0px; */
+    margin-bottom: 25px;
 }
 
 .text_agree{
@@ -240,11 +241,10 @@ footer p {
     height: 90px;
     border: 1px solid gray;
 }
-
 div input {
     width: 17px;
 }
-
+/**/
 .btn_div {
     display: flex;
     justify-content: space-around;
