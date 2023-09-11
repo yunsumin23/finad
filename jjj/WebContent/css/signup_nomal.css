@@ -295,6 +295,7 @@ footer p {
     border: 1px solid #c9c9ff;
     background-color: #c9c9ff;
     border-radius: 25px;
+    cursor: pointer;
 }
 
 .subnit_div {
