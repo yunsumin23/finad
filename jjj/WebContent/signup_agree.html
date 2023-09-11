@@ -188,12 +188,12 @@
                 동의</div>
             <span>이용약관 동의 (필수)</span>
             <div class="text_agree">이용약관1</div>
-            <div class="check_agree"><input type="checkbox" value="" onclick="" class="check_01">동의</div>
-            <span>만 15세 이상임을 확인합니다 (필수)</span>
-            <div class="check_agree"><input type="checkbox" value="" class="check_01">동의</div>
+            <div class="check_agree"><input type="checkbox" value="" class="check_01" id="check_agree1" onclick="hideBtn1()">동의</div>
+            <span>만 15세 이상임을 확인합니다 (필수)</span><br>
+            <div class="check_agree"><input type="checkbox" value="" class="check_01" id="check_agree2">동의</div>
             <div class="text_agree">이용약관2</div>
             <span>개인정보 수집 이용 동의 (필수)</span>
-            <div class="check_agree"><input type="checkbox" value="" class="check_01">동의</div>
+            <div class="check_agree"><input type="checkbox" value="" class="check_01" id="check_agree3">동의</div>
             <p>* 필수 수집항목은 서비스 이용에 필요한 최소한의 정보이며, 동의를 해야만 서비스를 이용할 수 있습니다.</p>
             <span>마케팅 · 이벤트정보 수신 동의 (선택)</span>
             <div class="check_agree"><input type="checkbox" value="" class="check_01">동의</div>
@@ -203,9 +203,9 @@
             <p>아래 인증하기버튼을 클릭해 본인인증을 진행해주세요.</p>
             <p>가입하시는 분 명의로 개설된 휴대폰으로 인증이 가능합니다. (만 15세 미만 가입불가)</p> -->
             <div class="btn_div">
-                <input type="button" value="일반 회원" id="btn_agree" onclick="location.href='signup_nomal.html'">
-                <input type="button" value="인플루언서 회원" id="btn_agree1" onclick="location.href='signup_influencer.html'">
-                <input type="button" value="기업 회원" id="btn_agree2" onclick="location.href='signup_company.html'">
+                <input type="button" value="일반 회원" id="btn_agree" onclick="agreeCheck1()">
+                <input type="button" value="인플루언서 회원" id="btn_agree1" onclick="agreeCheck2()">
+                <input type="button" value="기업 회원" id="btn_agree2" onclick="agreeCheck3()">
             </div>
         </div>
         <footer>

@@ -233,6 +233,7 @@ footer p {
     display: flex;
     justify-content: right;
     /* margin-right: 0px; */
+    margin-bottom: 25px;
 }
 
 .text_agree{

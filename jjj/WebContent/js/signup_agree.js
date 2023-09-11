@@ -39,3 +39,35 @@ function zoomOut(event) {
     event.target.style.zIndex = 0;
     event.target.style.transition = "all 0.5s"
 }
+function hideBtn1(){
+	$('#check_agree_alert1').hide();
+}
+
+function agreeCheck1() {
+    // 이용약관1, 이용약관2, 이용약관3 모두 동의한 경우에만 페이지 이동
+    if ($("#check_agree1").is(":checked") && $("#check_agree2").is(":checked") && $("#check_agree3").is(":checked")) {
+        window.location.href = 'signup_nomal.html';
+    } else {
+        alert("모든 필수 약관에 동의해 주세요.");
+    }
+}
+
+function agreeCheck2() {
+    if ($("#check_agree1").is(":checked") && $("#check_agree2").is(":checked") && $("#check_agree3").is(":checked")) {
+        window.location.href = 'signup_influencer.html';
+    } else {
+        alert("모든 필수 약관에 동의해 주세요.");
+    }
+}
+
+function agreeCheck3() {
+    if ($("#check_agree1").is(":checked") && $("#check_agree2").is(":checked") && $("#check_agree3").is(":checked")) {
+        window.location.href = 'signup_company.html';
+    } else {
+        alert("모든 필수 약관에 동의해 주세요.");
+    }
+}
+
+
+
+
