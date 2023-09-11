@@ -27,8 +27,6 @@
 		}
 		statement = connection.createStatement();
 		int i = statement.executeUpdate("insert into company(companyId, password, company_name, company_person, company_phone, company_email, company_number) values ('"+  id + "','" + pw + "','" + name + "','" + person + "','" + phone + "','" + email + "','" + number + "');");
-		
-		//im junpro im sexpro im sex machine
 	} finally {
 		try {
 			statement.close();

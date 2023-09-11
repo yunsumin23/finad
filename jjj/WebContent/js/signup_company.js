@@ -124,7 +124,7 @@ function checkComName() {
 		text_comname[0].style.border = '2px solid red';
 		return;
 	} else {
-		check_name.innerHTML = '';
+		check_comname.innerHTML = '';
 		text_comname[0].style.border = 'none';
 	}
 	console.log(name);
@@ -220,6 +220,7 @@ function checkForm() {
 	}
 	if (comname === "") {
 		alert("회사명을 입력해주세요.")
+		return false;
 	}
 	if (name === "") {
 		alert("담당자 이름을 입력해주세요.");
