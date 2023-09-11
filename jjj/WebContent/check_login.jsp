@@ -4,7 +4,11 @@
 <%
 	String id = request.getParameter("id");
 	String password = request.getParameter("password");
-	String check1 = "false";
+	
+	
+	
+	
+	
 	Connection connection = null;
 	Statement statement = null;
 	try {
@@ -15,6 +19,8 @@
 		}
 		statement = connection.createStatement();
 		ResultSet resultSet = statement.executeQuery("select nomalUserId, password from project.nomal_user where nomalUserId = '" + id + "' and password = '" + password + "';");
+		ResultSet resultSet2 = statement.executeQuery("select influ_user, password from project.user where influ_user = '" + id + "' and password = '" + password + "';");
+		ResultSet resultSet3 = statement.executeQuery("select companyId, password from project.company where companyId = '" + id + "' and password = '" + password + "';");
 		if(resultSet.next()) {
 %>
 		<script>
