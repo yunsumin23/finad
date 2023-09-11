@@ -21,9 +21,11 @@
                     <a href="#"><img src="img/mypage.png" alt=""></a>
                 </div>
             </div>
+            <form action="" name="search">
             <div class="header_search">
                 <input type="search" class="form-control" placeholder="search">
             </div>
+            </form>
         </header>
         <div class="nav_div">
             <nav>
@@ -162,37 +164,49 @@
                 </div>
             </nav>
         </div>
+        <form action="signup_nomal.jsp" name="form" method="post" onsubmit="return checkForm();">
         <div id="signup_input">
             <div id="input_title">일반 회원가입</div>
-            <div class="input_info">아이디</div><input type="text" class="input_info2"><br>
-            <div class="input_info">비밀번호</div><input type="text" class="input_info2"><br>
-            <div class="input_info">비밀번호 확인</div><input type="text" class="input_info2"><br>
-            <div class="input_info">이름</div><input type="text" class="input_info2"><br>
+            <div class="input_info">아이디</div><input type="text" id="input_info02" name="id" maxlength="16"><br>
+            <p id="result"></p>
+            <div class="input_info">비밀번호</div><input type="password" class="input_info2" name="pw" onblur="checkPW()" maxlength="32"><br>
+            <div class="input_info">비밀번호 확인</div><input type="password" class="input_info2" name="pwcheck" onblur="checkPW()" maxlength="32"><br>
+            <p id="check_pw"></p>
+            <div class="input_info">이름</div><input type="text" class="input_info2"name="name" onblur="checkName()" maxlength="16"><br>
+            <!-- <p id="result"></p>
+            <p id="check_pw"></p> -->
+            <p id="check_name"></p>
             <div class="input_info">성별</div>
-            <div class="input_info2" style="text-align: center;"><input type="radio" name="gender" value="남자">남성 <input type="radio" name="gender" value="여자">여성<br></div>
-            <div class="input_info">활동명</div><input type="text" class="input_info2"><br>
+            <div class="input_info2" style="text-align: center;"><input type="radio" name="gender" value="man" onblur="checkSex()">남성 <input type="radio" name="gender" value="woman" onblur="checkSex()">여성<br></div>
+           	<p id="check_sex"></p>
             <div class="input_info">주소</div>
             <div id="addr_btn">
-            <input type="text" id="sample6_postcode" placeholder="우편번호">
+            <input type="text" id="sample6_postcode" placeholder="우편번호" name="post" onblur="checkAddr()" maxlength="50">
             <input type="button" onclick="addr_btn()" value="우편번호 찾기"><br>
-            <input type="text" id="sample6_address" placeholder="주소"><br>
-            <input type="text" id="sample6_detailAddress" placeholder="상세주소">
-            <input type="text" id="sample6_extraAddress" placeholder="참고항목"><br>
+            <input type="text" id="sample6_address" placeholder="주소" name="addr" onblur="checkAddr()" maxlength="50"><br>
+            <input type="text" id="sample6_detailAddress" placeholder="상세주소" name="addr_more" onblur="checkAddr()" maxlength="50">
+            <input type="text" id="sample6_extraAddress" placeholder="참고항목" name="reference" onblur="checkAddr()" maxlength="50"><br>
+            <p id="check_addr"></p>
             </div>
             <div class="input_info">휴대폰 번호</div>
             <div class="input_info2">
-                <select class="input_phone">
+                <select class="input_phone" name="phone">
                     <option value="SKT">SKT</option>
                     <option value="KT">KT</option>
                     <option value="LG">LG</option>
                     <option value="알뜰폰">알뜰폰</option>
                 </select>
-                <input type="text" class="input_phone">
+                <input type="text" class="input_phone" name="input_phone" onblur="checkPhone();" maxlength="13">
                 <!-- <input type="button" value="인증하기" class="input_phone"> -->
+           <p id="check_phone"></p>
             </div>
-            <div class="input_info">이메일</div><input type="text" class="input_info2"><br>
-            <div><input type="button" value="회원가입" id="input_final" onclick="location.href='signup_final.html'"></div>
+            
+            <div class="input_info">이메일</div><input type="text" class="input_info2" name="email" onblur="checkEmail();" maxlength="32"><p id="check_email"></p>
+            <div class="subnit_div">
+            	<input type="submit" value="회원가입" id="input_final" name="submit">
+            </div>
         </div>
+        </form>
         <footer>
             <div class="footer_class">
                 <a href="#" target="_blank"><b>개인정보처리방침</b></a> | <a href="#" target="_blank">서비스이용약관</a> | <a href="#"
@@ -202,6 +216,7 @@
                 </p>
                 <p>COPYRIGHT (C) FINAD. All Rights Reserved.</p>
             </div>
+            
         </footer>
 </body>
 </html>

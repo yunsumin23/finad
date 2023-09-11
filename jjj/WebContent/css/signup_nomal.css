@@ -191,7 +191,7 @@ nav ul li:nth-child(5) a:after {
 
 /* 푸터 시작 */
 footer {
-    position: absolute;
+/*     position: absolute; */
     width: 100%;
     margin-top: 100px;
     background-color: #014D81;
@@ -220,7 +220,7 @@ footer p {
     width: 550px;
     margin-bottom: 100px;
     font-size: 20px;
-    height: 1100px;
+    height: 1000px;
 }
 
 #input_title {
@@ -295,6 +295,7 @@ footer p {
     border: 1px solid #c9c9ff;
     background-color: #c9c9ff;
     border-radius: 25px;
+    margin-top: 30px;
 }
 
 .subnit_div {
@@ -349,6 +350,7 @@ footer p {
 	padding-bottom: 3px;
 	float: left;
 }
-#check_header{
+/* #check_header{
 	float: left;
 }
+ */
