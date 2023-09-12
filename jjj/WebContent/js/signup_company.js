@@ -184,7 +184,7 @@ function checkNumber() {
 	var number = document.getElementsByName('company_number')[0].value;
 	var check_number = document.getElementById('check_number');
 	var text_number = document.getElementsByName('company_number');
-	if (email.length < 1) {
+	if (number.length < 1) {
 		check_number.innerHTML = '사업자/법인번호를 입력해주세요.';
 		check_number.style.color = 'red';
 		check_number.style.fontSize = '15px';
