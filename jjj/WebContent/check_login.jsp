@@ -27,9 +27,11 @@
 		resultSet = statement.executeQuery(check);
 		
 	    if(resultSet.next()) {
+	    	session.setAttribute("id", id);
+	    	session.setAttribute("password", password);
 %>
 		<script>
-		location.href="loginsuc.html";
+		location.href="loginsuc.jsp";
 		</script>
 <% 
 		} else {
