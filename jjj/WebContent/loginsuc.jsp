@@ -21,6 +21,7 @@ if (session.getAttribute("id") == null && session.getAttribute("password")== nul
     font-family: 'Do Hyeon', sans-serif;
 }
 
+
 header {
     position: relative;
     height: 100px;

@@ -15,6 +15,7 @@
 			throw new Exception("데이터베이스 연결 안됨");
 		}
 		statement = connection.createStatement();
+		
 		String check = "";
 		if("nomal".equals(userType)) {
 			check = "select nomalUserId, password from project.nomal_user where nomalUserId = '" + id + "' and password = '" + password + "';";
