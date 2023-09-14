@@ -22,7 +22,7 @@ if (id == null && password == null) {
 		<h1>마이페이지</h1>
 		<div>
 			<div>
-				<img alt="" src="">
+				<img alt="" src="유저 프로필사진">
 			</div>
 		</div>
 	</div>
