@@ -1,23 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
-<%	// 인증된 세션이 없으면 페이지 못보게 할거임
-// getAttribute하면 오브젝트 타입으로 넘어오기때문에 우리가 사용하기 편하게 하기 위해 앞에 강제로
-// 형변환 해준거임
-String id = (String) session.getAttribute("id");
-String password = (String) session.getAttribute("password");
-if (id == null && password == null) {
-    response.sendRedirect("login.html");
-}
-%>
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link href="css/loginsuc.css" rel="stylesheet" type="text/css">
-<script type="text/javascript"
-	src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-<script type="text/javascript" src="js/loginsuc.js"></script>
+<link href="css/header_login.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script type="text/javascript" src="js/header_login.js"></script>
 </head>
 <body>
 	<header>
@@ -25,8 +15,8 @@ if (id == null && password == null) {
 			<a href="main.html"><img src="img/logo.png" alt="로고"
 				id="main_logo"></a>
 			<div class="top_button">
-				<a href="#"><img src="img/login.png" alt=""></a> 
-				<a href="signup_agree.html"><img src="img/signup.png" alt=""></a>
+				<a href="#"><img src="img/login.png" alt=""></a> <a
+					href="signup_agree.html"><img src="img/signup.png" alt=""></a>
 				<a href="#"><img src="img/mypage.png" alt=""></a>
 			</div>
 		</div>
@@ -212,23 +202,5 @@ if (id == null && password == null) {
 			</div>
 		</nav>
 	</div>
-	<form action="main.html" class="log" method="post">
-		<h1 class="log_success">로그인 성공</h1>
-		<br> <input type="submit" value="메인으로 이동" class="main_move">
-	</form>
-<%-- 	<%= id %>
-	<%= password%> --%>
-	<footer>
-		<div class="footer_class">
-			<a href="#" target="_blank">개인정보처리방침</a> | <a href="#"
-				target="_blank">서비스이용약관</a> | <a href="#" target="_blank">FINAD이용약관</a>
-			| <a href="#" target="_blank">고객문의</a> | <a href="#" target="_blank">사이트맵</a>
-			<p>
-				법인명: (주) FINAD 대표자: 김유상 사업자등록번호 000-00-00000 통신판매업: 제0000-서울종로-0000호
-				<br> 주소 : 서울 성동구 광나루로 130 1101호
-			</p>
-			<p>COPYRIGHT (C) FINAD. All Rights Reserved.</p>
-		</div>
-	</footer>
 </body>
 </html>
