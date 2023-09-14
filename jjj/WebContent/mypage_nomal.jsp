@@ -22,6 +22,7 @@
 	<div class="main">
 		<h1>마이페이지</h1>
 		<div class="all_info">
+		
 			<div class="top_info">
 				<div>
 					<img alt="img/user.png" src="img/user.png">
