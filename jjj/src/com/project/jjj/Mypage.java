@@ -13,11 +13,11 @@ public class Mypage {
 	
 	
 	
-	public void nomal_user(String id) {
-		ArrayList<Nomal_user> arr = new ArrayList<Nomal_user>();
+	public ArrayList<Nomal_info> nomal_user(String id) {
+		ArrayList<Nomal_info> arr = new ArrayList<Nomal_info>();
 		
 		try {
-			Nomal_user nomal_user = new Nomal_user();
+			Nomal_info nomal_user = new Nomal_info();
 			getcon();
 			if(connection == null) {
 //				throw는 예외처리를 강제로 시키는거고
@@ -26,7 +26,14 @@ public class Mypage {
 			}
 //			java에서 jdbc를 사용해서 데이터베이스와 상호 작용할 때 사용되는 코드
 			statement = connection.createStatement();
-			resultSet = statement.executeQuery("select * from nomal_user;");
+			resultSet = statement.executeQuery("select * from nomal_user where nomalUserId = '" + id + "';");
+			while(resultSet.next()) {
+				nomal_user.setId(resultSet.getString("nomalUserId"));
+				nomal_user.setPw(resultSet.getString("name"));
+				nomal_user.setEmail(resultSet.getString("eMail"));
+				nomal_user.setMobilenumber(resultSet.getString("mobileNumber"));
+				arr.add(nomal_user);
+			}
 		} catch (Exception e) {
 			// TODO: handle exception
 		} finally {
@@ -36,6 +43,7 @@ public class Mypage {
 				// TODO: handle exception
 			}
 		}
+		return arr;
 	}
 	
 	

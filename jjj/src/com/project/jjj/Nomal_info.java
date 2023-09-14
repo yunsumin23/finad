@@ -1,6 +1,6 @@
 package com.project.jjj;
 
-public class Nomal_user {
+public class Nomal_info {
 	private String id, pw, name, sex, email, address, post, addr_more, referemce, newsagency, mobilenumber;
 
 	public String getId() {
