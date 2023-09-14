@@ -5,10 +5,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>로그인</title>
-<link rel="stylesheet" href="css/login.css">
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <script src="js/login.js"></script>
+<link rel="stylesheet" href="css/login.css">
 </head>
 
 <body>
@@ -209,7 +208,8 @@
 	<div class="login-wrapper">
 		<h2>로그인</h2>
 		<form method="post" action="check_login.jsp" id="login-form">
-			<input type="text" name="id" placeholder="아이디"> <input type="password" name="password" placeholder="비밀번호"> 
+			<input type="text" name="id" placeholder="아이디"> 
+			<input type="password" name="password" placeholder="비밀번호"> 
 			<label for="remember-check"> <input type="checkbox" id="remember-check">아이디 저장하기</label><br>
 			<div id="choice_user" >
 				<span id="nomal_btn">
@@ -223,6 +223,7 @@
 				<span id="company_btn">
 					<input type="radio" name="user_grade" id="company" value="company">
 					<label for="company"></label>
+				</span>
 			</div>
 			<input type="submit" value="확인">
 		</form>

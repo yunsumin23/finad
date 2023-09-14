@@ -8,6 +8,10 @@
 	Connection connection = null;
 	Statement statement = null;
 	ResultSet resultSet = null;
+	if (id == null || id.trim().isEmpty() || password == null || id.trim().isEmpty()) {
+		response.sendRedirect("login.html");
+		return;
+	}
 	try {
 		Class.forName("com.mysql.jdbc.Driver");
 		connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/project", "root", "simpsons514!");
@@ -15,6 +19,7 @@
 			throw new Exception("데이터베이스 연결 안됨");
 		}
 		statement = connection.createStatement();
+		
 		String check = "";
 		if("nomal".equals(userType)) {
 			check = "select nomalUserId, password from project.nomal_user where nomalUserId = '" + id + "' and password = '" + password + "';";
@@ -22,14 +27,18 @@
 			check = "select influ_user, password from project.user where influ_user = '" + id + "' and password = '" + password + "';";
 		} else if("company".equals(userType)) {
 			check = "select companyId, password from project.company where companyId = '" + id + "' and password = '" + password + "';";
+		} else {
+			response.sendRedirect("login.html");
 		}
 		
 		resultSet = statement.executeQuery(check);
 		
 	    if(resultSet.next()) {
+	    	session.setAttribute("id", id);
+	    	session.setAttribute("password", password);
 %>
 		<script>
-		location.href="loginsuc.html";
+		location.href="loginsuc.jsp";
 		</script>
 <% 
 		} else {
