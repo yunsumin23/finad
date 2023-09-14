@@ -1,11 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+
+<jsp:useBean id="session1" class="com.project.jjj.Mypage"></jsp:useBean>
 <%
 	String id = (String) session.getAttribute("id");
 	String password = (String) session.getAttribute("password");
 	if (id == null && password == null) {
 		response.sendRedirect("login.html");
 	}
+	session1.nomal_user(id);
 %>
 <!DOCTYPE html>
 <html>
@@ -29,10 +32,10 @@
 				</div>
 				<div class="div_ul">
 					<ul>
-						<li>닉네임 :</li>
+						<li>아이디 :</li>
 						<li>이름 :</li>
-						<li>전화번호 :</li>
 						<li>이메일 :</li>
+						<li>전화번호 :</li>
 					</ul>
 				</div>
 			</div>
