@@ -26,9 +26,9 @@ if (id == null && password == null) {
 		<h1 class="log_success">로그인 성공</h1>
 		<br> <input type="submit" value="메인으로 이동" class="main_move">
 	</form>
-  	<%= id %>
+<%--   	<%= id %>
 	<%= password%>
-	<%= type %>
+	<%= type %> --%>
 	<jsp:include page="footer.jsp"></jsp:include>
 </body>
 </html>
