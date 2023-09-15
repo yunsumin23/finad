@@ -35,11 +35,13 @@
 		<h1>자유게시판</h1>
 		<table>
 			<tr>
-				<td colspan="6"></td>
+			<%
+				out.println("<td colspan='6'>"+boardDTO.getName()+"</td>");
+			%>
 			</tr>
 			<tr id="text_info">
 				<%
-					out.println("<td>" + boardDTO.getName() + "</td>");
+					out.println("<td>" + boardDTO.getWriter() + "</td>");
 					out.println("<td>" + boardDTO.getDate() + "</td>");
 				%>
 				<td></td>

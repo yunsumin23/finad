@@ -21,8 +21,4 @@
 		</div>
 	</footer>
 </body>
-<<<<<<< HEAD
-=======
-
->>>>>>> branch 'master' of https://github.com/yunsumin23/finad.git
 </html>
