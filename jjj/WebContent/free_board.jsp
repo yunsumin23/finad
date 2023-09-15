@@ -16,33 +16,34 @@
 </head>
 <body>
 	<jsp:include page="header_logout.jsp"></jsp:include>
-	<jsp:useBean id="boardList" class="com.project.jjj.FreeBoard" scope="page" />
-	
+	<jsp:useBean id="boardList" class="com.project.jjj.FreeBoard"
+		scope="page" />
+
 	<div id="table_header">
-	<h1>게시판 목록</h1>
-	<table>
-		<tr id="sss">
-			<th>번호</th>
-			<th>제목</th>
-			<th>작성자</th>
-			<th>작성일</th>
-		</tr>
-		<%
-			ArrayList<BoardDTO> boardDTO = boardList.getBoardList();
-			for (int i = 0; i < boardDTO.size(); i++){
-				int number = boardDTO.get(i).getNumber();
-				String writer = boardDTO.get(i).getWriter();
-				String name = boardDTO.get(i).getName();
-				String date = boardDTO.get(i).getDate();
-				out.println("<tr>");
-				out.println("<td>" + number + "</td>");				
-				out.println("<td>" + writer + "</td>");
-				out.println("<td>" + name + "</td>");
-				out.println("<td>" + date + "</td>");
-				out.println("</tr>");
-			}
-		%>
-	</table>
+		<h1>게시판 목록</h1>
+		<table>
+			<tr id="sss">
+				<th>번호</th>
+				<th>제목</th>
+				<th>작성자</th>
+				<th>작성일</th>
+			</tr>
+			<%
+				ArrayList<BoardDTO> boardDTO = boardList.getBoardList();
+				for (int i = 0; i < boardDTO.size(); i++) {
+					int number = boardDTO.get(i).getNumber();
+					String writer = boardDTO.get(i).getWriter();
+					String name = boardDTO.get(i).getName();
+					String date = boardDTO.get(i).getDate();
+					out.println("<tr>");
+					out.println("<td><a href='" + number + "'" + number + "</td>");
+					out.println("<td>" + writer + "</td>");
+					out.println("<td>" + name + "</td>");
+					out.println("<td>" + date + "</td>");
+					out.println("</tr>");
+				}
+			%>
+		</table>
 	</div>
 	<jsp:include page="footer.jsp"></jsp:include>
 </body>
