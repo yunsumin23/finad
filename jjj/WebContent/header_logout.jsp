@@ -26,16 +26,16 @@ if (id == null && password == null) {
 			<a href="main.html"><img src="img/logo.png" alt="로고"
 				id="main_logo"></a>
 			<div class="top_button">
-				<a href="#"><img src="img/logout.png" alt=""></a> 
+				<a href="#"><img src="img/logout.png" alt=""></a>
 				<a href="signup_agree.html"><img src="img/signup.png" alt=""></a>
 			<%
-				if(type == "nomal") {
+				if(type.equals("nomal")) {
 					out.println("<a href='mypage_nomal.jsp''><img src='img/mypage.png' alt=''></a>");
 				}
-				if(type == "influencer") {
+				if(type.equals("influencer")) {
 					out.println("<a href='mypage_influ.jsp''><img src='img/mypage.png' alt=''></a>");
 				}
-				if(type == "company") {
+				if(type.equals("company")) {
 					out.println("<a href='mypage_company.jsp''><img src='img/mypage.png' alt=''></a>");
 				}
 			%>

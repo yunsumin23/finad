@@ -16,7 +16,6 @@ public class Mypage {
 	public Nomal_info nomal_user(String id) {
 		Nomal_info nomal_user = new Nomal_info();
 		try {
-			
 			getcon();
 			if(connection == null) {
 //				throw는 예외처리를 강제로 시키는거고
@@ -44,9 +43,51 @@ public class Mypage {
 		return nomal_user;
 	}
 	
+	public Influ_info influ(String id) {
+		Influ_info influ_info = new Influ_info();
+		try {
+			getcon();
+			if(connection == null) {
+				throw new Exception("데이터베이스 연결 안됨.");
+			}
+			statement = connection.createStatement();
+			resultSet = statement.executeQuery("select * from user where influ_user = '" + id + "';");
+			if(resultSet.next()) {
+				influ_info.setNickname(resultSet.getString("nickName"));
+				influ_info.setName(resultSet.getString("name"));
+				influ_info.setEmail(resultSet.getString("eMail"));
+				influ_info.setMobilenumber(resultSet.getString("mobileNumber"));
+			}
+		} catch (Exception e) {
+			// TODO: handle exception
+		} finally {
+			try {
+				close();
+			} catch (Exception e2) {
+				// TODO: handle exception
+			}
+		}
+		return influ_info;
+	}
 	
-	
-	
+	public void company() {
+		Company_info company_info = new Company_info();
+		try {
+			getcon();
+			if(connection == null) {
+				throw new Exception("데이터베이스 연결안됨.");
+			}
+			statement = connection.createStatement();
+		} catch (Exception e) {
+			// TODO: handle exception
+		} finally {
+			try {
+				close();
+			} catch (Exception e2) {
+				// TODO: handle exception
+			}
+		}
+	}
 	
 	
 	
