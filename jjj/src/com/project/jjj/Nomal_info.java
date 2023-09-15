@@ -1,7 +1,7 @@
 package com.project.jjj;
 
 public class Nomal_info {
-	private String id, pw, name, sex, email, address, post, addr_more, referemce, newsagency, mobilenumber;
+	private String id, pw, name, sex, email, address, post, addr_more, reference, newsagency, mobilenumber;
 
 	public String getId() {
 		return id;
@@ -68,11 +68,11 @@ public class Nomal_info {
 	}
 
 	public String getReferemce() {
-		return referemce;
+		return reference;
 	}
 
-	public void setReferemce(String referemce) {
-		this.referemce = referemce;
+	public void setReferemce(String reference) {
+		this.reference = reference;
 	}
 
 	public String getNewsagency() {
