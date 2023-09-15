@@ -206,6 +206,7 @@ h1 {
 .top_info {
 	display: flex;
 	align-items: center;
+	margin-top: 15px;
 }
 
 .top_info img {
