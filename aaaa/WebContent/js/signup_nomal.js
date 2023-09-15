@@ -58,7 +58,6 @@ $(document).ready(function() {
 		}
 	});
 });
-
 function zoomIn(event) {
 	event.target.style.transform = "scale(1.2)";
 	event.target.style.zIndex = "1";

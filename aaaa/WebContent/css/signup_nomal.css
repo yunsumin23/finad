@@ -5,7 +5,11 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Do Hyeon', sans-serif;
+<<<<<<< HEAD
     
+=======
+ 
+>>>>>>> branch 'master' of https://github.com/yunsumin23/finad.git
 }
 
 header {
@@ -217,10 +221,11 @@ footer p {
 }
 
 #signup_input {
-    margin: 80px auto;
+    margin: 100px auto;
     width: 550px;
     margin-bottom: 100px;
     font-size: 20px;
+    height: 1100px;
 }
 
 #input_title {
@@ -260,6 +265,18 @@ footer p {
     padding: 10px;
 }
 
+#input_info02 {
+    width: 300px;
+    height: 50px;
+    margin-top: 30px;
+    border-radius: 15px;
+    border: 1px solid #f8f8f8;
+    float: left;
+    background-color: #f8f8f8;
+    padding: 10px;
+    font-size: 20px;
+}
+
 .input_info2 {
     width: 300px;
     height: 50px;
@@ -283,46 +300,6 @@ footer p {
     padding: 10px;
     font-size: 15px;
 }
-#input_info3 input {
-    display: none;
-}
-#input_info3 label span {
-    vertical-align: middle;
-    padding-left: 5px;
-    width: 80px;
-    height: 22px;
-    display: inline-block;
-}
-input + label {
-    display: inline-block;
-    position: relative;
-
-}
-input + label:before{
-    content: ' ';
-  display: inline-block;
-  width: 16px;  /* 체크박스의 너비를 지정 */
-  height: 16px;  /* 체크박스의 높이를 지정 */
-  line-height: 16px; /* 세로정렬을 위해 높이값과 일치 */
-  margin: -2px 8px 0 0;
-  text-align: center; 
-  vertical-align: middle;
-  background: #fafafa;
-  border: 1px solid #cacece;
-  border-radius : 3px;
-  box-shadow: 0px 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05);
-}
-input + label:active:before, input:checked + label:active:before{
-    box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 1px 3px rgba(0,0,0,0.1);
-}
-input:checked + label:before{
-    content: '\2714';  /* 체크표시 유니코드 사용 */
-    color: #99a1a7;
-    text-shadow: 1px 1px #fff;
-    background: #e9ecee;
-    border-color: #adb8c0;
-    box-shadow: 0px 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05), inset 15px 10px -12px rgba(255,255,255,0.1);
-}
 
 .input_phone {
     height: 30px;
@@ -330,8 +307,6 @@ input:checked + label:before{
 }
 
 #input_final {
-    margin-top: 100px;
-    margin-left: 75px;
     width: 400px;
     height: 61px;
     font-size: 25px;
@@ -339,6 +314,10 @@ input:checked + label:before{
     background-color: #c9c9ff;
     border-radius: 25px;
     cursor: pointer;
+}
+
+.subnit_div {
+	text-align: center;
 }
 
 #addr_btn {
@@ -381,9 +360,23 @@ input:checked + label:before{
     padding: 5px;
     margin: 3px;
 }
+<<<<<<< HEAD
 #check_email {
 	width: 250px;
 	height: 50px;
 
 	
 }
+=======
+#check{
+	margin-left: 250px;
+	font-size: 20px;
+	width: 300px;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	float: left;
+}
+#check_header{
+	float: left;
+}
+>>>>>>> branch 'master' of https://github.com/yunsumin23/finad.git

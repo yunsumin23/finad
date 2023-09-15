@@ -29,6 +29,7 @@
 			check = "select companyId, password from project.company where companyId = '" + id + "' and password = '" + password + "';";
 		} else {
 			response.sendRedirect("login.html");
+			return;
 		}
 		
 		resultSet = statement.executeQuery(check);
