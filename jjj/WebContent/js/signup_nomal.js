@@ -58,6 +58,7 @@ $(document).ready(function() {
 		}
 	});
 });
+
 function zoomIn(event) {
 	event.target.style.transform = "scale(1.2)";
 	event.target.style.zIndex = "1";
@@ -160,6 +161,7 @@ function checkPW() {
 		check_pw.style.textAlign = 'center';
 		text_pw[0].style.border = "2px solid red";
 		text_pw2[0].style.border = '2px solid red';
+		return;
 	}
 }
 function checkName() {
@@ -283,6 +285,7 @@ function checkEmail() {
 		check_email.style.color = 'red';
 		check_email.style.fontSize = '15px';
 		check_email.style.textAlign = 'center';
+		check_email.style.width = '150px';
 		text_email[0].style.border = '2px solid red';
 	} else {
 		check_email.innerHTML = '';

@@ -326,7 +326,7 @@ input:checked + label:before{
 
 .input_phone {
     height: 30px;
-    font-size: 18px;
+    font-size: 17px;
 }
 
 #input_final {

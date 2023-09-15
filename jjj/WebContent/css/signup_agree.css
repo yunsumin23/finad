@@ -218,13 +218,12 @@ footer p {
 
 
 #signup_main {
-    width: 850px;
+    width: 800px;
     height: fit-content;
-    border: 1px solid rgb(122, 122, 122);
+    border: 1px solid black;
     margin: 0 auto;
     margin-top: 80px;
-    padding: 30px;
-    border-radius: 5px;
+    padding: 20px;
 }
 #div_first{
     border-bottom: 1px solid gray;
@@ -234,30 +233,18 @@ footer p {
     display: flex;
     justify-content: right;
     /* margin-right: 0px; */
+    margin-bottom: 25px;
 }
 
 .text_agree{
     margin: 10px;
     height: 90px;
-    border: 1px solid rgb(190, 190, 190);
-    border-radius: 3px;
-    color: rgb(141, 140, 140);
-    overflow: scroll;
+    border: 1px solid gray;
 }
-.ex_p{
-    color: rgb(255, 72, 72);
-}
-
-.explain{
-    font-size: 20px;
-    color: #003b63;
-    
-}
-
 div input {
     width: 17px;
 }
-
+/**/
 .btn_div {
     display: flex;
     justify-content: space-around;
@@ -269,11 +256,9 @@ div input {
     width: 200px;
     height: 61px;
     font-size: 25px;
-    color: white;
-    border: 1px solid #346aff;
-    border-radius: 3px;
-    background-color: #346aff;
-    cursor: pointer;
+    border: 1px solid #c9c9ff;
+    background-color: #c9c9ff;
+    border-radius: 25px;
 }
 
 #btn_agree1 {
@@ -281,11 +266,9 @@ div input {
     width: 200px;
     height: 61px;
     font-size: 25px;
-    color: white;
-    border: 1px solid #346aff;
-    border-radius: 3px;
-    background-color: #346aff;
-    cursor: pointer;
+    border: 1px solid #c9c9ff;
+    background-color: #c9c9ff;
+    border-radius: 25px;
 }
 
 #btn_agree2 {
@@ -293,9 +276,7 @@ div input {
     width: 200px;
     height: 61px;
     font-size: 25px;
-    color: white;
-    border: 1px solid #346aff;
-    border-radius: 3px;
-    background-color: #346aff;
-    cursor: pointer;
+    border: 1px solid #c9c9ff;
+    background-color: #c9c9ff;
+    border-radius: 25px;
 }

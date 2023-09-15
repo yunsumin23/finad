@@ -247,24 +247,24 @@ function checkAddr() {
 	}
 }
 function checkPhone() {
-	var phone = document.getElementsByName('input_phone').value;
+	var input_phone = document.forms["form"]["input_phone"].value;
+//	var input_phone = document.getElementsByName('input_phone').value;
 	var check_phone = document.getElementById('check_phone');
 	var text_phone = document.getElementsByName('input_phone');
-	if (phone.length < 1) {
+	if (input_phone.length < 1) {
 		check_phone.innerHTML = '전화번호를 입력해주세요.';
 		check_phone.style.color = red;
 		check_phone.style.fontSize = '15px';
 		check_phone.style.textAlign = 'center';
-		text_phone[0].style.border = '2px solid red';
+		text_phone.style.border = '2px solid red';
 		return;
 	} else {
 		check_phone.innerHTML = '';
-		text_phone[0].style.border = 'none';
+		text_phone.style.border = 'none';
 	}
 }
 function checkEmail() {
 	var email = document.forms["form"]["email"].value;
-//	var email = document.getElementsByName('email').value;
 	var check_email = document.getElementById('check_email');
 	var text_email = document.getElementsByName('email');
 	if (email.length < 1) {
@@ -272,6 +272,7 @@ function checkEmail() {
 		check_email.style.color = 'red';
 		check_email.style.fontSize = '15px';
 		check_email.style.textAlign = 'center';
+		check_email.style.width = '150px';
 		text_email[0].style.border = '2px solid red';
 		return;
 	} else {
