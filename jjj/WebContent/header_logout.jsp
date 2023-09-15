@@ -1,5 +1,15 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%	// 인증된 세션이 없으면 페이지 못보게 할거임
+// getAttribute하면 오브젝트 타입으로 넘어오기때문에 우리가 사용하기 편하게 하기 위해 앞에 강제로
+// 형변환 해준거임
+String id = (String) session.getAttribute("id");
+String password = (String) session.getAttribute("password");
+String type = (String) session.getAttribute("type");
+if (id == null && password == null) {
+    response.sendRedirect("login.html");
+}
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,9 +26,19 @@
 			<a href="main.html"><img src="img/logo.png" alt="로고"
 				id="main_logo"></a>
 			<div class="top_button">
-				<a href="#"><img src="img/logout.png" alt=""></a> <a
-					href="signup_agree.html"><img src="img/signup.png" alt=""></a>
-				<a href="#"><img src="img/mypage.png" alt=""></a>
+				<a href="#"><img src="img/logout.png" alt=""></a> 
+				<a href="signup_agree.html"><img src="img/signup.png" alt=""></a>
+			<%
+				if(type == "nomal") {
+					out.println("<a href='mypage_nomal.jsp''><img src='img/mypage.png' alt=''></a>");
+				}
+				if(type == "influencer") {
+					out.println("<a href='mypage_influ.jsp''><img src='img/mypage.png' alt=''></a>");
+				}
+				if(type == "company") {
+					out.println("<a href='mypage_company.jsp''><img src='img/mypage.png' alt=''></a>");
+				}
+			%>
 			</div>
 		</div>
 		<div class="header_search">
