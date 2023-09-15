@@ -11,7 +11,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src="js/adstore.js" type="text/javascript"></script>
   </head>
+  
 <jsp:include page="header_login.jsp"></jsp:include>
+
     <section class="section">
       <div id="banner"></div>
       <h1 class="h1">가장 최근 광고한 10개 상품!</h1>
