@@ -12,6 +12,7 @@
 </head>
 <body>
 	<%
+	
 		String writer = "작성자 ㅋㅋ";
 		String name = request.getParameter("input_name");
 		String text = request.getParameter("input_text");
