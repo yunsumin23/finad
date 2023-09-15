@@ -30,7 +30,7 @@
 				<td>댓글수</td>
 			</tr>
 			<tr>
-				<td colspan="6">text texttexttexttexttexttext  texttexttexttexttext text text text text text text</td>
+				<td colspan="6"></td>
 			</tr>
 			
 		</table>
