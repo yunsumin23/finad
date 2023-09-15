@@ -34,6 +34,7 @@
 				statement.close();
 			}catch(Exception ignored){
 				
+				
 			}
 		} try {
 			connection.close();
