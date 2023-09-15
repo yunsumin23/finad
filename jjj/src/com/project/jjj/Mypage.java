@@ -70,7 +70,7 @@ public class Mypage {
 		return influ_info;
 	}
 	
-	public void company() {
+	public Company_info company(String id) {
 		Company_info company_info = new Company_info();
 		try {
 			getcon();
@@ -78,6 +78,13 @@ public class Mypage {
 				throw new Exception("데이터베이스 연결안됨.");
 			}
 			statement = connection.createStatement();
+			resultSet = statement.executeQuery("select * from company where companyId = '" + id + "';");
+			if(resultSet.next()) {
+				company_info.setComname(resultSet.getString("companyName"));
+				company_info.setName(resultSet.getString("name"));
+				company_info.setComemail(resultSet.getString("eMail"));
+				company_info.setComnumber(resultSet.getString("telephoneNumber"));
+			}
 		} catch (Exception e) {
 			// TODO: handle exception
 		} finally {
@@ -87,6 +94,7 @@ public class Mypage {
 				// TODO: handle exception
 			}
 		}
+		return company_info;
 	}
 	
 	

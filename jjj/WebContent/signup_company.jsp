@@ -26,7 +26,7 @@
 			throw new Exception("데이터베이스 연결 안됨<br>");
 		}
 		statement = connection.createStatement();
-		int i = statement.executeUpdate("insert into company(companyId, password, company_name, company_person, company_phone, company_email, company_number) values ('"+  id + "','" + pw + "','" + name + "','" + person + "','" + phone + "','" + email + "','" + number + "');");
+		int i = statement.executeUpdate("insert into company(companyId, password, companyName, name, telephoneNumber, eMail, licenseNumber) values ('"+  id + "','" + pw + "','" + name + "','" + person + "','" + phone + "','" + email + "','" + number + "');");
 	} finally {
 		try {
 			statement.close();
