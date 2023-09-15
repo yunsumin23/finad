@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -15,9 +16,9 @@
 			<a href="main.html"><img src="img/logo.png" alt="로고"
 				id="main_logo"></a>
 			<div class="top_button">
-				<a href="login.html"><img src="img/login.png" alt=""></a> <a
+				<a href="#"><img src="img/login.png" alt=""></a> <a
 					href="signup_agree.html"><img src="img/signup.png" alt=""></a>
-				<a href="mypage_nomal.jsp"><img src="img/mypage.png" alt=""></a>
+				<a href="#"><img src="img/mypage.png" alt=""></a>
 			</div>
 		</div>
 		<div class="header_search">
@@ -203,4 +204,5 @@
 		</nav>
 	</div>
 </body>
+
 </html>

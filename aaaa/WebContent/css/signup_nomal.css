@@ -5,7 +5,11 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Do Hyeon', sans-serif;
+<<<<<<< HEAD
+    
+=======
  
+>>>>>>> branch 'master' of https://github.com/yunsumin23/finad.git
 }
 
 header {
@@ -235,6 +239,19 @@ footer p {
     padding: 10px;
 }
 
+#input_info02 {
+	width: 300px;
+    height: 50px;
+    margin-top: 30px;
+    border-radius: 15px;
+    border: 1px solid #f8f8f8;
+    float: left;
+    background-color: #f8f8f8;
+    padding: 10px;
+    font-size: 20px;
+}
+
+
 .input_info {
     width: 200px;
     height: 50px;
@@ -286,7 +303,7 @@ footer p {
 
 .input_phone {
     height: 30px;
-    font-size: 18px;
+    font-size: 17px;
 }
 
 #input_final {
@@ -296,6 +313,7 @@ footer p {
     border: 1px solid #c9c9ff;
     background-color: #c9c9ff;
     border-radius: 25px;
+    cursor: pointer;
 }
 
 .subnit_div {
@@ -342,6 +360,14 @@ footer p {
     padding: 5px;
     margin: 3px;
 }
+<<<<<<< HEAD
+#check_email {
+	width: 250px;
+	height: 50px;
+
+	
+}
+=======
 #check{
 	margin-left: 250px;
 	font-size: 20px;
@@ -353,3 +379,4 @@ footer p {
 #check_header{
 	float: left;
 }
+>>>>>>> branch 'master' of https://github.com/yunsumin23/finad.git
