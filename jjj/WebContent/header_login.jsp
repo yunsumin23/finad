@@ -1,14 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%	// 인증된 세션이 없으면 페이지 못보게 할거임
+<%
 // getAttribute하면 오브젝트 타입으로 넘어오기때문에 우리가 사용하기 편하게 하기 위해 앞에 강제로
 // 형변환 해준거임
 String id = (String) session.getAttribute("id");
 String password = (String) session.getAttribute("password");
 String type = (String) session.getAttribute("type");
-if (id == null && password == null) {
-    response.sendRedirect("login.html");
-}
 %>
 <!DOCTYPE html>
 <html>
@@ -22,12 +19,12 @@ if (id == null && password == null) {
 <body>
 	<header>
 		<div class="top_div">
-			<a href="main.html"><img src="img/logo.png" alt="로고"
+			<a href="main.jsp"><img src="img/logo.png" alt="로고"
 				id="main_logo"></a>
 			<div class="top_button">
 				<a href="login.html"><img src="img/login.png" alt=""></a> <a
 					href="signup_agree.html"><img src="img/signup.png" alt=""></a>
-				<a href="login.html"><img src="img/mypage.png" alt=""></a>
+				<a href="login.jsp"><img src="img/mypage.png" alt=""></a>
 			</div>
 		</div>
 		<div class="header_search">
@@ -40,8 +37,7 @@ if (id == null && password == null) {
 			<div class="category">
 				<div class="category_text">카테고리</div>
 				<ul class="nav_ul">
-					<li class="nav_li01"><a href="company_written_list.html"
-						target="_blank">광고게시판</a></li>
+					<li class="nav_li01"><a href="company_written_list.html" target="_blank">광고게시판</a></li>
 					<li class="nav_li02"><a href="" target="_blank">크리에이터 게시판</a></li>
 					<li class="nav_li03"><a href="" target="_blank">자유게시판</a></li>
 					<li class="nav_li04"><a href="" target="_blank">광고현황</a></li>
