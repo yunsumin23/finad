@@ -183,7 +183,7 @@
       <a href="cart.html"><img src="img/cart.png" alt=""></a>
     </div>
     <jsp:include page="footer.jsp"></jsp:include>
-    
+     
   </body>
 
 </html> 
