@@ -36,9 +36,9 @@
 					String name = boardDTO.get(i).getName();
 					String date = boardDTO.get(i).getDate();
 					out.println("<tr>");
-					out.println("<td><a href='" + number + "'" + number + "</td>");
+					out.println("<td><a href='free_board_text.jsp?number=" + number + "'>" + number + "</td>");
+					out.println("<td><a href='free_board_text.jsp?number=" + number + "'>" + name + "</td>");
 					out.println("<td>" + writer + "</td>");
-					out.println("<td>" + name + "</td>");
 					out.println("<td>" + date + "</td>");
 					out.println("</tr>");
 				}
