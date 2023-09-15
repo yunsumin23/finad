@@ -5,6 +5,7 @@
 	String id = request.getParameter("id");
 	String password = request.getParameter("password");
 	String userType = request.getParameter("user_grade");
+	String type = null;
 	Connection connection = null;
 	Statement statement = null;
 	ResultSet resultSet = null;
@@ -23,10 +24,13 @@
 		String check = "";
 		if("nomal".equals(userType)) {
 			check = "select nomalUserId, password from project.nomal_user where nomalUserId = '" + id + "' and password = '" + password + "';";
+			type = "nomal";
 		} else if("influencer".equals(userType)) {
 			check = "select influ_user, password from project.user where influ_user = '" + id + "' and password = '" + password + "';";
+			type = "influencer";
 		} else if("company".equals(userType)) {
 			check = "select companyId, password from project.company where companyId = '" + id + "' and password = '" + password + "';";
+			type = "company";
 		} else {
 			response.sendRedirect("login.html");
 			return;
@@ -37,6 +41,7 @@
 	    if(resultSet.next()) {
 	    	session.setAttribute("id", id);
 	    	session.setAttribute("password", password);
+			session.setAttribute("type", type);
 %>
 		<script>
 		location.href="loginsuc.jsp";
