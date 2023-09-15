@@ -5,6 +5,7 @@
 // 형변환 해준거임
 String id = (String) session.getAttribute("id");
 String password = (String) session.getAttribute("password");
+String type = (String) session.getAttribute("type");
 if (id == null && password == null) {
     response.sendRedirect("login.html");
 }
@@ -25,8 +26,9 @@ if (id == null && password == null) {
 		<h1 class="log_success">로그인 성공</h1>
 		<br> <input type="submit" value="메인으로 이동" class="main_move">
 	</form>
-<%-- 	<%= id %>
-	<%= password%> --%>
+<%--   	<%= id %>
+	<%= password%>
+	<%= type %> --%>
 	<jsp:include page="footer.jsp"></jsp:include>
 </body>
 </html>
