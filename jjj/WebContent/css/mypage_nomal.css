@@ -226,6 +226,18 @@ h1 {
 	margin-left: 30px;
 }
 
+hr {
+	width: 1300px;
+	margin: 15px auto;
+	border: 1px solid #014D81;
+}
+
+
+
+
+
+
+
 
 footer {
     position: absolute;

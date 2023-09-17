@@ -51,7 +51,7 @@ public class Mypage {
 				throw new Exception("데이터베이스 연결 안됨.");
 			}
 			statement = connection.createStatement();
-			resultSet = statement.executeQuery("select * from user where influ_user = '" + id + "';");
+			resultSet = statement.executeQuery("select * from user where influUserId = '" + id + "';");
 			if(resultSet.next()) {
 				influ_info.setNickname(resultSet.getString("nickName"));
 				influ_info.setName(resultSet.getString("name"));

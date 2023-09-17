@@ -59,7 +59,7 @@
 				throw new Exception("데이터베이스 연결 안됨<br>");
 			}
 			statement = connection.createStatement();
-			int i = statement.executeUpdate("insert into user(influ_user, password, name, sex, eMail, nickName, newsAgency, mobileNumber, category, post, address, addr_more, reference) values ('" + id + "','" + pw + "','" + name + "','" + gender + "','" + email + "','" + nickname + "','" + phone + "','" + input_phone + "','" + category + "','" + post + "','" + addr + "','" + addr_more + "','" + reference + "');");
+			int i = statement.executeUpdate("insert into user(influUserId, password, name, sex, eMail, nickName, newsAgency, mobileNumber, category, post, address, addr_more, reference) values ('" + id + "','" + pw + "','" + name + "','" + gender + "','" + email + "','" + nickname + "','" + phone + "','" + input_phone + "','" + category + "','" + post + "','" + addr + "','" + addr_more + "','" + reference + "');");
 			
 		} finally {
 			try {

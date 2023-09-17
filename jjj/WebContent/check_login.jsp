@@ -6,6 +6,7 @@
 	String password = request.getParameter("password");
 	String userType = request.getParameter("user_grade");
 	String type = null;
+	String check = null;
 	Connection connection = null;
 	Statement statement = null;
 	ResultSet resultSet = null;
@@ -21,18 +22,18 @@
 		}
 		statement = connection.createStatement();
 		
-		String check = "";
+		
 		if("nomal".equals(userType)) {
 			check = "select nomalUserId, password from project.nomal_user where nomalUserId = '" + id + "' and password = '" + password + "';";
 			type = "nomal";
 		} else if("influencer".equals(userType)) {
-			check = "select influ_user, password from project.user where influ_user = '" + id + "' and password = '" + password + "';";
+			check = "select influUserId, password from project.user where influUserId = '" + id + "' and password = '" + password + "';";
 			type = "influencer";
 		} else if("company".equals(userType)) {
 			check = "select companyId, password from project.company where companyId = '" + id + "' and password = '" + password + "';";
 			type = "company";
 		} else {
-			response.sendRedirect("login.html");
+			response.sendRedirect("login.jsp");
 			return;
 		}
 		
