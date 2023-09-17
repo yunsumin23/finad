@@ -29,7 +29,7 @@
 		<div class="all_info">
 
 			<div class="top_info">
-				<div>
+				<div class="user_img">
 					<img alt="img/user.png" src="img/user.png">
 				</div>
 				<div class="div_ul">
@@ -42,8 +42,60 @@
 							out.println("</ul>");
 					%>
 				</div>
+				<div class="div_sns">
+					<ul>
+						<li><a href="#" target="_blank"><img alt="" src="img/youtube.png"></a></li>
+						<li><a href="#" target="_blank"><img alt="" src="img/twitch.png"></a></li>
+						<li><a href="#" target="_blank"><img alt="" src="img/instagram.png"></a></li>
+					</ul>
+				</div>
 			</div>
 			<hr>
+			<div class="div_data">
+				<div>
+					<ul>
+						<li>구독자 수</li>
+						<li>평균 시청자 수</li>
+					</ul>
+				</div>
+				<div>
+					<ul>
+					<%	
+						out.println("<li>유튜브에서 대이터 추출해야함</li>");
+						out.println("<li>유튜브에서 대이터 추출해야함</li>");
+					%>
+					</ul>
+				</div>	
+			</div>
+			<div class="div_data2">
+				<div>
+					<ul>
+						<%
+						out.println("<li>유튜브에서 대이터 추출해야함</li>");
+						out.println("<li>유튜브에서 대이터 추출해야함</li>");
+						out.println("<li>유튜브에서 대이터 추출해야함</li>");
+						out.println("<li>유튜브에서 대이터 추출해야함</li>");
+						out.println("<li>유튜브에서 대이터 추출해야함</li>");
+						%>
+					</ul>
+				</div>
+			</div>
+			<hr>
+			<h2>카테고리</h2>
+			<div class="div_category">
+			<ul>
+				<%
+					out.println("<li>" + user.getCategory() + "</li>");
+				%>
+			</ul>
+			</div>
+			<h2>소개글</h2>
+			<form action="" method="post">
+			<input type="text" name="text" class="text">
+			</form>
+			<form action="" method="post">
+			<input type="submit" name="submit" value="광고진행사항" class="submit">
+			</form>
 		</div>
 	</div>
 

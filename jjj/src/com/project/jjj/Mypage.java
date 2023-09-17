@@ -12,7 +12,7 @@ public class Mypage {
 	ResultSet resultSet = null;
 	
 	
-	
+//	일반유저 데이터 추출
 	public Nomal_info nomal_user(String id) {
 		Nomal_info nomal_user = new Nomal_info();
 		try {
@@ -43,6 +43,7 @@ public class Mypage {
 		return nomal_user;
 	}
 	
+//	인플루언서 데이터 추출
 	public Influ_info influ(String id) {
 		Influ_info influ_info = new Influ_info();
 		try {
@@ -57,6 +58,7 @@ public class Mypage {
 				influ_info.setName(resultSet.getString("name"));
 				influ_info.setEmail(resultSet.getString("eMail"));
 				influ_info.setMobilenumber(resultSet.getString("mobileNumber"));
+				influ_info.setCategory(resultSet.getString("category"));
 			}
 		} catch (Exception e) {
 			// TODO: handle exception
@@ -70,6 +72,7 @@ public class Mypage {
 		return influ_info;
 	}
 	
+//	기업회원 데이터 추출
 	public Company_info company(String id) {
 		Company_info company_info = new Company_info();
 		try {
@@ -96,7 +99,6 @@ public class Mypage {
 		}
 		return company_info;
 	}
-	
 	
 	
 	

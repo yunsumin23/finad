@@ -194,7 +194,11 @@ nav ul li:nth-child(5) a:after {
 .main {
 	width: 1300px;
 	margin: 80px auto;
-	height: 500px;
+	height: 1100px;
+}
+
+.main li {
+	list-style: none;
 }
 
 h1 {
@@ -209,32 +213,80 @@ h1 {
 	margin-top: 15px;
 }
 
-.top_info img {
+.user_img img {
 	height: 128px;
 	width: 128px;
 	border-radius: 50%
 }
 
 .top_info li {
-	list-style: none;
 	padding: 5px;
 	font-size: 20px;
-	
 }
 
 .div_ul {
 	margin-left: 30px;
+	width: 850px;
+}
+
+.div_sns ul{
+	display: flex;
+}
+
+.div_sns img {
+	width: 64px;
+	height: 64px;
 }
 
 hr {
 	width: 1300px;
 	margin: 15px auto;
-	border: 1px solid #014D81;
+	border: 2px solid #014D81;
 }
 
+.div_data {
+	display: flex;
+	margin-left: 70px;
+}
 
+.div_data li {
+	font-size: 20px;
+	padding: 7px
+}
 
+.div_data div:nth-child(1) {
+	border-right: 3px solid #014D81;
+}
 
+.div_data2 ul{
+	display: flex;
+	justify-content: space-between;
+	margin-top: 50px;
+}
+
+h2 {
+	margin-top:50px;
+	width:75px;
+	border-bottom: 3px solid #014D81; 
+}
+
+.div_category li{
+	font-size: 20px;
+	color: #FF766B;
+}
+
+.text {
+	margin-top: 15px;
+	width: 1300px;
+	height: 500px;
+}
+
+.submit {
+	width: 300px;
+	height: 50px;
+	font-size: 20px;
+	margin-top: 15px;
+}
 
 
 footer {
