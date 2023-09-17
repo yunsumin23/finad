@@ -209,7 +209,7 @@ h1 {
 	margin-top: 15px;
 }
 
-.top_info img {
+.div_ul img {
 	height: 128px;
 	width: 128px;
 	border-radius: 50%
@@ -229,7 +229,7 @@ h1 {
 hr {
 	width: 1300px;
 	margin: 15px auto;
-	border: 1px solid #014D81;
+	border: 2px solid #014D81;
 }
 
 
