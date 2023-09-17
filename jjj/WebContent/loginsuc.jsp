@@ -22,7 +22,7 @@ if (id == null && password == null) {
 </head>
 <body>
 	<jsp:include page="header_logout.jsp"></jsp:include>
-	<form action="main.html" class="log" method="post">
+	<form action="main_logout.jsp" class="log" method="post">
 		<h1 class="log_success">로그인 성공</h1>
 		<br> <input type="submit" value="메인으로 이동" class="main_move">
 	</form>

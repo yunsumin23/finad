@@ -1,5 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%
+	String id = (String) session.getAttribute("id");
+	String password = (String) session.getAttribute("password");
+	if (id == null && password == null) {
+		response.sendRedirect("login.html");
+	}
+%>
 <!DOCTYPE html>
 <html>
 <head>

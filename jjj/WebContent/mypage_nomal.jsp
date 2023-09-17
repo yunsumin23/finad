@@ -28,7 +28,7 @@
 		<div class="all_info">
 
 			<div class="top_info">
-				<div>
+				<div class="div_img">
 					<img alt="img/user.png" src="img/user.png">
 				</div>
 				<div class="div_ul">
@@ -43,6 +43,9 @@
 				</div>
 			</div>
 			<hr>
+			<div>
+			
+			</div>
 		</div>
 	</div>
 	<jsp:include page="footer.jsp"></jsp:include>
