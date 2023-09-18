@@ -13,12 +13,12 @@
 	src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <script type="text/javascript" src="js/free_board.js"></script>
 <jsp:useBean id="boardList" class="com.project.jjj.FreeBoard"
-		scope="page" />
+	scope="page" />
 </head>
 <body>
 	<jsp:include page="header_login.jsp"></jsp:include>
 	<div id="write_container">
-		<form action="free_board_write_sql.jsp">
+		<form action="free_board_write_sql.jsp" name="form" onsubmit="return check_name();">
 			<input type="text" name="input_name" placeholder="제목">
 			<textarea name="input_text"></textarea>
 			<input type="submit" value="완료" placeholder="내용">

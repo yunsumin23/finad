@@ -19,6 +19,7 @@ nav a {
     text-decoration: none;
 }
 
+
 .top_button img {
     height: 18px;
     padding-left: 10px;
@@ -220,7 +221,9 @@ td{
 	border-bottom: 1px solid gray;
 	padding: 3px;
 }
-
+#text {
+	padding-bottom: 300px;
+}
 /* 푸터 시작 */
 
 footer {

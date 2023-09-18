@@ -19,6 +19,10 @@ nav a {
     text-decoration: none;
 }
 
+a {
+    text-decoration: none;
+}
+
 .top_button img {
     height: 18px;
     padding-left: 10px;

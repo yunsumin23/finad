@@ -51,7 +51,7 @@
 			</tr>
 			<tr>
 				<%
-					out.println("<td colspan='6'>" + boardDTO.getText() + "</td>");
+					out.println("<td colspan='6' id='text'>" + boardDTO.getText() + "</td>");
 				%>
 			</tr>
 
