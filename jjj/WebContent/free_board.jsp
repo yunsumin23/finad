@@ -37,6 +37,8 @@
 				<th>제목</th>
 				<th>작성자</th>
 				<th>작성일</th>
+				<th>조회</th>
+				<th>추천</th>
 			</tr>
 			<%
 				ArrayList<BoardDTO> boardDTO = boardList.getBoardList();
@@ -50,6 +52,8 @@
 					out.println("<td><a href='free_board_text.jsp?number=" + number + "'>" + name + "</td>");
 					out.println("<td>" + writer + "</td>");
 					out.println("<td>" + date + "</td>");
+					out.println("<td>" + "조회수"+ "</td>");
+					out.println("<td>" + "추천수" + "</td>");
 					out.println("</tr>");
 				}
 			%>
