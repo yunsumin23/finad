@@ -16,7 +16,7 @@
 		scope="page" />
 </head>
 <body>
-	<jsp:include page="header_logout.jsp"></jsp:include>
+	<jsp:include page="header_login.jsp"></jsp:include>
 	<div id="write_container">
 		<form action="free_board_write_sql.jsp">
 			<input type="text" name="input_name" placeholder="제목">

@@ -218,7 +218,14 @@ table th:nth-child(3) {
 table th:nth-child(4) {
 	width: 130px;
 }
-
+#free_board_write_btn{
+	margin-top: 10px;
+	margin-left: 830px;
+}
+#free_board_write_btn input {
+	width: 55px;
+	height: 25px;
+}
 /* 푸터 시작 */
 
 footer {

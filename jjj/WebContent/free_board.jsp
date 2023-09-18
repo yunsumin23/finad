@@ -15,7 +15,7 @@
 <script src="js/free_board.js"></script>
 </head>
 <body>
-	<jsp:include page="header_logout.jsp"></jsp:include>
+	<jsp:include page="header_login.jsp"></jsp:include>
 	<jsp:useBean id="boardList" class="com.project.jjj.FreeBoard"
 		scope="page" />
 
@@ -44,6 +44,11 @@
 				}
 			%>
 		</table>
+		<div id="free_board_write_btn">
+			<form action = "free_board_write.jsp">
+				<input type="submit" value="글쓰기">
+			</form>
+		</div>
 	</div>
 	<jsp:include page="footer.jsp"></jsp:include>
 </body>

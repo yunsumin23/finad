@@ -29,7 +29,7 @@
 		}
 		
 	%>
-	<jsp:include page="header_logout.jsp"></jsp:include>
+	<jsp:include page="header_login.jsp"></jsp:include>
 
 	<div id="text_header">
 		<h1>자유게시판</h1>
