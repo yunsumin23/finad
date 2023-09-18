@@ -17,7 +17,7 @@
 		}
 		statement = connection.createStatement();
 		ResultSet resultSet = statement
-				.executeQuery("select influ_user from project.user where influ_user = '" + id + "';");
+				.executeQuery("select influUserId from project.user where influUserId = '" + id + "';");
 		while (resultSet.next()) {
 			isAvailable = "false";
 		}

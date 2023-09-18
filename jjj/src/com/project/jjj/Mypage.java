@@ -72,6 +72,50 @@ public class Mypage {
 		return influ_info;
 	}
 	
+	public Mypage_influ influ_mypage(String id) {
+		Mypage_influ mypage_influ = new Mypage_influ();
+		try {
+			getcon();
+			if(connection == null) {
+				throw new Exception();
+			}
+			statement = connection.createStatement();
+			resultSet = statement.executeQuery("select * from user_mypage where influUserId = '" + id + "';");
+			if(resultSet.next()) {
+				mypage_influ.setSubscri(resultSet.getInt("subscribers"));
+				mypage_influ.setYoutuLink(resultSet.getString("youtubeLink"));
+				mypage_influ.setLiveBcLink(resultSet.getString("liveBroadcastLink"));
+				mypage_influ.setSnsLink(resultSet.getString("snsLink"));
+				mypage_influ.setAvgviewers(resultSet.getInt("avgviewers"));
+				mypage_influ.setThravgSub(resultSet.getInt("30avgSub"));
+				mypage_influ.setTweavgSub(resultSet.getInt("20avgSub"));
+				mypage_influ.setTeavgSub(resultSet.getInt("10avgSub"));
+				mypage_influ.setThravgViewer(resultSet.getInt("30avgViewer"));
+				mypage_influ.setTweavgViewer(resultSet.getInt("20avgViewer"));
+				mypage_influ.setTenavgViewer(resultSet.getInt("10avgViewer"));
+				mypage_influ.setThravgHit(resultSet.getInt("30avgHits"));
+				mypage_influ.setTweavgHit(resultSet.getInt("20avgHits"));
+				mypage_influ.setTenavgHit(resultSet.getInt("10avgHits"));
+				mypage_influ.setMan_ratio(resultSet.getDouble("man_ratio"));
+				mypage_influ.setWoman_ratio(resultSet.getDouble("woman_ratio"));
+				mypage_influ.setTenAge(resultSet.getDouble("ageAvg10"));
+				mypage_influ.setTweAge(resultSet.getDouble("ageAvg20"));
+				mypage_influ.setThrAge(resultSet.getDouble("ageAvg30"));
+				mypage_influ.setForAge(resultSet.getDouble("ageAvg40"));
+				mypage_influ.setFifAge(resultSet.getDouble("ageAvg50"));
+			}
+		} catch (Exception e) {
+			// TODO: handle exception
+		} finally {
+			try {
+				close();
+			} catch (Exception e2) {
+				// TODO: handle exception
+			}
+		}
+		return mypage_influ;
+	}
+	
 //	기업회원 데이터 추출
 	public Company_info company(String id) {
 		Company_info company_info = new Company_info();

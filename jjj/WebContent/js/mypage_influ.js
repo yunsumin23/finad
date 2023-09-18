@@ -13,6 +13,7 @@ $(document).ready(function () {
     $(".img_info_main").mouseenter(function () {
         $(".img_info02").stop().slideDown();
     });
+    
 });
 
 function zoomIn(event) {

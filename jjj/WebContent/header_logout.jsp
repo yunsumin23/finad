@@ -12,7 +12,8 @@ if (id == null && password == null) {
 }
 if (request.getParameter("logout") != null) {
     session.removeAttribute("id");
-    response.sendRedirect("login.html");
+    session.removeAttribute("password");
+    response.sendRedirect("login.jsp");
 }
 %>
 <!DOCTYPE html>
@@ -28,7 +29,7 @@ if (request.getParameter("logout") != null) {
 <body>
 <header>
 		<div class="top_div">
-			<a href="main.html"><img src="img/logo.png" alt="로고"
+			<a href="main_logout.jsp"><img src="img/logo.png" alt="로고"
 				id="main_logo"></a>
 			<div class="top_button">
 				<a href="#" onclick="logout()"><img src="img/logout.png" alt=""></a>
