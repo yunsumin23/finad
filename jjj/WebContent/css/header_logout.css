@@ -51,7 +51,7 @@ nav a {
 
 .header_search {
     position: absolute;
-    top: 50px;
+    top: 65px;
     right: 0px;
 }
 
@@ -112,7 +112,7 @@ nav a {
     font-size: 25px;
     font-weight: 500;
     justify-content: space-between;
-    width: 700px;
+    width: 800px;
     margin-left: 100px;
 }
 
