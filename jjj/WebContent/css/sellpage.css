@@ -5,6 +5,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Do Hyeon', sans-serif;
+    font-weight: normal;
 }
 
 header {
@@ -188,15 +189,32 @@ nav ul li:nth-child(5) a:after {
     width: 83px;
 }
 
-.cart, .order {
-    width: 120px;
-    height: 50px;
+.cart  {
+  
+    width: 130px;
+    height: 40px;
+    color: #346aff;
     font-size: 20px;
-    border: 3px solid #014D81;
-    border-radius: 15px;
-    background: none;
+    border: 1px solid #346aff;
+    border-radius: 3px;
+    cursor: pointer;
+    background-color: white;
+}
+
+.order {
+    width: 130px;
+    height: 40px;
+    color: white;
+    font-size: 20px;
+    border: 1px solid #346aff;
+    border-radius: 3px;
+    background-color: #346aff;
     cursor: pointer;
 }
+
+
+
+
 
 .info {
   width: 1300px;
@@ -215,28 +233,121 @@ nav ul li:nth-child(5) a:after {
   
 }
 
+
+
 .summary{
   width: 800px;
-  margin-top: 20px;
+  margin-top: 50px;
   font-size: 20px;
 }
 
-.product-img{
+/* .product-img{
   width: 460px;
   height: 460px;
-  border: 2px solid rgb(17, 0, 0);
   border-radius: 12px;
   margin: 0 auto;
+} */
+
+.nike_slide {
+    width: 460px;
+    height: 460px;
+    overflow: hidden;
 }
+
+.nike_slide ul {
+    display: flex;
+}
+
+.nike_slide li {
+    list-style: none;
+}
+
+
+.nike_slide img {
+    width: 460px;
+    height: 460px;
+}
+
+
+.nikekr{
+    font-size: 25px;
+    color: #014D81;
+}
+#nikr{
+    color: rgb(1, 39, 255);
+}
+
+
+.total{
+  
+    color: rgb(170, 40, 40);
+    font-size: 30px;
+    padding: 5px;
+}
+
+
+.choose{
+    margin: 0 auto;
+    width: 55px;
+    height: 25px;
+    margin-left: 5px;
+    background-color: rgb(240, 240, 240);
+}
+.chs{
+    display: flex;
+    margin-top: 10px;
+
+}
+
+.yyy {
+    display: flex;
+   margin-right: 15px;
+}
+
+
+.org_price{
+    color: rgb(250, 105, 105);
+}
+
+.summary h5{
+    color: rgb(161, 161, 161);
+}
+
+.delivery{
+    font-size: 15px;
+    color: #A83A4F;
+
+}
+
+
+.arrival{
+    font-size: 15px;
+    color: #4d994d;
+}
+
+.origin{
+    font-size: 15px;
+    color: #666565;
+}
+
+
 .nike_2{
   width: 860px;
   height: 460px;
-  border: 2px solid rgb(17, 0, 0);
+  /* border: 2px solid rgb(17, 0, 0); */
   border-radius: 12px;
   margin: 0 auto;
   margin-bottom: 10px;
 }
 
+.nike_3{
+    width: 860px;
+    height: 460px;
+    /* border: 2px solid rgb(17, 0, 0); */
+    border-radius: 12px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+  }
 
 .detail{
   font-size: 30px;
@@ -249,29 +360,77 @@ nav ul li:nth-child(5) a:after {
 .notice_last{
   margin-top: 50px;
   margin-bottom: 50px;
-  color: red;
+  color: rgb(92, 91, 91);
 }
 
+.review{
+    padding: 80px;
+    border: 2px solid rgb(85, 130, 255);
+    border-radius: 20px;
+}
+
+.ratingstar4{
+color: rgb(60, 60, 253);
+
+}
+.re_id{
+font-size: 20px;
+
+}
+
+.re_per{
+margin-top: 20px;
+}
+
+
+
+.re_re{
+    font-size: 50px;
+    color: rgb(255, 86, 86);
+}
+
+.re_text{
+    color: #666565;
+}
+
+
+
 .paging {
-    margin-top: 30px;
+    margin-top: 40px;
+    
 }
 
 .paging a{
     text-decoration: none;
     font-size: 20px;
     color: #000;
-    padding: 7px;
-    background-color: #aaa;
-    border-radius: 15px;
+    padding: 5px;
+    background-color: #ffffff;
+    color: rgb(83, 83, 83);
+   
 }
 
+.prev a, .next a{
+    color: rgb(117, 117, 117);
+     border-radius: 3px ;
+     border: 2px solid rgb(117, 117, 117);
+    background-color: rgb(248, 248, 248);
+}
+.num .on{
+    color: rgb(0, 0, 0);
+    background-color: #ffffff;
+    border: 2px solid rgb(54, 54, 54); 
+}
+
+
+/* 장바구니 */
 .cart_div img {
     width: 64px;
     position: fixed;
     right: 200px;
-    bottom: 180px;
+  bottom: 100px;
     background-color: white;
-    border: 3px solid #014D81;
+    border: 3px solid #A83A4F;
     border-radius: 50%;
 }
 
