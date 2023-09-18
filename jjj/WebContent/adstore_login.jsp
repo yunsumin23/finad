@@ -14,6 +14,7 @@
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <script src="js/adstore.js" type="text/javascript"></script>
+
 </head>
 <body>
 	<jsp:include page="header_login.jsp"></jsp:include>
@@ -278,7 +279,7 @@
 		</div>
 	</div>
 	<div class="cart_div">
-		<a href="cart.html"><img src="img/cart.png" alt=""></a>
+		<a href="cart.jsp"><img src="img/cart.png" alt=""></a>
 	</div>
 	<jsp:include page="footer.jsp"></jsp:include>
 

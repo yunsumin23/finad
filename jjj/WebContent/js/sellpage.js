@@ -22,3 +22,4 @@ function zoomOut(event) {
     event.target.style.zIndex = 0;
     event.target.style.transition = "all 0.5s"
 }
+

@@ -1,5 +1,8 @@
+<%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
+<%@ page import="com.project.jjj.AdstoreDTO"%>
+<%@ page import="com.project.jjj.AdstoreReviewDTO" %>
 <!DOCTYPE html>
 <html lang="ko">
 
@@ -14,6 +17,12 @@
 
     <body>
 <jsp:include page="header_login.jsp"></jsp:include>
+<jsp:useBean id="adstorelist" class="com.project.jjj.Adstore" scope="page" />
+<jsp:useBean id="adreviewlist" class="com.project.jjj.AdstoreReview" scope="page" />
+		
+	<%
+		ArrayList<AdstoreDTO> jjj = adstorelist.getAdstoreList();
+	%>
   
         <section class="section">
             <div class="info">
@@ -34,26 +43,28 @@
                         </h5>
                     </nav>
                     <nav>
-                        <h3>나이키 스포츠웨어 아이콘 퓨추라 반팔티 티셔츠</h3>
+                        <h3><%
+							out.println("<span class='product-name'>" + jjj.get(0).getItemName() + "</span>");
+						%></h3>
                         <div class="chs">
                             <div class="yyy">
                                 <h4>사이즈</h4>
                                 <select class="choose"> 
-                                    <option value="">X</option>
-                                    <option value="">S</option>
-                                    <option value="">M</option>
-                                    <option value="">L</option>
-                                    <option value="">XL</option>
-                                    <option value="">2XL</option>
+                                    <option value="x-small">X</option>
+                                    <option value="small">S</option>
+                                    <option value="medium">M</option>
+                                    <option value="large">L</option>
+                                    <option value="x-large">XL</option>
+                                    <option value="xx-large">2XL</option>
                                     </select>
                             </div>
                             <div class="yyy">
                                 <h4>색상</h4>
                                 <select class="choose"> 
-                                    <option value="">블랙</option>
-                                    <option value="">화이트</option>
-                                    <option value="">그레이</option>
-                                    <option value="">네이비</option>
+                                    <option value="black">블랙</option>
+                                    <option value="white">화이트</option>
+                                    <option value="gray">그레이</option>
+                                    <option value="navy">네이비</option>
                                 </select>
                             </div>
                         </div>
@@ -74,17 +85,61 @@
                         <span class="origin">원산지-상세설명 참조</span>
                     </nav>
                     <div class="count">
-                        <button class="decrease">-</button>
-                        <input type="text" name="num" size="2" maxlength="4" value="1" readonly>
-                        <span><i class="fas fa-arrow-alt-circle-up up"></i></span>
-                        <span><i class="fas fa-arrow-alt-circle-down down"></i></span>
-                        <button class="increase">+</button>
-                    </div> 
-                    
-                    <div class="total">
-                        <span>27,000</span>
-                        총 상품금액
-                    </div>
+    <button class="decrease">-</button>
+    <input type="text" name="num" id="quantity" size="2" maxlength="4" value="1" readonly> <!-- 수정: ID 추가 -->
+    <span><i class="fas fa-arrow-alt-circle-up up"></i></span>
+    <span><i class="fas fa-arrow-alt-circle-down down"></i></span>
+    <button class="increase">+</button>
+</div>
+
+<div class="total">
+    <span><span id="totalPrice"><%= jjj.get(0).getItemPrice() %>원</span></span> <!-- 수정: ID 추가 -->
+    총 상품금액
+</div>
+<script type="text/javascript">
+    $(document).ready(function() {
+        // 초기 상품 가격 및 수량 설정
+        var itemPrice = <%= jjj.get(0).getItemPrice() %>;
+        var quantity = parseInt($("#quantity").val());
+        var totalPrice = itemPrice * quantity;
+        
+        // 총 상품금액을 업데이트하는 함수
+        function updateTotalPrice() {
+            quantity = parseInt($("#quantity").val());
+            totalPrice = itemPrice * quantity;
+            $("#totalPrice").text(totalPrice + "원");
+        }
+        
+        // 수량을 증가시키는 이벤트 리스너
+        $(".increase").click(function() {
+            quantity++;
+            $("#quantity").val(quantity);
+            updateTotalPrice();
+        });
+        
+        // 수량을 감소시키는 이벤트 리스너
+        $(".decrease").click(function() {
+            if (quantity > 1) {
+                quantity--;
+                $("#quantity").val(quantity);
+                updateTotalPrice();
+            }
+        });
+        
+        // 수량 입력란에 직접 값을 입력할 때
+        $("#quantity").change(function() {
+            quantity = parseInt($(this).val());
+            if (quantity < 1) {
+                quantity = 1;
+                $("#quantity").val(quantity);
+            }
+            updateTotalPrice();
+        });
+        
+        // 페이지 로딩 시 초기 총 상품금액 설정
+        $("#totalPrice").text(totalPrice + "원");
+    });
+</script>
                     <div class="button">
                         <input type="button" class="cart" value="장바구니" onclick="location.href='cart.html'">
                         <input type="button" class="order" value="바로결제" onclick="location.href='pay.html'">
@@ -106,6 +161,9 @@
                     시행령 제21조 2에 따라 지연일수에 대하여 전상법 시행령으로 정하는 이율을 곱하여 산정한 지연이자(“지연배상금”)를 신청할 수 있습니다. 아울러, 교환∙반품∙보증 및 결제대금의
                     환급신청은 [나의쇼핑정보]에서 하실 수 있으며, 자세한 문의는 개별 판매자에게 연락하여 주시기 바랍니다. </p>
             </article>
+            <%
+		ArrayList<AdstoreReviewDTO> kkk = adreviewlist.getAdreviewList();
+			%>
             <article class="review">
                 <nav>
                     <h1 class="re_re" id="ree">상품평</h1>
@@ -113,45 +171,78 @@
                 <ul>
                     <li class="re_per">
                      
-                            <h5 class="ratingstar4">나이키 남여공용 스포츠웨어 블랙,L</h5>
-                            <span class="re_id">kys****** 2023-09-01</span>
+                            <h5 class="ratingstar4">
+                            <%
+							out.println("<span class='product-name'>" + jjj.get(0).getItemName() + "</span>");
+						%>
+                            </h5>
+                            <span class="re_id">
+                            <%
+									out.println("<span>" + kkk.get(0).getItemBuyer() + "</span>");
+								%>
+							2023-09-01</span>
                         </div>
                         <h3>가볍고 시원하고</h3>
                         <p class="re_text">
-                            실내에서 운동하거나 야간에 야외에서 착용시에는 문제없고, 그렇다고 심하게 비치는 정도는 아닙니다만 체형이 드러나니 자신없는 저같은 분들은 한 사이즈 업! 가볍게 입기는 좋습니다. </p>
+                            <%
+									out.println("<span>" + kkk.get(0).getItemReviewText() + "</span>");
+								%> </p>
                     </li>
                     <li class="re_per">
                         <div>
-                            <h5 class="ratingstar4">나이키 남여공용 스포츠웨어 네이비,XL</h5>
-                            <span class="re_id">yuns****** 2023-09-01</span>
+                            <h5 class="ratingstar4"> <%
+							out.println("<span class='product-name'>" + jjj.get(0).getItemName() + "</span>");
+						%></h5>
+                            <span class="re_id"> <%
+									out.println("<span>" + kkk.get(1).getItemBuyer() + "</span>");
+								%> 2023-09-01</span>
                         </div>
                         <h3>나름 괜찮음...</h3>
-                        <p class="re_text"> 다른 리뷰들 처럼 옷이 되게 얇아서 몸이 비치기 때문에 밖에 입고 다니기는 좀 민망할 수 있을 것 같고 운동용으로 입기에 좋은 옷 같습니다,</p>
+                        <p class="re_text"> <%
+									out.println("<span>" + kkk.get(1).getItemReviewText() + "</span>");
+								%></p>
                     </li>
                     <li class="re_per">
                         <div>
-                            <h5 class="ratingstar4">나이키 남여공용 스포츠웨어 블랙,L</h5>
-                            <span class="re_id">seo****** 2023-09-01</span>
+                            <h5 class="ratingstar4"><%
+							out.println("<span class='product-name'>" + jjj.get(0).getItemName() + "</span>");
+						%></h5>
+                            <span class="re_id"><%
+									out.println("<span>" + kkk.get(2).getItemBuyer() + "</span>");
+								%> 2023-09-01</span>
                         </div>
                         <h3>나이키 왜이래</h3>
-                        <p class="re_text"> 나이키 티셔츠는 뒤로 갈수록 퇴보하는듯 전체적으로 신축성 통기성 모두 좋지않아 일상, 운동용 모두 부적절 장점이 없음 </p>
+                        <p class="re_text"><%
+									out.println("<span>" + kkk.get(2).getItemReviewText() + "</span>");
+								%> </p>
                     </li>
                     <li class="re_per">
                         <div>
-                            <h5 class="ratingstar4">나이키 남여공용 스포츠웨어 화이트,S</h5>
-                            <span class="re_id">jun****** 2023-08-30</span>
+                            <h5 class="ratingstar4"><%
+							out.println("<span class='product-name'>" + jjj.get(0).getItemName() + "</span>");
+						%></h5>
+                            <span class="re_id"><%
+									out.println("<span>" + kkk.get(3).getItemBuyer() + "</span>");
+								%> 2023-08-30</span>
                         </div>
                         <h3>사이즈 참고하세요.</h3>
-                        <p class="re_text"> 1업 더 하세요.
-                            보통 나이키 티셔츠 XL입고 이 제품도 XL로 구입했는데, 생각보다 신축성이 뛰어나지 않아서 운동할 때 조금 불편합니다. 특히 어깨부분이 불편하더군요. 얇기 때문에 꼭툭튀도 있습니다. 평소에 입기엔 문제 없는데 운동용이라면 무조건 업하셔야 합니다. </p>
+                        <p class="re_text"> <%
+									out.println("<span>" + kkk.get(3).getItemReviewText() + "</span>");
+								%> </p>
                     </li>
                     <li class="re_per">
                         <div>
-                            <h5 class="ratingstar4">나이키 남여공용 스포츠웨어 블랙,XL</h5>
-                            <span class="re_id">kks****** 2023-08-30</span>
+                            <h5 class="ratingstar4"><%
+							out.println("<span class='product-name'>" + jjj.get(0).getItemName() + "</span>");
+						%></h5>
+                            <span class="re_id"><%
+									out.println("<span>" + kkk.get(4).getItemBuyer() + "</span>");
+								%> 2023-08-30</span>
                         </div>
                         <h3>정사이즈로...</h3>
-                        <p class="re_text"> 한치수 작게(M) 주문했더니, 좀 타이트 하네요. </p>
+                        <p class="re_text"><%
+									out.println("<span>" + kkk.get(4).getItemReviewText() + "</span>");
+								%> </p>
                     </li>
                 </ul>
             </article>
