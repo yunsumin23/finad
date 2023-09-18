@@ -22,7 +22,7 @@
                         <div class="product-card">
                             <div><img class="product-img" src="img/adidas.png" alt="" /></div>
                             <div class="product-contents">
-                                <span class="product-name">어린이아디다스 져지</span><span class="product-price">89,350원</span>
+                                <span class="product-name">아디다스 져지</span><span class="product-price">89,350원</span>
                                 <div>
                                 </div>
                             </div>
