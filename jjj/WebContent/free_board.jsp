@@ -23,6 +23,7 @@
 	src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <script src="js/free_board.js"></script>
 </head>
+
 <body>
 	<jsp:include page="header_login.jsp"></jsp:include>
 	<jsp:useBean id="boardList" class="com.project.jjj.FreeBoard"
