@@ -82,6 +82,7 @@
                 <input type="button" value="기업 회원" id="btn_agree2" onclick="location.href='signup_company.html'">
             </div>
         </div>
+        
        <jsp:include page="footer.jsp"></jsp:include>
     </body>
 
