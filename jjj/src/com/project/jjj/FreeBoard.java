@@ -13,7 +13,7 @@ public class FreeBoard {
 		Connection connection = null;
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
-			connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/project?characterEncoding=utf-8", "root", "simpsons514!!");
+			connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/project?characterEncoding=utf-8", "root", "simpsons514!");
 		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -49,7 +49,7 @@ public class FreeBoard {
 		
 		try {
 			statement = connection.createStatement();
-			resultSet = statement.executeQuery("select * from ads.freeboard;");
+			resultSet = statement.executeQuery("select * from project.freeboard;");
 			while(resultSet.next()) {
 				BoardDTO boardDTO = new BoardDTO();
 				boardDTO.setNumber(resultSet.getInt("freeboardnumber"));

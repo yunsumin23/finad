@@ -12,14 +12,6 @@
 <!-- 8 - 조회수, 추천수, 댓글수 구현 -->
 <!-- 9 - 글작성 폼에서 폰트조절 가능하게 못하냐 -->
 <!-- 10 - 글 목록에서 15,30,50개 단위로 보기랑 다음페이지 가는 버튼 만들기  -->
-<% 
-String id = (String) session.getAttribute("id");
-String password = (String) session.getAttribute("password");
-String type = (String) session.getAttribute("type");
-%>
-
-
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -32,7 +24,20 @@ String type = (String) session.getAttribute("type");
 </head>
 
 <body>
-	<jsp:include page="header_login.jsp"></jsp:include>
+	<%
+	String id = (String) session.getAttribute("id");
+	String password = (String) session.getAttribute("password");
+	String type = (String) session.getAttribute("type");
+	if (id == null && password == null) {
+%>
+<jsp:include page="header_login.jsp"></jsp:include>
+<%
+	} else {
+		%>
+<jsp:include page="header_logout.jsp"></jsp:include>
+		<%
+	}
+%>
 	<jsp:useBean id="boardList" class="com.project.jjj.FreeBoard"
 		scope="page" />
 

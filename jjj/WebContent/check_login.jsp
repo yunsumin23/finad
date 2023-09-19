@@ -46,7 +46,7 @@
 %>
 		<script>
 		alert("로그인에 성공했습니다.");
-		location.href="main_logout.jsp";
+		location.href="main.jsp";
 		</script>
 <% 
 		} else {

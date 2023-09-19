@@ -31,6 +31,6 @@ function logout() {
 	$.get("header_logout.jsp", function(data) {
 	    // 로그아웃 성공 시 실행할 코드
 	    alert("로그아웃되었습니다.");
-	    window.location.href = "login.html"; // 로그인 페이지로 리디렉션
+	    window.location.href = "login.jsp"; // 로그인 페이지로 리디렉션
 	  });
 }

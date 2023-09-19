@@ -3,15 +3,6 @@
 <%@ page import="com.project.jjj.Influ_info"%>
 <%@ page import="com.project.jjj.Mypage_influ" %>
 <jsp:useBean id="session1" class="com.project.jjj.Mypage"></jsp:useBean>
-<%
-	String id = (String) session.getAttribute("id");
-	String password = (String) session.getAttribute("password");
-	if (id == null && password == null) {
-		response.sendRedirect("login.html");
-	}
-	Influ_info user = session1.influ(id);
-	Mypage_influ user1 = session1.influ_mypage(id);
-%>
 
 <!DOCTYPE html>
 <html>
@@ -25,7 +16,23 @@
 <script type="text/javascript" src="js/mypage_influ.js"></script>
 </head>
 <body>
+<%
+	String id = (String) session.getAttribute("id");
+	String password = (String) session.getAttribute("password");
+	String type = (String) session.getAttribute("type");
+	if (id == null && password == null) {
+		response.sendRedirect("login.jsp");
+%>
+<jsp:include page="header_login.jsp"></jsp:include>
+<%
+	} else {
+		%>
 <jsp:include page="header_logout.jsp"></jsp:include>
+		<%
+	}
+	Influ_info user = session1.influ(id);
+	Mypage_influ user1 = session1.influ_mypage(id);
+%>
 
 	<div class="main">
 		<h1>마이페이지</h1>
