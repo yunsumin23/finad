@@ -19,10 +19,10 @@ String type = (String) session.getAttribute("type");
 <body>
 	<header>
 		<div class="top_div">
-			<a href="main.jsp"><img src="img/logo.png" alt="로고"
+			<a href="main_login.jsp"><img src="img/logo.png" alt="로고"
 				id="main_logo"></a>
 			<div class="top_button">
-				<a href="login.html"><img src="img/login.png" alt=""></a> <a
+				<a href="login.jsp"><img src="img/login.png" alt=""></a> <a
 					href="signup_agree.html"><img src="img/signup.png" alt=""></a>
 				<a href="login.jsp"><img src="img/mypage.png" alt=""></a>
 			</div>
@@ -39,9 +39,9 @@ String type = (String) session.getAttribute("type");
 				<ul class="nav_ul">
 					<li class="nav_li01"><a href="company_written_list.html" target="_blank">광고게시판</a></li>
 					<li class="nav_li02"><a href="" target="_blank">크리에이터 게시판</a></li>
-					<li class="nav_li03"><a href="" target="_blank">자유게시판</a></li>
+					<li class="nav_li03"><a href="free_board.jsp" target="_blank">자유게시판</a></li>
 					<li class="nav_li04"><a href="" target="_blank">광고현황</a></li>
-					<li class="nav_li05"><a href="adstore.html" target="_blank">ADStore</a></li>
+					<li class="nav_li05"><a href="adstore_login.jsp" target="_blank">ADStore</a></li>
 				</ul>
 				<div class="category_div">
 					<div class="gnb_div">

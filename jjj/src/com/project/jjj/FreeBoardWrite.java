@@ -11,7 +11,7 @@ public class FreeBoardWrite {
 		
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
-			connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/ads", "root", "s2m2j52120!");
+			connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/project", "root", "simpsons514!");
 			statement = connection.createStatement();
 			statement.executeUpdate("insert into freeboard values ('"
 			+ boardDTO.getName() + "','"

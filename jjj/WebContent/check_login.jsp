@@ -45,7 +45,8 @@
 			session.setAttribute("type", type);
 %>
 		<script>
-		location.href="loginsuc.jsp";
+		alert("로그인에 성공했습니다.");
+		location.href="main_logout.jsp";
 		</script>
 <% 
 		} else {
