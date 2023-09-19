@@ -24,7 +24,7 @@
 </head>
 
 <body>
-	<%
+<%
 	String id = (String) session.getAttribute("id");
 	String password = (String) session.getAttribute("password");
 	String type = (String) session.getAttribute("type");
