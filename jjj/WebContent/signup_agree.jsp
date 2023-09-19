@@ -1,31 +1,30 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="ko">
-
+<html>
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>회원가입</title>
-        <link rel="stylesheet" href="css/signup_agree.css" type="text/css">
+        <title>회원가입 동의</title>
+          <link rel="stylesheet" href="css/signup_agree.css" type="text/css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
         <script src="js/signup_agree.js" type="text/javascript"></script>
     </head>
-
     <body>
-       <%
-    String id = (String) session.getAttribute("id");
-    String password = (String) session.getAttribute("password");
-    String type = (String) session.getAttribute("type");
-    if (id == null && password == null) {
+<%
+	String id = (String) session.getAttribute("id");
+	String password = (String) session.getAttribute("password");
+	String type = (String) session.getAttribute("type");
+	if (id == null && password == null) {
 %>
 <jsp:include page="header_login.jsp"></jsp:include>
 <%
-    } else {
-        %>
+	} else {
+		%>
 <jsp:include page="header_logout.jsp"></jsp:include>
-        <%
-    }
+		<%
+	}
 %>
         <div id="signup_main">
             <p class="ex_p">약관 동의</p>
@@ -82,7 +81,7 @@
                 <input type="button" value="기업 회원" id="btn_agree2" onclick="location.href='signup_company.html'">
             </div>
         </div>
-        
+
        <jsp:include page="footer.jsp"></jsp:include>
     </body>
 

@@ -243,11 +243,10 @@ footer p {
     border-radius: 3px;
     color: rgb(141, 140, 140);
     overflow: scroll;
-
+}
 .ex_p{
     color: rgb(255, 72, 72);
 }
-
 
 .explain{
     font-size: 20px;
