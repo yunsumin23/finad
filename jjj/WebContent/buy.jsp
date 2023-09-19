@@ -17,18 +17,18 @@
 
 <body>
 <%
-	String id = (String) session.getAttribute("id");
-	String password = (String) session.getAttribute("password");
-	String type = (String) session.getAttribute("type");
-	if (id == null && password == null) {
+    String id = (String) session.getAttribute("id");
+    String password = (String) session.getAttribute("password");
+    String type = (String) session.getAttribute("type");
+    if (id == null && password == null) {
 %>
 <jsp:include page="header_login.jsp"></jsp:include>
 <%
-	} else {
-		%>
+    } else {
+        %>
 <jsp:include page="header_logout.jsp"></jsp:include>
-		<%
-	}
+        <%
+    }
 %>
     
     <div class="orderform" id="orderform" name="orderform" action="">

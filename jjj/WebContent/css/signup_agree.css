@@ -242,8 +242,7 @@ footer p {
     border: 1px solid rgb(190, 190, 190);
     border-radius: 3px;
     color: rgb(141, 140, 140);
-    overflow: hide;
-}
+    overflow: scroll;
 
 .ex_p{
     color: rgb(255, 72, 72);
