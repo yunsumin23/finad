@@ -34,7 +34,7 @@ if (request.getParameter("logout") != null) {
 			<div class="top_button">
 				<a href="#" onclick="logout()"><img src="img/logout.png" alt=""></a>
 
-				<a href="signup_agree.html"><img src="img/signup.png" alt=""></a>
+				<a href="signup_agree.jsp"><img src="img/signup.png" alt=""></a>
 			<%
 				if(type.equals("nomal")) {
 					out.println("<a href='mypage_nomal.jsp'><img src='img/mypage.png' alt=''></a>");
