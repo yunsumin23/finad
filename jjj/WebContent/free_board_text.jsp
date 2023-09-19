@@ -29,7 +29,20 @@
 		}
 		
 	%>
-	<jsp:include page="header_login.jsp"></jsp:include>
+<%
+	String id = (String) session.getAttribute("id");
+	String password = (String) session.getAttribute("password");
+	String type = (String) session.getAttribute("type");
+	if (id == null && password == null) {
+%>
+<jsp:include page="header_login.jsp"></jsp:include>
+<%
+	} else {
+		%>
+<jsp:include page="header_logout.jsp"></jsp:include>
+		<%
+	}
+%>
 
 	<div id="text_header">
 		<h1>자유게시판</h1>

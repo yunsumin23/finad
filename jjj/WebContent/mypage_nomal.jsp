@@ -2,14 +2,6 @@
 	pageEncoding="UTF-8"%>
 <%@ page import="com.project.jjj.Nomal_info"%>
 <jsp:useBean id="session1" class="com.project.jjj.Mypage"></jsp:useBean>
-<%
-	String id = (String) session.getAttribute("id");
-	String password = (String) session.getAttribute("password");
-	if (id == null && password == null) {
-		response.sendRedirect("login.html");
-	}
-	Nomal_info user = session1.nomal_user(id);
-%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -21,7 +13,21 @@
 <script type="text/javascript" src="js/mypage_nomal.js"></script>
 </head>
 <body>
-	<jsp:include page="header_logout.jsp"></jsp:include>
+<%
+	String id = (String) session.getAttribute("id");
+	String password = (String) session.getAttribute("password");
+	String type = (String) session.getAttribute("type");
+	Nomal_info user = session1.nomal_user(id);
+	if (id == null && password == null) {
+%>
+<jsp:include page="header_login.jsp"></jsp:include>
+<%
+	} else {
+		%>
+<jsp:include page="header_logout.jsp"></jsp:include>
+		<%
+	}
+%>
 
 	<div class="main">
 		<h1>마이페이지</h1>

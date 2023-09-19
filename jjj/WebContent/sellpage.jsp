@@ -16,7 +16,20 @@
     </head>
 
     <body>
+<%
+	String id = (String) session.getAttribute("id");
+	String password = (String) session.getAttribute("password");
+	String type = (String) session.getAttribute("type");
+	if (id == null && password == null) {
+%>
 <jsp:include page="header_login.jsp"></jsp:include>
+<%
+	} else {
+		%>
+<jsp:include page="header_logout.jsp"></jsp:include>
+		<%
+	}
+%>
 <jsp:useBean id="adstorelist" class="com.project.jjj.Adstore" scope="page" />
 <jsp:useBean id="adreviewlist" class="com.project.jjj.AdstoreReview" scope="page" />
 		
