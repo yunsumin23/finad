@@ -17,11 +17,6 @@ public class Mypage {
 		Nomal_info nomal_user = new Nomal_info();
 		try {
 			getcon();
-			if(connection == null) {
-//				throw는 예외처리를 강제로 시키는거고
-//				throws는 메소드 옆에 달아서 해당 메소드가 어떤 예외를 던질 수 있는지를 선언하는 데 사용한다!
-				throw new Exception("데이터베이스 연결 안됨.");
-			}
 //			java에서 jdbc를 사용해서 데이터베이스와 상호 작용할 때 사용되는 코드
 			statement = connection.createStatement();
 			resultSet = statement.executeQuery("select * from nomal_user where nomalUserId = '" + id + "';");
@@ -45,15 +40,14 @@ public class Mypage {
 	
 //	인플루언서 데이터 추출
 	public Influ_info influ(String id) {
+		System.out.println(id);
 		Influ_info influ_info = new Influ_info();
 		try {
 			getcon();
-			if(connection == null) {
-				throw new Exception("데이터베이스 연결 안됨.");
-			}
 			statement = connection.createStatement();
 			resultSet = statement.executeQuery("select * from user where influUserId = '" + id + "';");
-			if(resultSet.next()) {
+//			resultSet = statement.executeQuery("select * from user where influUserId = 'hk';");
+			while(resultSet.next()) {
 				influ_info.setNickname(resultSet.getString("nickName"));
 				influ_info.setName(resultSet.getString("name"));
 				influ_info.setEmail(resultSet.getString("eMail"));
@@ -69,16 +63,15 @@ public class Mypage {
 				// TODO: handle exception
 			}
 		}
+		System.out.println(influ_info.getNickname());
 		return influ_info;
 	}
-	
+
+//	인플루언서 마이페이지 추가 정보
 	public Mypage_influ influ_mypage(String id) {
 		Mypage_influ mypage_influ = new Mypage_influ();
 		try {
 			getcon();
-			if(connection == null) {
-				throw new Exception();
-			}
 			statement = connection.createStatement();
 			resultSet = statement.executeQuery("select * from user_mypage where influUserId = '" + id + "';");
 			if(resultSet.next()) {
@@ -121,9 +114,6 @@ public class Mypage {
 		Company_info company_info = new Company_info();
 		try {
 			getcon();
-			if(connection == null) {
-				throw new Exception("데이터베이스 연결안됨.");
-			}
 			statement = connection.createStatement();
 			resultSet = statement.executeQuery("select * from company where companyId = '" + id + "';");
 			if(resultSet.next()) {
@@ -152,10 +142,15 @@ public class Mypage {
 	public void getcon() {
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
-			connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/project?characterEncoding=utf-8", "root", "xhddlf336!");
-			
+			connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/project?characterEncoding=utf-8", "root", "simpsons514!");
+			if(connection == null) {
+//				throw는 예외처리를 강제로 시키는거고
+//				throws는 메소드 옆에 달아서 해당 메소드가 어떤 예외를 던질 수 있는지를 선언하는 데 사용한다!
+				throw new Exception("데이터베이스 연결 안됨.");
+			}
 		} catch (Exception e) {
 			// TODO: handle exception
+			System.out.println(e);
 		}
 	}
 //	클로즈 전부 모은거임 finally 에 있는 트라이에 이 메소드 호출하면 됨.

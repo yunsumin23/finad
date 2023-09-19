@@ -2,6 +2,7 @@ $(document).ready(function () {
     $(".gnb").hide();
     $(".gnbbox").hide();
     $(".img_info02").hide();
+    $(".info_ul").hide();
     $(".category_text").mouseenter(function () {
         $(".gnb").stop().slideDown();
         $(".gnbbox").stop().slideDown();
@@ -13,7 +14,10 @@ $(document).ready(function () {
     $(".img_info_main").mouseenter(function () {
         $(".img_info02").stop().slideDown();
     });
-    
+    $("#showInfo").click(function() {
+    	 $(".info_ul").show();
+    	 $(this).hide();
+	});
 });
 
 function zoomIn(event) {
