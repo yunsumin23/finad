@@ -23,7 +23,7 @@ String type = (String) session.getAttribute("type");
 				id="main_logo"></a>
 			<div class="top_button">
 				<a href="login.jsp"><img src="img/login.png" alt=""></a> <a
-					href="signup_agree.html"><img src="img/signup.png" alt=""></a>
+					href="signup_agree.jsp"><img src="img/signup.png" alt=""></a>
 				<a href="login.jsp"><img src="img/mypage.png" alt=""></a>
 			</div>
 		</div>
