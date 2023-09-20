@@ -39,7 +39,7 @@ String type = (String) session.getAttribute("type");
 				<ul class="nav_ul">
 					<li class="nav_li01"><a href="company_written_list.html" target="_blank">광고게시판</a></li>
 					<li class="nav_li02"><a href="" target="_blank">크리에이터 게시판</a></li>
-					<li class="nav_li03"><a href="free_board_text.jsp" target="_blank">자유게시판</a></li>
+					<li class="nav_li03"><a href="free_board.jsp" target="_blank">자유게시판</a></li>
 					<li class="nav_li04"><a href="" target="_blank">광고현황</a></li>
 					<li class="nav_li05"><a href="adstore_login.jsp" target="_blank">ADStore</a></li>
 				</ul>
