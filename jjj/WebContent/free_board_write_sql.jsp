@@ -30,7 +30,7 @@
         
         try{
             Class.forName("com.mysql.jdbc.Driver");
-            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/ads?characterEncoding=utf-8", "root", "s2m2j52120!");
+            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/project?characterEncoding=utf-8", "root", "123456");
             if(connection == null){
                 throw new Exception("데이터베이스 연결 안됨<br>");
             }
