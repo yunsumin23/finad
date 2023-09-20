@@ -202,8 +202,11 @@ input {
 textarea {
 	width: 1300px;
 	height: 500px;
-	padding: 3px
+	padding: 3px;
+	resize: none;
 }
+.ck-editor__editable { height: 400px; }
+.ck-content { font-size: 12px; }
 
 /* 푸터 시작 */
 

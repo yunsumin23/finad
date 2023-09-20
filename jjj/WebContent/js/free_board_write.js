@@ -9,6 +9,9 @@ $(document).ready(function() {
         $(".gnb").stop().slideUp();
         $(".gnbbox").stop().slideUp();
     });
+    ClassicEditor.create( document.querySelector( '#editor' ), {
+        language: "ko"
+    });
 });
 
 function zoomIn(event) {

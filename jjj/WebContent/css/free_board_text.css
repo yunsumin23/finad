@@ -224,6 +224,14 @@ td{
 #text {
 	padding-bottom: 300px;
 }
+#free_board_btn{
+	margin-top: 10px;
+	margin-left: 955px;
+}
+#free_board_btn input {
+	width: 55px;
+	height: 25px;
+}
 /* 푸터 시작 */
 
 footer {

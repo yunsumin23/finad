@@ -67,12 +67,13 @@
 					out.println("<td colspan='6' id='text'>" + boardDTO.getText() + "</td>");
 				%>
 			</tr>
-
 		</table>
+		<div id="free_board_btn">
+			<form action = "free_board.jsp">
+				<input type="submit" value="목록">
+			</form>
+		</div>
 	</div>
-
-
-
 	<jsp:include page="footer.jsp"></jsp:include>
 </body>
 </html>

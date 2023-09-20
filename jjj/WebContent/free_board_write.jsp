@@ -6,14 +6,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>free_board_text.jsp</title>
-<link rel="stylesheet" href="css/free_board_write.css">
-<script type="text/javascript"
-	src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-<script type="text/javascript" src="js/free_board.js"></script>
-<jsp:useBean id="boardList" class="com.project.jjj.FreeBoard"
-	scope="page" />
+    <meta charset="UTF-8">
+    <title>free_board_text.jsp</title>
+    <link rel="stylesheet" href="css/free_board_write.css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.ckeditor.com/ckeditor5/34.0.0/classic/ckeditor.js"></script>
+    <script type="text/javascript" src="https://cdn.ckeditor.com/ckeditor5/34.0.0/classic/translations/ko.js"></script>
+    <script type="text/javascript" src="js/free_board_write.js"></script>
+    <jsp:useBean id="boardList" class="com.project.jjj.FreeBoard" scope="page" />
 </head>
 <body>
 <%
@@ -30,13 +30,15 @@
 		<%
 	}
 %>
+
 	<div id="write_container">
 		<form action="free_board_write_sql.jsp" name="form" onsubmit="return check_name();">
 			<input type="text" name="input_name" placeholder="제목">
-			<textarea name="input_text"></textarea>
+			<textarea name="input_text" id="editor"></textarea>
 			<input type="submit" value="완료" placeholder="내용">
 		</form>
 	</div>
+	
 	<jsp:include page="footer.jsp"></jsp:include>
 </body>
 </html>

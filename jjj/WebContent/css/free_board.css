@@ -18,9 +18,18 @@ header a,
 nav a {
     text-decoration: none;
 }
-
 a {
     text-decoration: none;
+    color: black;
+}
+a:visited { 
+	color: #770088; 
+}
+a:hover { 
+	
+}
+a:active { 
+	color: red; 
 }
 
 .top_button img {
@@ -232,7 +241,7 @@ table th:nth-child(6) {
 }
 #free_board_write_btn{
 	margin-top: 10px;
-	margin-left: 830px;
+	margin-left: 955px;
 }
 #free_board_write_btn input {
 	width: 55px;

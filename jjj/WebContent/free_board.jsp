@@ -42,7 +42,7 @@
 		scope="page" />
 
 	<div id="table_header">
-		<h1>게시판 목록</h1>
+		<h1>자유게시판</h1>
 		<table>
 			<tr id="sss">
 				<th>번호</th>
@@ -60,7 +60,7 @@
 					String name = boardDTO.get(i).getName();
 					String date = boardDTO.get(i).getDate();
 					out.println("<tr>");
-					out.println("<td><a href='free_board_text.jsp?number=" + number + "'>" + number + "</td>");
+					out.println("<td>" + number + "</td>");
 					out.println("<td><a href='free_board_text.jsp?number=" + number + "'>" + name + "</td>");
 					out.println("<td>" + writer + "</td>");
 					out.println("<td>" + date + "</td>");
