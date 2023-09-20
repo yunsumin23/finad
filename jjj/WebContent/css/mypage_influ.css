@@ -274,6 +274,14 @@ hr {
 	color: #FF3A56;
 }
 
+.gender_type {
+	width: 260px;
+}
+
+.sub_age {
+	width: 260px;
+}
+
 h2 {
 	margin-top:50px;
 	width:75px;

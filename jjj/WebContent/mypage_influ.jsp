@@ -11,6 +11,7 @@
 <link href="css/mypage_influ.css" rel="stylesheet" type="text/css">
 <script type="text/javascript"
 	src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script type="text/javascript" src="js/mypage_influ.js"></script>
 </head>
@@ -83,24 +84,17 @@
 			<div class="div_data2">
 				<div>
 					<ul>
-					<% 
-						out.println("<li><p class='count-num' data-count='" + user1.getThravgSub() +"'>0</p><br>최근 30일 구독자 수</li>");
-						out.println("<li><p class='count-num' data-count='" + user1.getThravgViewer() + "'>0</p><br>최근 30일 시청자 수</li>");
-						out.println("<li><p class='count-num' data-count='" + user1.getThravgHit() + "'>0</p><br>최근 30일 평균 조회수</li>");
-						out.println("<li><p></p><br>구독자 성비</li>");
-						out.println("<li><p></p><br>구독자 연령대</li>");
-					%>
+						<%
+							out.println(
+									"<li><p class='count-num' data-count='" + user1.getThravgSub() + "'>0</p><br>최근 30일 구독자 수</li>");
+							out.println(
+									"<li><p class='count-num' data-count='" + user1.getThravgViewer() + "'>0</p><br>최근 30일 시청자 수</li>");
+							out.println(
+									"<li><p class='count-num' data-count='" + user1.getThravgHit() + "'>0</p><br>최근 30일 평균 조회수</li>");
+							out.println("<li><canvas class='gender_type></canvas><br>구독자 성비</li>");
+							out.println("<li><canvas class='sub_age'></canvas><br>구독자 연령대</li>");
+						%>
 					</ul>
-					<%= user1.getThravgSub() %>
-					<%= user1.getThravgViewer() %>
-					<%= user1.getThravgHit() %>
-					<%= user1.getMan_ratio() %>
-					<%= user1.getWoman_ratio() %>
-					<%= user1.getTenAge()%>
-					<%= user1.getTweAge()%>
-					<%= user1.getThrAge()%>
-					<%= user1.getForAge()%>
-					<%= user1.getFifAge()%>
 				</div>
 			</div>
 			<hr>
