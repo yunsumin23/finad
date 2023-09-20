@@ -91,8 +91,11 @@
 									"<li><p class='count-num' data-count='" + user1.getThravgViewer() + "'>0</p><br>최근 30일 시청자 수</li>");
 							out.println(
 									"<li><p class='count-num' data-count='" + user1.getThravgHit() + "'>0</p><br>최근 30일 평균 조회수</li>");
-							out.println("<li><canvas class='gender_type></canvas><br>구독자 성비</li>");
-							out.println("<li><canvas class='sub_age'></canvas><br>구독자 연령대</li>");
+							out.println("<li><canvas class='gender_type' data-gender1='" + user1.getMan_ratio() + "' data-gender2='"
+									+ user1.getWoman_ratio() + "'></canvas><br>구독자 성비</li>");
+							out.println("<li><canvas class='sub_age' data-age1='" + user1.getTenAge() + "' data-age2='"
+									+ user1.getTweAge() + "' data-age3='" + user1.getThrAge() + "' data-age4='" + user1.getForAge()
+									+ "' data-age5='" + user1.getFifAge() + "'></canvas><br>구독자 연령대</li>");
 						%>
 					</ul>
 				</div>

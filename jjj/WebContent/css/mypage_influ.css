@@ -240,7 +240,9 @@ h1 {
 
 hr {
 	width: 1300px;
-	margin: 15px auto;
+	margin-top: 15px;
+	margin-right: auto;
+	margin-left:auto;
 	border: 2px solid #014D81;
 }
 
@@ -306,6 +308,12 @@ h2 {
 	font-size: 20px;
 	margin-top: 15px;
 }
+
+
+
+
+
+
 
 
 footer {
