@@ -52,7 +52,7 @@
 				</div>
 				<div class="div_sns">
 					<ul>
-						<% 
+						<%
 							out.println("<li><a href='" + user1.getYoutuLink()
 									+ "' target='_blank'><img alt='' src='img/youtube.png'></a></li>");
 							out.println("<li><a href='" + user1.getLiveBcLink()
@@ -83,14 +83,24 @@
 			<div class="div_data2">
 				<div>
 					<ul>
-						<%
-							out.println("<li><canvas class='sub'></canvas>최근 30일 구독자 수</li>");
-							out.println("<li><canvas class='view'></canvas>최근 30일 시청자 수</li>");
-							out.println("<li><canvas class='hits'></canvas>최근 30일 평균 조회수</li>");
-							out.println("<li><canvas class='ratio'></canvas>구독자 성비</li>");
-							out.println("<li><canvas class='age'></canvas>구독자 연령대</li>");
-						%>
+					<% 
+						out.println("<li><p class='count-num' data-count='" + user1.getThravgSub() +"'>0</p><br>최근 30일 구독자 수</li>");
+						out.println("<li><p class='count-num' data-count='" + user1.getThravgViewer() + "'>0</p><br>최근 30일 시청자 수</li>");
+						out.println("<li><p class='count-num' data-count='" + user1.getThravgHit() + "'>0</p><br>최근 30일 평균 조회수</li>");
+						out.println("<li><p></p><br>구독자 성비</li>");
+						out.println("<li><p></p><br>구독자 연령대</li>");
+					%>
 					</ul>
+					<%= user1.getThravgSub() %>
+					<%= user1.getThravgViewer() %>
+					<%= user1.getThravgHit() %>
+					<%= user1.getMan_ratio() %>
+					<%= user1.getWoman_ratio() %>
+					<%= user1.getTenAge()%>
+					<%= user1.getTweAge()%>
+					<%= user1.getThrAge()%>
+					<%= user1.getForAge()%>
+					<%= user1.getFifAge()%>
 				</div>
 			</div>
 			<hr>
@@ -104,11 +114,11 @@
 			</div>
 			<h2>소개글</h2>
 			<div class="text">
-			<% 
-				out.println(user1.getIntroduc());
-			%>
+				<%
+					out.println(user1.getIntroduc());
+				%>
 			</div>
-<!-- 			<form action="" method="post">
+			<!-- 			<form action="" method="post">
 				<input type="text" name="text" class="text">
 			</form> -->
 			<form action="" method="post">

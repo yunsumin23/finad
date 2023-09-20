@@ -254,11 +254,6 @@ hr {
 	padding: 7px
 }
 
-.div_data2 li{
-	width: 260px;
-	text-align: center;
-}
-
 .div_data div:nth-child(1) {
 	border-right: 3px solid #014D81;
 }
@@ -267,6 +262,16 @@ hr {
 	display: flex;
 	justify-content: space-between;
 	margin-top: 50px;
+}
+
+.div_data2 li{
+	width: 260px;
+	text-align: center;
+}
+
+.div_data2 p {
+	font-size: 40px;
+	color: #FF3A56;
 }
 
 h2 {

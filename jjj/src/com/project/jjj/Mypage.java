@@ -82,14 +82,8 @@ public class Mypage {
 				mypage_influ.setIntroduc(resultSet.getString("introduction"));
 				mypage_influ.setAvgviewers(resultSet.getInt("avgviewers"));
 				mypage_influ.setThravgSub(resultSet.getInt("30avgSub"));
-				mypage_influ.setTweavgSub(resultSet.getInt("20avgSub"));
-				mypage_influ.setTeavgSub(resultSet.getInt("10avgSub"));
 				mypage_influ.setThravgViewer(resultSet.getInt("30avgViewer"));
-				mypage_influ.setTweavgViewer(resultSet.getInt("20avgViewer"));
-				mypage_influ.setTenavgViewer(resultSet.getInt("10avgViewer"));
 				mypage_influ.setThravgHit(resultSet.getInt("30avgHits"));
-				mypage_influ.setTweavgHit(resultSet.getInt("20avgHits"));
-				mypage_influ.setTenavgHit(resultSet.getInt("10avgHits"));
 				mypage_influ.setMan_ratio(resultSet.getDouble("man_ratio"));
 				mypage_influ.setWoman_ratio(resultSet.getDouble("woman_ratio"));
 				mypage_influ.setTenAge(resultSet.getDouble("ageAvg10"));

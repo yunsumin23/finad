@@ -2,7 +2,7 @@ package com.project.jjj;
 
 public class Mypage_influ {
 	private String image,youtuLink,liveBcLink,snsLink,introduc;
-	int subscri, avgviewers, thravgSub, tweavgSub, tenavgSub, thravgViewer, tweavgViewer, tenavgViewer, thravgHit, tweavgHit, tenavgHit;
+	int subscri, avgviewers, thravgSub, thravgViewer, thravgHit;
 	double man_ratio, woman_ratio, tenAge, tweAge, thrAge, forAge, fifAge;
 	public String getImage() {
 		return image;
@@ -52,53 +52,17 @@ public class Mypage_influ {
 	public void setThravgSub(int thravgSub) {
 		this.thravgSub = thravgSub;
 	}
-	public int getTweavgSub() {
-		return tweavgSub;
-	}
-	public void setTweavgSub(int tweavgSub) {
-		this.tweavgSub = tweavgSub;
-	}
-	public int getTeavgSub() {
-		return tenavgSub;
-	}
-	public void setTeavgSub(int tenavgSub) {
-		this.tenavgSub = tenavgSub;
-	}
 	public int getThravgViewer() {
 		return thravgViewer;
 	}
 	public void setThravgViewer(int thravgViewer) {
 		this.thravgViewer = thravgViewer;
 	}
-	public int getTweavgViewer() {
-		return tweavgViewer;
-	}
-	public void setTweavgViewer(int tweavgViewer) {
-		this.tweavgViewer = tweavgViewer;
-	}
-	public int getTenavgViewer() {
-		return tenavgViewer;
-	}
-	public void setTenavgViewer(int tenavgViewer) {
-		this.tenavgViewer = tenavgViewer;
-	}
 	public int getThravgHit() {
 		return thravgHit;
 	}
 	public void setThravgHit(int thravgHit) {
 		this.thravgHit = thravgHit;
-	}
-	public int getTweavgHit() {
-		return tweavgHit;
-	}
-	public void setTweavgHit(int tweavgHit) {
-		this.tweavgHit = tweavgHit;
-	}
-	public int getTenavgHit() {
-		return tenavgHit;
-	}
-	public void setTenavgHit(int tenavgHit) {
-		this.tenavgHit = tenavgHit;
 	}
 	public double getMan_ratio() {
 		return man_ratio;
