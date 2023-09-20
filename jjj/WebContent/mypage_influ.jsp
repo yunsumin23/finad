@@ -52,7 +52,7 @@
 				</div>
 				<div class="div_sns">
 					<ul>
-						<%
+						<% 
 							out.println("<li><a href='" + user1.getYoutuLink()
 									+ "' target='_blank'><img alt='' src='img/youtube.png'></a></li>");
 							out.println("<li><a href='" + user1.getLiveBcLink()
@@ -103,9 +103,14 @@
 				</ul>
 			</div>
 			<h2>소개글</h2>
-			<form action="" method="post">
+			<div class="text">
+			<% 
+				out.println(user1.getIntroduc());
+			%>
+			</div>
+<!-- 			<form action="" method="post">
 				<input type="text" name="text" class="text">
-			</form>
+			</form> -->
 			<form action="" method="post">
 				<input type="submit" name="submit" value="광고진행사항" class="submit">
 			</form>

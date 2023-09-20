@@ -79,6 +79,7 @@ public class Mypage {
 				mypage_influ.setYoutuLink(resultSet.getString("youtubeLink"));
 				mypage_influ.setLiveBcLink(resultSet.getString("liveBroadcastLink"));
 				mypage_influ.setSnsLink(resultSet.getString("snsLink"));
+				mypage_influ.setIntroduc(resultSet.getString("introduction"));
 				mypage_influ.setAvgviewers(resultSet.getInt("avgviewers"));
 				mypage_influ.setThravgSub(resultSet.getInt("30avgSub"));
 				mypage_influ.setTweavgSub(resultSet.getInt("20avgSub"));

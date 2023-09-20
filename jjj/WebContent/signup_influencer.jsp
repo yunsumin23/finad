@@ -45,7 +45,7 @@
 			for(int j = 0; j < category.length; j++) {
 				category2 += category[j];
 				if (j < category.length - 1) {
-					category2 += ",";
+					category2 += "#";
 	            }
 			}
 		}
