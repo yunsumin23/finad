@@ -43,10 +43,10 @@
 			<a href="sellpage.jsp" target="_blank">
 				<div class="product-card">
 					<div>
-						<img class="product-img" src="img/niket1.png" alt=""
-							onmouseenter="zoomIn(event)" onmouseleave="zoomOut(event)">
+							<% 
+							out.println("<img class='product-img' src='img/" + jjj.get(0).getItemImage() + "' + alt=''>");
+							%>
 					</div>
-
 					<div class="product-contents">
 						<%
 							out.println("<span class='product-name'>" + jjj.get(0).getItemName() + "</span><span class='product-price'>"
@@ -62,11 +62,12 @@
 						</div>
 					</div>
 				</div>
-			</a> <a href="">
+			</a> <a href="sellpage.jsp">
 				<div class="product-card">
 					<div>
-						<img class="product-img" src="img/bag.png" alt=""
-							onmouseenter="zoomIn(event)" onmouseleave="zoomOut(event)">
+						<% 
+							out.println("<img class='product-img' src='img/" + jjj.get(1).getItemImage() + "' + alt=''>");
+							%>
 					</div>
 					<div class="product-contents">
 						<%
@@ -86,8 +87,9 @@
 			</a> <a href="">
 				<div class="product-card">
 					<div>
-						<img class="product-img" src="img/belt.png" alt=""
-							onmouseenter="zoomIn(event)" onmouseleave="zoomOut(event)">
+							<% 
+							out.println("<img class='product-img' src='img/" + jjj.get(2).getItemImage() + "' + alt=''>");
+							%>
 					</div>
 					<div class="product-contents">
 						<%
@@ -107,8 +109,9 @@
 			</a> <a href="">
 				<div class="product-card">
 					<div>
-						<img class="product-img" src="img/buds.png" alt=""
-							onmouseenter="zoomIn(event)" onmouseleave="zoomOut(event)">
+							<% 
+							out.println("<img class='product-img' src='img/" + jjj.get(3).getItemImage() + "' + alt=''>");
+							%>
 					</div>
 					<div class="product-contents">
 					<%
@@ -128,8 +131,9 @@
 			</a> <a href="">
 				<div class="product-card">
 					<div>
-						<img class="product-img" src="img/cap.png" alt=""
-							onmouseenter="zoomIn(event)" onmouseleave="zoomOut(event)">
+							<% 
+							out.println("<img class='product-img' src='img/" + jjj.get(4).getItemImage() + "' + alt=''>");
+							%>
 					</div>
 					<div class="product-contents">
 					<%
@@ -149,8 +153,9 @@
 			</a> <a href="">
 				<div class="product-card">
 					<div>
-						<img class="product-img" src="img/couple.png" alt=""
-							onmouseenter="zoomIn(event)" onmouseleave="zoomOut(event)">
+						<% 
+							out.println("<img class='product-img' src='img/" + jjj.get(5).getItemImage() + "' + alt=''>");
+							%>
 					</div>
 					<div class="product-contents">
 							<%
@@ -170,8 +175,9 @@
 			</a> <a href="">
 				<div class="product-card">
 					<div>
-						<img class="product-img" src="img/dickies.png" alt=""
-							onmouseenter="zoomIn(event)" onmouseleave="zoomOut(event)">
+							<% 
+							out.println("<img class='product-img' src='img/" + jjj.get(6).getItemImage() + "' + alt=''>");
+							%>
 					</div>
 					<div class="product-contents">
 					<%
@@ -191,8 +197,9 @@
 			</a> <a href="">
 				<div class="product-card">
 					<div>
-						<img class="product-img" src="img/graycap.png" alt=""
-							onmouseenter="zoomIn(event)" onmouseleave="zoomOut(event)">
+						<% 
+							out.println("<img class='product-img' src='img/" + jjj.get(7).getItemImage() + "' + alt=''>");
+							%>
 					</div>
 					<div class="product-contents">
 						<%
@@ -212,8 +219,9 @@
 			</a> <a href="">
 				<div class="product-card">
 					<div>
-						<img class="product-img" src="img/hood.png" alt=""
-							onmouseenter="zoomIn(event)" onmouseleave="zoomOut(event)">
+							<% 
+							out.println("<img class='product-img' src='img/" + jjj.get(8).getItemImage() + "' + alt=''>");
+							%>
 					</div>
 					<div class="product-contents">
 						<%
@@ -225,7 +233,7 @@
 								<img class="product-avatar" src="img/nike.png" />
 								<% 
 								out.println("<span>"+ jjj.get(8).getItemSeller() +"</span>");
-								%>
+								%>	
 							</div>
 						</div>
 					</div>
@@ -233,8 +241,9 @@
 			</a> <a href="">
 				<div class="product-card">
 					<div>
-						<img class="product-img" src="img/jacket.png" alt=""
-							onmouseenter="zoomIn(event)" onmouseleave="zoomOut(event)">
+							<% 
+							out.println("<img class='product-img' src='img/" + jjj.get(9).getItemImage() + "' + alt=''>");
+							%>
 					</div>
 					<div class="product-contents">
 						<%

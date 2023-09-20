@@ -202,7 +202,7 @@ nav ul li:nth-child(5) a:after {
 
 .h1 {
   font-size: 30px;
-  color: #FF766B;
+  color: #ff0080;
   font-weight: 500;
 }
 
@@ -220,7 +220,7 @@ nav ul li:nth-child(5) a:after {
   width: 180px;
   height: 300px;
   margin-right: 50px;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
 }
 
 #product-list{
@@ -235,8 +235,9 @@ nav ul li:nth-child(5) a:after {
 .product-img{
   width: 220px;
   height: 220px;
-  border: 2px solid #014D81;
+  border: 2px solid #c0c0c0;
   border-radius: 12px;
+ 
 }
 
 .product-contents{
@@ -244,6 +245,7 @@ nav ul li:nth-child(5) a:after {
   flex-direction: column;
   padding: 8px;
   font-weight: bold;
+
 }
 
 .product-name{
@@ -313,7 +315,7 @@ nav ul li:nth-child(5) a:after {
   width: 630px;
   height: 300px;
   font-size: 40px;
-  color: #FF766B;
+  color: #ff0080;
 }
 
 .right_div_div {
@@ -340,7 +342,7 @@ nav ul li:nth-child(5) a:after {
   width: 630px;
   height: 300px;
   font-size: 40px;
-  color: #FF766B;
+  color: #ff0080;
 }
 
 .m_div {
