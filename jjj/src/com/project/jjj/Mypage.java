@@ -143,7 +143,7 @@ public class Mypage {
 	public void getcon() {
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
-			connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/project?characterEncoding=utf-8", "root", "simpsons514!");
+			connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/project?characterEncoding=utf-8", "root", "123456");
 			if(connection == null) {
 //				throw는 예외처리를 강제로 시키는거고
 //				throws는 메소드 옆에 달아서 해당 메소드가 어떤 예외를 던질 수 있는지를 선언하는 데 사용한다!
