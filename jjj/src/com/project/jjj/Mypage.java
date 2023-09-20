@@ -70,7 +70,6 @@ public class Mypage {
 //	인플루언서 마이페이지 추가 정보
 	public Mypage_influ influ_mypage(String id) {
 		Mypage_influ mypage_influ = new Mypage_influ();
-		
 		try {
 			getcon();
 			statement = connection.createStatement();
