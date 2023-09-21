@@ -45,7 +45,7 @@ public class Mypage {
 			getcon();
 			statement = connection.createStatement();
 			resultSet = statement.executeQuery("select * from user where influUserId = '" + id + "';");
-			while(resultSet.next()) {
+			if(resultSet.next()) {
 				influ_info.setNickname(resultSet.getString("nickName"));
 				influ_info.setName(resultSet.getString("name"));
 				influ_info.setEmail(resultSet.getString("eMail"));

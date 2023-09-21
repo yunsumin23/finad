@@ -2,6 +2,7 @@
 	pageEncoding="UTF-8"%>
 <%@ page import="com.project.jjj.Influ_info"%>
 <%@ page import="com.project.jjj.Mypage_influ"%>
+<%@ page import="java.util.HashMap" %>
 <jsp:useBean id="session1" class="com.project.jjj.Mypage"></jsp:useBean>
 <!DOCTYPE html>
 <html>
@@ -109,7 +110,7 @@
 					    String gradientStyle = "background: conic-gradient(" +
 					            "#02f533 " + startTenAge + "% " + endTenAge + "%," +
 					            "#02b4f5 " + startTweAge + "% " + endTweAge + "%," +
-					            "#f22424 " + startThrAge + "% " + endThrAge + "%," +
+					            "#FF3A56 " + startThrAge + "% " + endThrAge + "%," +
 					            "#ffa600 " + startForAge + "% " + endForAge + "%," +
 					            "#f5dd02 " + startFifAge + "% " + endFifAge + "%" +
 					        ");";
@@ -124,10 +125,9 @@
 					   double endWomanRatio = 100.0;
 					   
 					   String genderStyle = "background: conic-gradient(" + 
-					   			"#FF3A56 " + startManRatio + "% " + endManRatio + "%," + 
-					   			"#014D81 " + startWomanRatio + "% " + endWomanRatio + "%" +
+					   			"#014D81 " + startManRatio + "% " + endManRatio + "%," + 
+					   			"#FF3A56 " + startWomanRatio + "% " + endWomanRatio + "%" +
 					   					");";
-					   
 							out.println(
 									"<li><p class='count-num' data-count='" + user1.getThravgSub() + "'>0</p><br>최근 30일 구독자 수</li>");
 							out.println(
@@ -135,7 +135,7 @@
 							out.println(
 									"<li><p class='count-num' data-count='" + user1.getThravgHit() + "'>0</p><br>최근 30일 평균 조회수</li>");
 							out.println("<li><p class='gender_type' style='" + genderStyle + "'></p><br>구독자 성비<div class='man_woman'><div class='man'>남 : " + manRatio + "</div><div class='woman'>여 : " + womanRatio + "</div></div></li>");
-							out.println("<li><p class='sub_age' style='" + gradientStyle + "'></p><br>구독자 연령대<div class='avg_age'><div class='ten'>10대" + tenAge + "</div><div class='twe'>20대" + tweAge + "</div><div class='thr'>30대" + thrAge + "</div><div class='fort'>40대" + forAge + "</div><div class='fift'>50대" + fifAge + "</div></div></li>");
+							out.println("<li><p class='sub_age' style='" + gradientStyle + "'></p><br>구독자 연령대<br><div class='avg_age'><div class='ten'>10대" + tenAge + "</div><div class='twe'>20대" + tweAge + "</div><div class='thr'>30대" + thrAge + "</div><div class='fort'>40대" + forAge + "</div><div class='fift'>50대" + fifAge + "</div></div></li>");
 						%>
 						
 					</ul>
@@ -146,7 +146,54 @@
 			<div class="div_category">
 				<ul>
 					<%
-						out.println("<li>" + user.getCategory() + "</li>");
+					String category = user.getCategory();
+					String[] categories = category.split(",");
+					HashMap<String, String> categoryImages = new HashMap<>();
+					HashMap<String, String> categoryName = new HashMap<>();
+					categoryImages.put("beauty", "img/beauty_img.png");
+					categoryName.put("beauty", "뷰티 * 패션");
+					categoryImages.put("food", "img/food_img.png");
+					categoryName.put("food", "먹방");
+					categoryImages.put("BJ", "img/BJ_img.png");
+					categoryName.put("BJ", "BJ");
+					categoryImages.put("vlog", "img/vlog_img.png");
+					categoryName.put("vlog", "vlog");
+					categoryImages.put("game", "img/game_img.png");
+					categoryName.put("game", "게임");
+					categoryImages.put("IT", "img/IT_img.png");
+					categoryName.put("IT", "IT");
+					categoryImages.put("music", "img/music_img.png");
+					categoryName.put("music", "music");
+					categoryImages.put("cook", "img/cook_img.png");
+					categoryName.put("cook", "cook");
+					categoryImages.put("travel", "img/travel_img.png");
+					categoryName.put("travel", "travel");
+					categoryImages.put("pet", "img/pet_img.png");
+					categoryName.put("pet", "pet");
+					categoryImages.put("sports", "img/sports_img.png");
+					categoryName.put("sports", "sports");
+					categoryImages.put("movie", "img/movie_img.png");
+					categoryName.put("movie", "movie");
+					categoryImages.put("car", "img/car_img.png");
+					categoryName.put("car", "car");
+					categoryImages.put("kid", "img/kid_img.png");
+					categoryName.put("kid", "kid");
+					categoryImages.put("education", "img/education_img.png");
+					categoryName.put("education", "education");
+					categoryImages.put("real statement", "img/real statement_img.png");
+					categoryName.put("real statement", "real statement");
+					categoryImages.put("politics", "img/politics_img.png");
+					categoryName.put("politics", "politics");
+					categoryImages.put("palette", "img/palette_img.png");
+					categoryName.put("palette", "palette");
+					categoryImages.put("clover", "img/clover_img.png");
+					categoryName.put("clover", "clover");
+					categoryImages.put("another", "img/another_img.png");
+					categoryName.put("another", "another");
+					// 각 카테고리에 대한 이미지 출력
+					for(String cat : categories) {
+						out.print("<li><img src='" + categoryImages.get(cat) + "'>"+ categoryName.get(cat) + "</li>");
+					}
 					%>
 				</ul>
 			</div>
@@ -156,9 +203,6 @@
 					out.println(user1.getIntroduc());
 				%>
 			</div>
-			<!-- 			<form action="" method="post">
-				<input type="text" name="text" class="text">
-			</form> -->
 			<form action="" method="post">
 				<input type="submit" name="submit" value="광고진행사항" class="submit">
 			</form>
