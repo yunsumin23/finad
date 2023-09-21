@@ -17,8 +17,22 @@
 <title>Insert title here</title>
 </head>
 <body>
+<%
+	String id = (String) session.getAttribute("id");
+	String password = (String) session.getAttribute("password");
+	String type = (String) session.getAttribute("type");
+	if (id == null && password == null) {
+%>
+<jsp:include page="header_login.jsp"></jsp:include>
+<%
+	} else {
+		%>
+<jsp:include page="header_logout.jsp"></jsp:include>
+		<%
+	}
+%>
     <%
-        String writer = "작성자 ㅋㅋ";
+        String writer = id;
         String name = request.getParameter("input_name");
         String text = request.getParameter("input_text");
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
