@@ -222,7 +222,11 @@ td{
 	padding: 3px;
 }
 #text {
+	width: 1300px;
 	padding-bottom: 300px;
+}
+#text p {
+	word-break: break-word;
 }
 #free_board_btn{
 	margin-top: 10px;
