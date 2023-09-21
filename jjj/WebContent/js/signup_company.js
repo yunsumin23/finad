@@ -4,7 +4,7 @@ $(document).ready(function() {
     $(".category_text").mouseenter(function() {
         $(".gnb").stop().slideDown();
         $(".gnbbox").stop().slideDown();
-    });
+    }); 
     $(".category_div").mouseleave(function() {
         $(".gnb").stop().slideUp();
         $(".gnbbox").stop().slideUp();
