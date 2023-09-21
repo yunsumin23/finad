@@ -144,7 +144,7 @@
 			<hr>
 			<h2>카테고리</h2>
 			<div class="div_category">
-				<ul>
+				<table>
 					<%
 					String category = user.getCategory();
 					String[] categories = category.split(",");
@@ -155,47 +155,53 @@
 					categoryImages.put("food", "img/food_img.png");
 					categoryName.put("food", "먹방");
 					categoryImages.put("BJ", "img/BJ_img.png");
-					categoryName.put("BJ", "BJ");
+					categoryName.put("BJ", "BJ *엔터테이너");
 					categoryImages.put("vlog", "img/vlog_img.png");
 					categoryName.put("vlog", "vlog");
 					categoryImages.put("game", "img/game_img.png");
 					categoryName.put("game", "게임");
 					categoryImages.put("IT", "img/IT_img.png");
-					categoryName.put("IT", "IT");
+					categoryName.put("IT", "IT *전자기기");
 					categoryImages.put("music", "img/music_img.png");
-					categoryName.put("music", "music");
+					categoryName.put("music", "음악 * 츰");
 					categoryImages.put("cook", "img/cook_img.png");
-					categoryName.put("cook", "cook");
+					categoryName.put("cook", "요리* 베이킹");
 					categoryImages.put("travel", "img/travel_img.png");
-					categoryName.put("travel", "travel");
+					categoryName.put("travel", "여행* 아웃도어");
 					categoryImages.put("pet", "img/pet_img.png");
-					categoryName.put("pet", "pet");
+					categoryName.put("pet", "동물 * 펫");
 					categoryImages.put("sports", "img/sports_img.png");
-					categoryName.put("sports", "sports");
+					categoryName.put("sports", "스포츠 * 건강");
 					categoryImages.put("movie", "img/movie_img.png");
-					categoryName.put("movie", "movie");
+					categoryName.put("movie", "영화 * 애니");
 					categoryImages.put("car", "img/car_img.png");
-					categoryName.put("car", "car");
+					categoryName.put("car", "자동차");
 					categoryImages.put("kid", "img/kid_img.png");
-					categoryName.put("kid", "kid");
+					categoryName.put("kid", "키즈 * 플레이");
 					categoryImages.put("education", "img/education_img.png");
-					categoryName.put("education", "education");
+					categoryName.put("education", "교육");
 					categoryImages.put("real statement", "img/real statement_img.png");
-					categoryName.put("real statement", "real statement");
+					categoryName.put("real statement", "부동산 * 투자");
 					categoryImages.put("politics", "img/politics_img.png");
-					categoryName.put("politics", "politics");
+					categoryName.put("politics", "정치 * 시사");
 					categoryImages.put("palette", "img/palette_img.png");
-					categoryName.put("palette", "palette");
+					categoryName.put("palette", "그림 * 만들기");
 					categoryImages.put("clover", "img/clover_img.png");
-					categoryName.put("clover", "clover");
+					categoryName.put("clover", "운세 * 타로");
 					categoryImages.put("another", "img/another_img.png");
-					categoryName.put("another", "another");
+					categoryName.put("another", "기타");
 					// 각 카테고리에 대한 이미지 출력
 					for(String cat : categories) {
-						out.print("<li><img src='" + categoryImages.get(cat) + "'>"+ categoryName.get(cat) + "</li>");
+						out.print("<tr><th><img src='" + categoryImages.get(cat) + "'></th></tr>");
+						out.print("<tr><td>" + categoryName.get(cat) + "</td></tr>");
+					if(categories == null) {
+							out.println("선택하신 카테고리가 없습니다.");
+						}
 					}
+					
 					%>
-				</ul>
+					
+				</table>
 			</div>
 			<h2>소개글</h2>
 			<div class="text">
