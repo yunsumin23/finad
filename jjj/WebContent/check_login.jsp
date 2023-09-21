@@ -33,7 +33,12 @@
 			check = "select companyId, password from project.company where companyId = '" + id + "' and password = '" + password + "';";
 			type = "company";
 		} else {
-			response.sendRedirect("login.jsp");
+			%>
+			<script>
+				alert("회원 종류를 선택해주세요.");
+				location.href="login.jsp";
+			</script>
+			<%
 			return;
 		}
 		
@@ -53,7 +58,7 @@
 %>
 			<script>
 			alert("아이디 또는 패스워드가 일치하지 않습니다. 다시 로그인해주세요");
-			location.href="login.html";
+			location.href="login.jsp";
 			</script>
 <%
 		}
