@@ -85,18 +85,59 @@
 				<div>
 					<ul>
 						<%
+						double tenAge = user1.getTenAge();
+					    double tweAge = user1.getTweAge();
+					    double thrAge = user1.getThrAge();
+					    double forAge = user1.getForAge();
+					    double fifAge = user1.getFifAge();
+
+					    double startTenAge = 0.0;
+					    double endTenAge = tenAge;
+
+					    double startTweAge = endTenAge;
+					    double endTweAge = startTweAge + tweAge;
+
+					    double startThrAge = endTweAge;
+					    double endThrAge = startThrAge + thrAge;
+
+					    double startForAge = endThrAge;
+					    double endForAge = startForAge + forAge;
+
+					    double startFifAge = endForAge;
+					    double endFifAge = 100.0; // 최대 100%까지
+						
+					    String gradientStyle = "background: conic-gradient(" +
+					            "#02f533 " + startTenAge + "% " + endTenAge + "%," +
+					            "#02b4f5 " + startTweAge + "% " + endTweAge + "%," +
+					            "#f22424 " + startThrAge + "% " + endThrAge + "%," +
+					            "#ffa600 " + startForAge + "% " + endForAge + "%," +
+					            "#f5dd02 " + startFifAge + "% " + endFifAge + "%" +
+					        ");";
+					    
+					   double manRatio = user1.getMan_ratio();
+					   double womanRatio = user1.getWoman_ratio();
+					   
+					   double startManRatio = 0.0;
+					   double endManRatio = manRatio;
+					   
+					   double startWomanRatio = endManRatio;
+					   double endWomanRatio = 100.0;
+					   
+					   String genderStyle = "background: conic-gradient(" + 
+					   			"#FF3A56 " + startManRatio + "% " + endManRatio + "%," + 
+					   			"#014D81 " + startWomanRatio + "% " + endWomanRatio + "%" +
+					   					");";
+					   
 							out.println(
 									"<li><p class='count-num' data-count='" + user1.getThravgSub() + "'>0</p><br>최근 30일 구독자 수</li>");
 							out.println(
 									"<li><p class='count-num' data-count='" + user1.getThravgViewer() + "'>0</p><br>최근 30일 시청자 수</li>");
 							out.println(
 									"<li><p class='count-num' data-count='" + user1.getThravgHit() + "'>0</p><br>최근 30일 평균 조회수</li>");
-							out.println("<li><canvas class='gender_type' data-gender1='" + user1.getMan_ratio() + "' data-gender2='"
-									+ user1.getWoman_ratio() + "'></canvas><br>구독자 성비</li>");
-							out.println("<li><canvas class='sub_age' data-age1='" + user1.getTenAge() + "' data-age2='"
-									+ user1.getTweAge() + "' data-age3='" + user1.getThrAge() + "' data-age4='" + user1.getForAge()
-									+ "' data-age5='" + user1.getFifAge() + "'></canvas><br>구독자 연령대</li>");
+							out.println("<li><p class='gender_type' style='" + genderStyle + "'></p><br>구독자 성비<div class='man_woman'><div class='man'>남 : " + manRatio + "</div><div class='woman'>여 : " + womanRatio + "</div></div></li>");
+							out.println("<li><p class='sub_age' style='" + gradientStyle + "'></p><br>구독자 연령대<div class='avg_age'><div class='ten'>10대" + tenAge + "</div><div class='twe'>20대" + tweAge + "</div><div class='thr'>30대" + thrAge + "</div><div class='fort'>40대" + forAge + "</div><div class='fift'>50대" + fifAge + "</div></div></li>");
 						%>
+						
 					</ul>
 				</div>
 			</div>

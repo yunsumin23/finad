@@ -40,13 +40,11 @@ public class Mypage {
 	
 //	인플루언서 데이터 추출
 	public Influ_info influ(String id) {
-		System.out.println(id);
 		Influ_info influ_info = new Influ_info();
 		try {
 			getcon();
 			statement = connection.createStatement();
 			resultSet = statement.executeQuery("select * from user where influUserId = '" + id + "';");
-//			resultSet = statement.executeQuery("select * from user where influUserId = 'hk';");
 			while(resultSet.next()) {
 				influ_info.setNickname(resultSet.getString("nickName"));
 				influ_info.setName(resultSet.getString("name"));
@@ -63,7 +61,6 @@ public class Mypage {
 				// TODO: handle exception
 			}
 		}
-		System.out.println(influ_info.getNickname());
 		return influ_info;
 	}
 

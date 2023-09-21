@@ -264,11 +264,13 @@ hr {
 	display: flex;
 	justify-content: space-between;
 	margin-top: 50px;
+	align-items: center;
 }
 
 .div_data2 li{
 	width: 260px;
 	text-align: center;
+	
 }
 
 .div_data2 p {
@@ -277,11 +279,17 @@ hr {
 }
 
 .gender_type {
-	width: 260px;
+	width: 200px;
+	height: 200px;
+  	border-radius: 50%;
+  	margin: 0 auto;
 }
 
 .sub_age {
-	width: 260px;
+	width: 200px;
+	height: 200px;
+  	border-radius: 50%;
+  	margin: 0 auto;
 }
 
 h2 {
@@ -309,9 +317,38 @@ h2 {
 	margin-top: 15px;
 }
 
+.man_woman, .avg_age {
+	display: flex;
+}
 
+.man {
+	color: #014D81;
+	width: 130px;
+}
 
+.woman {
+	color: #FF3A56;
+}
 
+.ten {
+	color:#02f533;
+}
+
+.twe {
+	color:#02b4f5;
+}
+
+.thr {
+	color:#f22424;
+}
+
+.fort {
+	color:#ffa600;
+}
+
+.fift {
+	color:#f5dd02;
+}
 
 
 

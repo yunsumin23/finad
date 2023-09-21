@@ -40,8 +40,19 @@ $(document).ready(function () {
     	    	$this.text(this.countNum.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ','));
     	    }
     	  });  
-    	});
-
+    });
+//    $.ajax({
+//    	url:"test1.jsp",
+//    	method: "post",
+//    	dataType: "json",
+//    	success: function(data) {
+//			drawPieChart(data);
+//			console.log(data);
+//		},
+//    	error: function(data) {
+//			console.error("데이터 가져오는데 실패함");
+//		}
+//    });
 });
 
 
@@ -56,3 +67,22 @@ function zoomOut(event) {
     event.target.style.zIndex = 0;
     event.target.style.transition = "all 0.5s"
 }
+
+//function drawPieChart() {
+//	var gender = document.querySelector(".gender_type").getContext("2d");
+//	var genderData = {
+//			labels:["남성", "여성"],
+//			datasets: [{
+//                data: [data.man, data.woman],
+//                backgroundColor: ['#FF5733', '#3498db'],
+//            }]
+//	};
+//	var genderChart = new Chart(gender, {
+//        type: 'pie',
+//        data: genderData,
+//    });
+//	$(".gender_type").css({
+//		"background":"conic-gradient(#FF766B 0% 50%, #014D81 50% 100%)"
+//	});
+//	
+//}
