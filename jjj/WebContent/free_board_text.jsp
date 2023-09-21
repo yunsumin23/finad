@@ -11,7 +11,7 @@
 <link rel="stylesheet" href="css/free_board_text.css">
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-<script src="js/free_board.js"></script>
+<script src="js/free_board_text.js"></script>
 <jsp:useBean id="boardList" class="com.project.jjj.FreeBoard"
 		scope="page" />
 </head>

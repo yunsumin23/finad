@@ -25,3 +25,18 @@ function zoomOut(event) {
     event.target.style.zIndex = 0;
     event.target.style.transition = "all 0.5s"
 }
+
+function check_name() {
+    var name = document.forms["form"]["input_name"].value;
+    var text = document.forms["form"]["input_text"].value;
+
+    if(name === ""){
+    	alert("제목을 입력해주세요.");
+    	return false;
+    }
+    if(text === ""){
+    	alert("내용을 입력해주세요.");
+    	return false;
+    }
+    return true;
+}
