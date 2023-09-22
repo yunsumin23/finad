@@ -123,7 +123,7 @@ function checkPW() {
 		check_pw.style.textAlign = 'right';
 		text_pw[0].style.border = '5px solid #FF4343';
 		text_pw2[0].style.border = '5px solid #FF4343';
-		
+		return;
 	
 	}
 }
