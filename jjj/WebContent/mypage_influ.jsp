@@ -144,64 +144,67 @@
 			<hr>
 			<h2>카테고리</h2>
 			<div class="div_category">
-				<table>
+				<ul>
 					<%
 					String category = user.getCategory();
 					String[] categories = category.split(",");
 					HashMap<String, String> categoryImages = new HashMap<>();
 					HashMap<String, String> categoryName = new HashMap<>();
-					categoryImages.put("beauty", "img/beauty_img.png");
+					categoryImages.put("beauty", "img/beauty.png");
 					categoryName.put("beauty", "뷰티 * 패션");
-					categoryImages.put("food", "img/food_img.png");
+					categoryImages.put("food", "img/food.png");
 					categoryName.put("food", "먹방");
-					categoryImages.put("BJ", "img/BJ_img.png");
+					categoryImages.put("BJ", "img/BJ.png");
 					categoryName.put("BJ", "BJ *엔터테이너");
-					categoryImages.put("vlog", "img/vlog_img.png");
+					categoryImages.put("vlog", "img/vlog.png");
 					categoryName.put("vlog", "vlog");
-					categoryImages.put("game", "img/game_img.png");
+					categoryImages.put("game", "img/game.png");
 					categoryName.put("game", "게임");
-					categoryImages.put("IT", "img/IT_img.png");
+					categoryImages.put("IT", "img/IT.png");
 					categoryName.put("IT", "IT *전자기기");
-					categoryImages.put("music", "img/music_img.png");
+					categoryImages.put("music", "img/music.png");
 					categoryName.put("music", "음악 * 츰");
-					categoryImages.put("cook", "img/cook_img.png");
+					categoryImages.put("cook", "img/cook.png");
 					categoryName.put("cook", "요리* 베이킹");
-					categoryImages.put("travel", "img/travel_img.png");
+					categoryImages.put("travel", "img/travel.png");
 					categoryName.put("travel", "여행* 아웃도어");
-					categoryImages.put("pet", "img/pet_img.png");
+					categoryImages.put("pet", "img/pet.png");
 					categoryName.put("pet", "동물 * 펫");
-					categoryImages.put("sports", "img/sports_img.png");
+					categoryImages.put("sports", "img/sports.png");
 					categoryName.put("sports", "스포츠 * 건강");
-					categoryImages.put("movie", "img/movie_img.png");
+					categoryImages.put("movie", "img/movie.png");
 					categoryName.put("movie", "영화 * 애니");
-					categoryImages.put("car", "img/car_img.png");
+					categoryImages.put("car", "img/car.png");
 					categoryName.put("car", "자동차");
-					categoryImages.put("kid", "img/kid_img.png");
+					categoryImages.put("kid", "img/kid.png");
 					categoryName.put("kid", "키즈 * 플레이");
-					categoryImages.put("education", "img/education_img.png");
+					categoryImages.put("education", "img/education.png");
 					categoryName.put("education", "교육");
-					categoryImages.put("real statement", "img/real statement_img.png");
+					categoryImages.put("real statement", "img/real estate.png");
 					categoryName.put("real statement", "부동산 * 투자");
-					categoryImages.put("politics", "img/politics_img.png");
+					categoryImages.put("politics", "img/Politics.png");
 					categoryName.put("politics", "정치 * 시사");
-					categoryImages.put("palette", "img/palette_img.png");
+					categoryImages.put("palette", "img/palette.png");
 					categoryName.put("palette", "그림 * 만들기");
-					categoryImages.put("clover", "img/clover_img.png");
+					categoryImages.put("clover", "img/clover.png");
 					categoryName.put("clover", "운세 * 타로");
-					categoryImages.put("another", "img/another_img.png");
+					categoryImages.put("another", "img/another.png");
 					categoryName.put("another", "기타");
 					// 각 카테고리에 대한 이미지 출력
-					for(String cat : categories) {
-						out.print("<tr><th><img src='" + categoryImages.get(cat) + "'></th></tr>");
-						out.print("<tr><td>" + categoryName.get(cat) + "</td></tr>");
-					if(categories == null) {
-							out.println("선택하신 카테고리가 없습니다.");
+					if(categories == null || categories.length == 0) {
+							out.println("<li>선택하신 카테고리가 없습니다.</li>");
+						} else {
+							for(String cat : categories) {
+								out.print("<div class='cate_div'>");
+								out.print("<li>");
+								out.print("<img src='" + categoryImages.get(cat) + "'>");
+								out.print("<p>" + categoryName.get(cat) + "</p>");
+								out.print("</li>");
+								out.print("</div>");
+							}
 						}
-					}
-					
 					%>
-					
-				</table>
+				</ul>
 			</div>
 			<h2>소개글</h2>
 			<div class="text">

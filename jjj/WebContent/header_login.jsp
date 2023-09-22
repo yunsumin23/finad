@@ -17,14 +17,15 @@ String type = (String) session.getAttribute("type");
 <script type="text/javascript" src="js/header_login.js"></script>
 </head>
 <body>
+<div class="div_headder">
 	<header>
 		<div class="top_div">
-			<a href="main.jsp"><img src="img/logo.png" alt="로고"
+			<a href="main.jsp"><img src="img/logo2.png" alt="로고"
 				id="main_logo"></a>
 			<div class="top_button">
-				<a href="login.jsp"><img src="img/login.png" alt=""></a> <a
-					href="signup_agree.jsp"><img src="img/signup.png" alt=""></a>
-				<a href="login.jsp"><img src="img/mypage.png" alt=""></a>
+				<a href="login.jsp"><div>로그인</div></a> 
+				<a href="signup_agree.jsp"><div>회원가입</div></a>
+				<a href="login.jsp"><div>마이 페이지</div></a>
 			</div>
 		</div>
 		<div class="header_search">
@@ -208,6 +209,7 @@ String type = (String) session.getAttribute("type");
 			</div>
 		</nav>
 	</div>
+</div>
 </body>
 
 </html>
