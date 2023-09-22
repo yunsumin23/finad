@@ -3,9 +3,10 @@
 <%
 // getAttribute하면 오브젝트 타입으로 넘어오기때문에 우리가 사용하기 편하게 하기 위해 앞에 강제로
 // 형변환 해준거임
-String id = (String) session.getAttribute("id");
+/* String id = (String) session.getAttribute("id");
 String password = (String) session.getAttribute("password");
-String type = (String) session.getAttribute("type");
+String type = (String) session.getAttribute("type"); */
+
 %>
 <!DOCTYPE html>
 <html>

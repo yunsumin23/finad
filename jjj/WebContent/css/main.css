@@ -5,6 +5,7 @@
     background: url(../img/maingif.gif) 50% center / cover no-repeat;
     width: 100%;
     height: 560px;
+    margin-top: 10px;
     margin-bottom: 40px;
     justify-content: center;
     align-items: flex-start;
