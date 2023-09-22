@@ -1,13 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%
-// getAttribute하면 오브젝트 타입으로 넘어오기때문에 우리가 사용하기 편하게 하기 위해 앞에 강제로
-// 형변환 해준거임
-/* String id = (String) session.getAttribute("id");
-String password = (String) session.getAttribute("password");
-String type = (String) session.getAttribute("type"); */
-
-%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -26,7 +18,6 @@ String type = (String) session.getAttribute("type"); */
 			<div class="top_button">
 				<a href="login.jsp"><div>로그인</div></a> 
 				<a href="signup_agree.jsp"><div>회원가입</div></a>
-				<a href="login.jsp"><div>마이 페이지</div></a>
 			</div>
 		</div>
 		<div class="header_search">
