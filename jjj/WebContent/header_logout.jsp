@@ -60,13 +60,11 @@
 				<div class="category">
 					<div class="category_text">카테고리</div>
 					<ul class="nav_ul">
-						<li class="nav_li01"><a href="company_written_list.html"
-							target="_blank">광고게시판</a></li>
-						<li class="nav_li02"><a href="" target="_blank">크리에이터 게시판</a></li>
-						<li class="nav_li03"><a href="free_board.jsp" target="_blank">자유게시판</a></li>
-						<li class="nav_li04"><a href="" target="_blank">광고현황</a></li>
-						<li class="nav_li05"><a href="adstore_login.jsp"
-							target="_blank">ADStore</a></li>
+						<li class="nav_li01"><a href="company_written_list.html">광고게시판</a></li>
+						<li class="nav_li02"><a href="">크리에이터 게시판</a></li>
+						<li class="nav_li03"><a href="free_board.jsp">자유게시판</a></li>
+						<li class="nav_li04"><a href="">광고현황</a></li>
+						<li class="nav_li05"><a href="adstore_login.jsp">ADStore</a></li>
 					</ul>
 					<div class="category_div">
 						<div class="gnb_div">

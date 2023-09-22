@@ -1,0 +1,320 @@
+#a1 {
+    background-color: #ffffff;
+    color: #0073e6;
+    border-radius: 20px;
+    padding: 30px;
+    font-size: 30px;
+    float: left;
+    margin: 20px;
+}
+#a2 {
+    background-color: #888888;
+    color: #4caf50;
+    border-radius: 20px;
+    padding: 30px;
+    font-size: 30px;
+    float: left;
+    margin: 20px;
+}
+#a3 {
+    background-color: #ffc107;
+    color: #00bfa5;
+    border-radius: 20px;
+    padding: 30px;
+    font-size: 30px;
+    float: left;
+    margin: 20px;
+}
+#a4 {
+    background-color: #ff5722;
+    color: #333333;
+    border-radius: 20px;
+    padding: 30px;
+    font-size: 30px;
+    float: left;
+    margin: 20px;
+}
+#a5 {
+    background-color: #ffffff;
+    color: #03a9f4;
+    border-radius: 20px;
+    padding: 30px;
+    font-size: 30px;
+    float: left;
+    margin: 20px;
+}
+#a6 {
+    background-color: #95a5a6;
+    color: #3498db;
+    border-radius: 20px;
+    padding: 30px;
+    font-size: 30px;
+    float: left;
+    margin: 20px;
+}
+#a7 {
+    background-color: #ffffff;
+    color: #9b59b6;
+    border-radius: 20px;
+    padding: 30px;
+    font-size: 30px;
+    float: left;
+    margin: 20px;
+}
+#a8 {
+    background-color: #34495e;
+    color: #f39c12;
+    border-radius: 20px;
+    padding: 30px;
+    font-size: 30px;
+    float: left;
+    margin: 20px;
+}
+#a9 {
+    background-color: #ffffff;
+    color: #00da62;
+    border-radius: 20px;
+    padding: 30px;
+    font-size: 30px;
+    float: left;
+    margin: 20px;
+}
+#a10 {
+    background-color: #858585;
+    color: #ffd700;
+    border-radius: 20px;
+    padding: 30px;
+    font-size: 30px;
+    float: left;
+    margin: 20px;
+}
+#a11 {
+    background-color: #d4d7db;
+    color: #a112f3;
+    border-radius: 20px;
+    padding: 30px;
+    font-size: 30px;
+    float: left;
+    margin: 20px;
+}
+#a12 {
+    background-color: #34495e;
+    color: #f39c12;
+    border-radius: 20px;
+    padding: 30px;
+    font-size: 30px;
+    float: left;
+    margin: 20px;
+}
+#a13 {
+    background-color: #E8F5E9;
+    color: #4CAF50;
+    border-radius: 20px;
+    padding: 30px;
+    font-size: 30px;
+    float: left;
+    margin: 20px;
+}
+#a14 {
+    background-color: #34495e;
+    color: #f39c12;
+    border-radius: 20px;
+    padding: 30px;
+    font-size: 30px;
+    float: left;
+    margin: 20px;
+}
+#a15 {
+    background-color: #F5F5F5;
+    color: #333333;
+    border-radius: 20px;
+    padding: 30px;
+    font-size: 30px;
+    float: left;
+    margin: 20px;
+}
+#a16 {
+    background-color: #FCE4EC;
+    color: #FF4081;
+    border-radius: 20px;
+    padding: 30px;
+    font-size: 30px;
+    float: left;
+    margin: 20px;
+}
+#a17 {
+    background-color: #FDECEA;
+    color: #FF5722;
+    border-radius: 20px;
+    padding: 30px;
+    font-size: 30px;
+    float: left;
+    margin: 20px;
+}
+#a18 {
+    background-color: #F3E5F5;
+    color: #9C27B0;
+    border-radius: 20px;
+    padding: 30px;
+    font-size: 30px;
+    float: left;
+    margin: 20px;
+}
+#a19 {
+    background-color: #FFF8E1;
+    color: #FFD700;
+    border-radius: 20px;
+    padding: 30px;
+    font-size: 30px;
+    float: left;
+    margin: 20px;
+}
+#a20 {
+    background-color: #E0F2F1;
+    color: #00BFA5;
+    border-radius: 20px;
+    padding: 30px;
+    font-size: 30px;
+    float: left;
+    margin: 20px;
+}
+#a21 {
+    background-color: #E3F2FD;
+    color: #1976D2;
+    border-radius: 20px;
+    padding: 30px;
+    font-size: 30px;
+    float: left;
+    margin: 20px;
+}
+#a22 {
+    background-color: #E0F2F1;
+    color: #00BFA5;
+    border-radius: 20px;
+    padding: 30px;
+    font-size: 30px;
+    float: left;
+    margin: 20px;
+}
+#a23 {
+    background-color: #E8F5E9;
+    color: #689F38;
+    border-radius: 20px;
+    padding: 30px;
+    font-size: 30px;
+    float: left;
+    margin: 20px;
+}
+#a24 {
+    background-color: #EFEBE9;
+    color: #795548;
+    border-radius: 20px;
+    padding: 30px;
+    font-size: 30px;
+    float: left;
+    margin: 20px;
+}
+#a25 {
+    background-color: #E0F7FA;
+    color: #00ACC1;
+    border-radius: 20px;
+    padding: 30px;
+    font-size: 30px;
+    float: left;
+    margin: 20px;
+}
+#a26 {
+    background-color: #FFF3E0;
+    color: #FF9800;
+    border-radius: 20px;
+    padding: 30px;
+    font-size: 30px;
+    float: left;
+    margin: 20px;
+}
+#a27 {
+    background-color: #E0E0E0;
+    color: #000000;
+    border-radius: 20px;
+    padding: 30px;
+    font-size: 30px;
+    float: left;
+    margin: 20px;
+}
+#a28 {
+    background-color: #FBE3E3;
+    color: #FF6F61;
+    border-radius: 20px;
+    padding: 30px;
+    font-size: 30px;
+    float: left;
+    margin: 20px;
+}
+#a29 {
+    background-color: #cacaca;
+    color: #ffbd59;
+    border-radius: 20px;
+    padding: 30px;
+    font-size: 30px;
+    float: left;
+    margin: 20px;
+}
+#a30 {
+    background-color: #0d072c;
+    color: #ffc188;
+    border-radius: 20px;
+    padding: 30px;
+    font-size: 30px;
+    float: left;
+    margin: 20px;
+}
+#a31 {
+    background-color: #ffffff;
+    color: #b81818;
+    border-radius: 20px;
+    padding: 30px;
+    font-size: 30px;
+    float: left;
+    margin: 20px;
+}
+#a32 {
+    background-color: #1c51ff;
+    color: #ffffff;
+    border-radius: 20px;
+    padding: 30px;
+    font-size: 30px;
+    float: left;
+    margin: 20px;
+}
+#a33 {
+    background-color: #623b2a;
+    color: #ffffff;
+    border-radius: 20px;
+    padding: 30px;
+    font-size: 30px;
+    float: left;
+    margin: 20px;
+}
+#a34 {
+    background-color: #065494;
+    color: #ffffff;
+    border-radius: 20px;
+    padding: 30px;
+    font-size: 30px;
+    float: left;
+    margin: 20px;
+}
+#a35 {
+    background-color: #292826;
+    color: #f9d342;
+    border-radius: 20px;
+    padding: 30px;
+    font-size: 30px;
+    float: left;
+    margin: 20px;
+}
+body{
+    background-color: antiquewhite;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
