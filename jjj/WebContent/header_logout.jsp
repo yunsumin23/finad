@@ -37,19 +37,12 @@
 				<a href="main.jsp"><img src="img/logo2.png" alt="로고"
 					id="main_logo"></a>
 				<div class="top_button">
-					<a href="main.jsp" onclick="logout()" name="logout"><div>로그아웃</div></a> 
-					
-					<%
-						if (type.equals("nomal")) {
-							out.println("<a href='mypage_nomal.jsp'><div>마이 페이지</div></a>");
-						}
-						if (type.equals("influencer")) {
-							out.println("<a href='mypage_influ.jsp''><div>마이 페이지</div></a>");
-						}
-						if (type.equals("company")) {
-							out.println("<a href='mypage_company.jsp''><div>마이 페이지</div>></a>");
-						}
-					%>
+					<form action="logout.jsp" id="logoutForm" method="post">
+						<input type="submit" value="로그아웃" name="logout" class="submit">
+					</form>
+					<form action="into_mypage.jsp" method="post">
+						<input type="submit" value="마이페이지" name="mypage" class="submit">
+					</form>
 				</div>
 			</div>
 			<div class="header_search">

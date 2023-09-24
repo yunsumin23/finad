@@ -13,6 +13,8 @@ $(document).ready(function () {
     $(".img_info_main").mouseenter(function () {
         $(".img_info02").stop().slideDown();
     });
+
+	
 });
 
 function zoomIn(event) {
@@ -27,11 +29,3 @@ function zoomOut(event) {
     event.target.style.transition = "all 0.5s"
 }
 
-function logout() {
-	$.get("header_logout.jsp", function(data) {
-	    // 로그아웃 성공 시 실행할 코드
-		console.log(data);
-	    alert("로그아웃되었습니다.");
-	    window.location.href = "main.jsp"; // 로그인 페이지로 리디렉션
-	  });
-}

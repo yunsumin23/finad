@@ -26,11 +26,12 @@
 		} else {
 	%>
 	<jsp:include page="header_logout.jsp"></jsp:include>
-	
-	
 	<%
 		}
 	%>
+	<%= id %>
+	<%= password %>
+	<%= type %>
 	<div class="center">
 		<div class="center_container">
 			<div class="center_container_div">

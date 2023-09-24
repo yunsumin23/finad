@@ -213,7 +213,7 @@
 				%>
 			</div>
 			<form action="" method="post">
-				<input type="submit" name="submit" value="광고진행사항" class="submit">
+				<input type="submit" name="submit" value="광고진행사항" class="check_pro">
 			</form>
 		</div>
 	</div>

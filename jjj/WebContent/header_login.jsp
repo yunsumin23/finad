@@ -16,8 +16,12 @@
 			<a href="main.jsp"><img src="img/logo2.png" alt="로고"
 				id="main_logo"></a>
 			<div class="top_button">
-				<a href="login.jsp"><div>로그인</div></a> 
-				<a href="signup_agree.jsp"><div>회원가입</div></a>
+				<form action="login.jsp" method="post">
+					<input type="submit" name="submit" value="로그인" class="submit">
+				</form>
+				<form action="signup_agree.jsp" method="post">
+					<input type="submit" name="submit" value="회원가입" class="submit">
+				</form>
 			</div>
 		</div>
 		<div class="header_search">

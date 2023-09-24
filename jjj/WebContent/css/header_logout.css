@@ -45,10 +45,13 @@ nav a {
 	font-weight: 500;
 }
 
-.top_button a{
+.submit {
+	border: none;
 	color: #fff;
+	background-color: #0d072c;
+	font-size: 22px;
+	cursor: pointer;
 }
-
 
 .form-control {
     width: 320px;

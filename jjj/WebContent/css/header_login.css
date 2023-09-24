@@ -39,19 +39,22 @@ nav a {
     right: 0px;
     display: flex;
     align-items: baseline;
-	width: 250px;
+	width: 200px;
 	justify-content: space-around;
 	font-size: 22px;
 	font-weight: 500;
 }
 
-.top_button a{
+.submit {
+	border: none;
 	color: #fff;
+	background-color: #0d072c;
+	font-size: 22px;
+	cursor: pointer;
 }
 
-
 .form-control {
-    width: 245px;
+    width: 320px;
     height: 30px;
     font-size: 17px;
     color: black;

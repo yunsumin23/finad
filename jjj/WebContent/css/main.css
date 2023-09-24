@@ -209,35 +209,3 @@
     display: flex;
     justify-content: center;
 }
-
-
-
-
-
-
-
-
-footer {
-    position: absolute;
-    width: 100%;
-    margin-top: 100px;
-    background-color: #014D81;
-}
-
-.footer_class {
-    width: 1300px;
-    height: 200px;
-    margin: 0 auto;
-    padding-top: 50px;
-}
-
-footer a {
-    text-decoration: none;
-    color: #aaa;
-    font-weight: 400;
-}
-
-footer p {
-    color: #aaa;
-    font-weight: 400;
-}
