@@ -29,9 +29,9 @@
 	<%
 		}
 	%>
-	<%= id %>
+<%-- 	<%= id %>
 	<%= password %>
-	<%= type %>
+	<%= type %> --%>
 	<div class="center">
 		<div class="center_container">
 			<div class="center_container_div">
