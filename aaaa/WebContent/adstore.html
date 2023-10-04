@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADstore</title>
+    <link rel="stylesheet" href="css/adstore.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="js/adstore.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <div class="top_div">
+        <a href="main.html"><img src="img/logo.png" alt="로고" id="main_logo"></a>
+        <div class="top_button">
+          <a href="#"><img src="img/login.png" alt=""></a>
+          <a href="signup_agree.html"><img src="img/signup.png" alt=""></a>
+          <a href="#"><img src="img/mypage.png" alt=""></a>
+        </div>
+      </div>
+      <div class="header_search">
+        <input type="search" class="form-control" placeholder="search">
+      </div>
+    </header>
+    <div class="nav_div">
+      <nav>
+        <p class="gnbbox"></p>
+        <div class="category">
+          <div class="category_text">카테고리</div>
+          <ul class="nav_ul">
+            <li class="nav_li01"><a href="company_written_list.html" target="_blank">광고게시판</a></li>
+            <li class="nav_li02"><a href="" target="_blank">크리에이터 게시판</a></li>
+            <li class="nav_li03"><a href="" target="_blank">자유게시판</a></li>
+            <li class="nav_li04"><a href="" target="_blank">광고현황</a></li>
+            <li class="nav_li05"><a href="adstore.html" target="_blank">ADStore</a></li>
+          </ul>
+          <div class="category_div">
+            <div class="gnb_div">
+              <ul class="gnb">
+                <li onmouseenter="zoomIn(event)" onmouseleave="zoomOut(event)"><a href="categori01.html"
+                    target="_blank">
+                    <div><img src="img/beauty_img.png" alt="">
+                      <div class="li_text">뷰티 * 패션</div>
+                    </div>
+                  </a></li>
+                <li onmouseenter="zoomIn(event)" onmouseleave="zoomOut(event)"><a href="" target="_blank">
+                    <div><img src="img/food_img.png" alt="">
+                      <div class="li_text">먹방</div>
+                    </div>
+                  </a></li>
+                <li onmouseenter="zoomIn(event)" onmouseleave="zoomOut(event)"><a href="" target="_blank">
+                    <div><img src="img/BJ_img.png" alt="">
+                      <div class="li_text">BJ * 엔터테이너</div>
+                    </div>
+                  </a></li>
+                <li onmouseenter="zoomIn(event)" onmouseleave="zoomOut(event)"><a href="" target="_blank">
+                    <div><img src="img/vlog_img.png" alt="">
+                      <div class="li_text">vlog * 일상</div>
+                    </div>
+                  </a></li>
+              </ul>
+            </div>
+            <div class="gnb_div">
+              <ul class="gnb">
+                <li onmouseenter="zoomIn(event)" onmouseleave="zoomOut(event)"><a href="" target="_blank">
+                    <div><img src="img/game_img.png" alt="">
+                      <div class="li_text">게임</div>
+                    </div>
+                  </a></li>
+                <li onmouseenter="zoomIn(event)" onmouseleave="zoomOut(event)"><a href="" target="_blank">
+                    <div><img src="img/IT_img.png" alt="">
+                      <div class="li_text">IT * 전자기기</div>
+                    </div>
+                  </a></li>
+                <li onmouseenter="zoomIn(event)" onmouseleave="zoomOut(event)"><a href="" target="_blank">
+                    <div><img src="img/music_img.png" alt="">
+                      <div class="li_text">음악 * 춤</div>
+                    </div>
+                  </a></li>
+                <li onmouseenter="zoomIn(event)" onmouseleave="zoomOut(event)"><a href="" target="_blank">
+                    <div><img src="img/cook_img.png" alt="">
+                      <div class="li_text">요리 * 베이킹</div>
+                    </div>
+                  </a></li>
+              </ul>
+            </div>
+            <div class="gnb_div">
+              <ul class="gnb">
+                <li onmouseenter="zoomIn(event)" onmouseleave="zoomOut(event)"><a href="" target="_blank">
+                    <div><img src="img/travel_img.png" alt="">
+                      <div class="li_text">여행 * 아웃도어</div>
+                    </div>
+                  </a></li>
+                <li onmouseenter="zoomIn(event)" onmouseleave="zoomOut(event)"><a href="" target="_blank">
+                    <div><img src="img/pet_img.png" alt="">
+                      <div class="li_text">동물 * 펫</div>
+                    </div>
+                  </a></li>
+                <li onmouseenter="zoomIn(event)" onmouseleave="zoomOut(event)"><a href="" target="_blank">
+                    <div><img src="img/sports_img.png" alt="">
+                      <div class="li_text">스포츠 * 건강</div>
+                    </div>
+                  </a></li>
+                <li onmouseenter="zoomIn(event)" onmouseleave="zoomOut(event)"><a href="" target="_blank">
+                    <div><img src="img/movie_img.png" alt="">
+                      <div class="li_text">영화 * 애니</div>
+                    </div>
+                  </a></li>
+              </ul>
+            </div>
+            <div class="gnb_div">
+              <ul class="gnb">
+                <li onmouseenter="zoomIn(event)" onmouseleave="zoomOut(event)"><a href="" target="_blank">
+                    <div><img src="img/car_img.png" alt="">
+                      <div class="li_text">자동차</div>
+                    </div>
+                  </a></li>
+                <li onmouseenter="zoomIn(event)" onmouseleave="zoomOut(event)"><a href="" target="_blank">
+                    <div><img src="img/kid_img.png" alt="">
+                      <div class="li_text">키즈 * 플레이</div>
+                    </div>
+                  </a></li>
+                <li onmouseenter="zoomIn(event)" onmouseleave="zoomOut(event)"><a href="" target="_blank">
+                    <div><img src="img/education_img.png" alt="">
+                      <div class="li_text">교육</div>
+                    </div>
+                  </a></li>
+                <li onmouseenter="zoomIn(event)" onmouseleave="zoomOut(event)"><a href="" target="_blank">
+                    <div><img src="img/real estate_img.png" alt="">
+                      <div class="li_text">부동산 * 투자</div>
+                    </div>
+                  </a></li>
+              </ul>
+            </div>
+            <div class="gnb_div">
+              <ul class="gnb">
+                <li onmouseenter="zoomIn(event)" onmouseleave="zoomOut(event)"><a href="" target="_blank">
+                    <div><img src="img/Politics_img.png" alt="">
+                      <div class="li_text">정치 * 시사</div>
+                    </div>
+                  </a></li>
+                <li onmouseenter="zoomIn(event)" onmouseleave="zoomOut(event)"><a href="" target="_blank">
+                    <div><img src="img/palette_img.png" alt="">
+                      <div class="li_text">그림 *만들기</div>
+                    </div>
+                  </a></li>
+                <li onmouseenter="zoomIn(event)" onmouseleave="zoomOut(event)"><a href="" target="_blank">
+                    <div><img src="img/clover_img.png" alt="">
+                      <div class="li_text">운세 * 타로</div>
+                    </div>
+                  </a></li>
+                <li onmouseenter="zoomIn(event)" onmouseleave="zoomOut(event)"><a href="" target="_blank">
+                    <div><img src="img/another_img.png" alt="">
+                      <div class="li_text">기타</div>
+                    </div>
+                  </a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <section class="section">
+      <div id="banner"></div>
+      <h1 class="h1">가장 최근 광고한 10개 상품!</h1>
+      <div id="product-list">
+        <a href="sellpage.html" target="_blank">
+          <div class="product-card">
+            <div><img class="product-img" src="img/niket1.png" alt="" onmouseenter="zoomIn(event)" onmouseleave="zoomOut(event)"></div>
+            <div class="product-contents">
+              <span class="product-name">나이키 스포츠 퓨추라 반팔티</span><span class="product-price">27,000원</span>
+              <div>
+                <div class="product-seller">
+                  <img class="product-avatar" src="img/nike.png" /><span>나이키</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+        <a href="">
+          <div class="product-card">
+            <div><img class="product-img" src="img/bag.png" alt="" onmouseenter="zoomIn(event)" onmouseleave="zoomOut(event)"></div>
+            <div class="product-contents">
+              <span class="product-name">오킹 가방</span><span class="product-price">88,980원</span>
+              <div>
+                <div class="product-seller">
+                  <img class="product-avatar" src="img/oking.png" /><span>OKING</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+        <a href="">
+          <div class="product-card">
+            <div><img class="product-img" src="img/belt.png" alt="" onmouseenter="zoomIn(event)" onmouseleave="zoomOut(event)"></div>
+            <div class="product-contents">
+              <span class="product-name">윤수민 벨트</span><span class="product-price">5,500원</span>
+              <div>
+                <div class="product-seller">
+                  <img class="product-avatar" src="img/boy.png" /><span>윤수민</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+        <a href="">
+          <div class="product-card">
+            <div><img class="product-img" src="img/buds.png" alt="" onmouseenter="zoomIn(event)" onmouseleave="zoomOut(event)"></div>
+            <div class="product-contents">
+              <span class="product-name">삼성 버즈</span><span class="product-price">135,900원</span>
+              <div>
+                <div class="product-seller">
+                  <img class="product-avatar" src="img/samsung.png" /><span>SAMSUNG</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+        <a href="">
+          <div class="product-card">
+            <div><img class="product-img" src="img/cap.png" alt="" onmouseenter="zoomIn(event)" onmouseleave="zoomOut(event)"></div>
+            <div class="product-contents">
+              <span class="product-name">이준표 캡 모자</span><span class="product-price">9,350원</span>
+              <div>
+                <div class="product-seller">
+                  <img class="product-avatar" src="img/girl.png" /><span>junpro</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+        <a href="">
+          <div class="product-card">
+            <div><img class="product-img" src="img/couple.png" alt="" onmouseenter="zoomIn(event)" onmouseleave="zoomOut(event)"></div>
+            <div class="product-contents">
+              <span class="product-name">가을 핫템 커플룩</span><span class="product-price">180,500원</span>
+              <div>
+                <div class="product-seller">
+                  <img class="product-avatar" src="img/oking.png" /><span>OKING</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+        <a href="">
+          <div class="product-card">
+            <div><img class="product-img" src="img/dickies.png" alt="" onmouseenter="zoomIn(event)" onmouseleave="zoomOut(event)"></div>
+            <div class="product-contents">
+              <span class="product-name">디키즈 후드티</span><span class="product-price">60,800원</span>
+              <div>
+                <div class="product-seller">
+                  <img class="product-avatar" src="img/boy.png" /><span>보이샵</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+        <a href="">
+          <div class="product-card">
+            <div><img class="product-img" src="img/graycap.png" alt="" onmouseenter="zoomIn(event)" onmouseleave="zoomOut(event)"></div>
+            <div class="product-contents">
+              <span class="product-name">남성 그레이 캡</span><span class="product-price">19,300원</span>
+              <div>
+                <div class="product-seller">
+                  <img class="product-avatar" src="img/gongdae.png" /><span>공대생</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+        <a href="">
+          <div class="product-card">
+            <div><img class="product-img" src="img/hood.png" alt="" onmouseenter="zoomIn(event)" onmouseleave="zoomOut(event)"></div>
+            <div class="product-contents">
+              <span class="product-name">나이키 후드티</span><span class="product-price">80,400원</span>
+              <div>
+                <div class="product-seller">
+                  <img class="product-avatar" src="img/nike.png" /><span>나이키</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+        <a href="">
+          <div class="product-card">
+            <div><img class="product-img" src="img/jacket.png" alt="" onmouseenter="zoomIn(event)" onmouseleave="zoomOut(event)"></div>
+            <div class="product-contents">
+              <span class="product-name">오킹 바시티 자켓</span><span class="product-price">89,350원</span>
+              <div>
+                <div class="product-seller">
+                  <img class="product-avatar" src="img/oking.png" /><span>OKING</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+    </section>
+    <form action="">
+      <div class="product_div">
+        <input type="search" class="product_search" placeholder="원하시는 상품을 검색해주세요" maxlength="20">
+      </div>
+    </form>
+    <div class="mm">
+      <div class="right_div">
+        전자기기 총 집합!
+        <div class="right_div_div">
+          <ul>
+            <li><a href=""><img src="img/zflip.png" alt=""></a></li>
+            <li><a href=""><img src="img/lg_go.png" alt=""></a></li>
+            <li><a href=""><img src="img/macbook.png" alt=""></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="left_div">브랜드존
+        <div class="m_div">
+          <div class="left_div_div01">
+            <a href=""><img src="img/coat.png" alt="옷" onmouseenter="zoomIn(event)" onmouseleave="zoomOut(event)">
+            </a>
+          </div>
+          <div class="left_div_div02">
+            <ul>
+              <li><a href=""><img src="img/nike_air.png" alt="" onmouseenter="zoomIn(event)" onmouseleave="zoomOut(event)"></a></li>
+              <li><a href=""><img src="img/nike_graey.png" alt="" onmouseenter="zoomIn(event)" onmouseleave="zoomOut(event)"></a></li>
+              <li><a href=""><img src="img/nike_super.png" alt="" onmouseenter="zoomIn(event)" onmouseleave="zoomOut(event)"></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="cart_div">
+      <a href="cart.html"><img src="img/cart.png" alt=""></a>
+    </div>
+    <footer>
+      <div class="footer_class">
+        <a href="#" target="_blank"><b>개인정보처리방침</b></a> | <a href="#" target="_blank">서비스이용약관</a> | <a href="#"
+          target="_blank">FINAD이용약관</a> | <a href="#" target="_blank">고객문의</a> | <a href="#" target="_blank">사이트맵</a>
+        <p> 법인명: (주) FINAD 대표자: 김유상 사업자등록번호 000-00-00000 통신판매업: 제0000-서울종로-0000호 <br /> 주소 : 서울 성동구 광나루로 130 1101호 </p>
+        <p>COPYRIGHT (C) FINAD. All Rights Reserved.</p>
+      </div>
+    </footer>
+  </body>
+
+</html> 
