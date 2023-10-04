@@ -33,7 +33,7 @@
 	</div>
 	<div class="container">
 		<div class="left_filter">
-			<form action="jsp/categori01.jsp" name="form_left" method="post">
+			<form action="" name="form_left" method="post">
 				<div>
 					<div class="main_shorts">
 						<div class="shorts_div">쇼츠 여부</div>
