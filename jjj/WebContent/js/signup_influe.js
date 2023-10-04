@@ -14,22 +14,28 @@ $(document).ready(function() {
 		var idvalue = $('input[name="id"]').val();
 		if (id.trim() === "") {
 			$("#result").html("아이디를 입력해주세요.");
-			$("#result").css("color", "red");
+			$("#result").css("color", "#FF4343");
 			$("#result").css("font-size", "15px");
-			$("#result").css("text-align", "center");
-			$('input[name="id"]').css('border', '2px solid red');
+			$("#result").css("text-align", "right");
+			$("#result").css("margin-left", "250px");
+			$('input[name="id"]').css('border', '5px solid #FF4343');
+			$('input[name="id"]').css('margin-bottom', '10px');
 		} else if (id.length < 6 || id.length > 16) {
 			$("#result").html("아이디는 6글자에서 16글자 사이로 입력해주세요.");
-			$("#result").css("color", "red");
+			$("#result").css("color", "#FF4343");
 			$("#result").css("font-size", "15px");
-			$("#result").css("text-align", "center");
-			$('input[name="id"]').css('border', '2px solid red');
+			$("#result").css("text-align", "right");
+			$("#result").css("margin-left", "250px");
+			$('input[name="id"]').css('border', '5px solid #FF4343');
+			$('input[name="id"]').css('margin-bottom', '10px');
 		} else if (!/^[a-zA-Z0-9]+$/.test(id)) {
 			$("#result").html("아이디는 영문 대소문자와 숫자만 입력 가능합니다.");
-			$("#result").css("color", "red");
+			$("#result").css("color", "#FF4343");
 			$("#result").css("font-size", "15px");
-			$("#result").css("text-align", "center");
-			$('input[name="id"]').css('border', '2px solid red');
+			$("#result").css("text-align", "right");
+			$("#result").css("margin-left", "250px");
+			$('input[name="id"]').css('border', '5px solid #FF4343');
+			$('input[name="id"]').css('margin-bottom', '10px');
 		} else {
 			$.ajax({
 				type : "POST",
@@ -42,16 +48,20 @@ $(document).ready(function() {
 					console.log(data);
 					if (data === "true") {
 						$("#result").html("사용가능한 아이디입니다.");
-						$("#result").css("color", "blue");
+						$("#result").css("color", "#1E6CFF");
 						$("#result").css("font-size", "15px");
-						$("#result").css("text-align", "center");
-						$('input[name="id"]').css('border', 'none');
+						$("#result").css("text-align", "right");
+						$("#result").css("margin-left", "250px");
+						$('input[name="id"]').css('border', '5px solid #1E6CFF');
+						$('input[name="id"]').css('margin-bottom', '10px');
 					} else if (data === "false") {
 						$("#result").html("중복된 아이디입니다. 다시 수정해주세요");
-						$("#result").css("color", "red");
+						$("#result").css("color", "#FF4343");
 						$("#result").css("font-size", "15px");
-						$("#result").css("text-align", "center");
-						$('input[name="id"]').css('border', '2px solid red');
+						$("#result").css("text-align", "right");
+						$("#result").css("margin-left", "250px");
+						$('input[name="id"]').css('border', '5px solid #FF4343');
+						$('input[name="id"]').css('margin-bottom', '10px');
 					}
 				}
 			});
@@ -130,36 +140,36 @@ function checkPW() {
 	var text_pw2 = document.getElementsByName('pwcheck');
 	if (pw.length < 8 || pw.length > 32) {
 		check_pw.innerHTML = '비밀번호는 8글자 이상, 32글자 이하만 이용 가능합니다.';
-		check_pw.style.color = 'red';
+		check_pw.style.color = '#FF4343';
 		check_pw.style.fontSize = '15px';
-		check_pw.style.textAlign = 'center';
-		text_pw[0].style.border = '2px solid red';
-		text_pw2[0].style.border = '2px solid red';
+		check_pw.style.textAlign = 'right';
+		text_pw[0].style.border = '5px solid #FF4343';
+		text_pw2[0].style.border = '5px solid #FF4343';
 		return;
 	}
 	if (pw === pwcheck) { // 엄격하게 비교하므로 예기치 않은 형변환을 방지하고 정확한 비교를 수행합니다.
 		check_pw.innerHTML = '비밀번호가 일치합니다.';
-		check_pw.style.color = 'blue';
+		check_pw.style.color = '#1E6CFF';
 		check_pw.style.fontSize = '15px';
-		check_pw.style.textAlign = 'center';
-		text_pw[0].style.border = 'none';
-		text_pw2[0].style.border = 'none';
+		check_pw.style.textAlign = 'right';
+		text_pw[0].style.border = '5px solid #1E6CFF';
+		text_pw2[0].style.border = '5px solid #1E6CFF';
 	} else {
 		check_pw.innerHTML = '비밀번호가 일치하지 않습니다.';
-		check_pw.style.color = 'red';
+		check_pw.style.color = '#FF4343';
 		check_pw.style.fontSize = '15px';
-		check_pw.style.textAlign = 'center';
-		text_pw[0].style.border = '2px solid red';
-		text_pw2[0].style.border = '2px solid red';
+		check_pw.style.textAlign = 'right';
+		text_pw[0].style.border = '5px solid #FF4343';
+		text_pw2[0].style.border = '5px solid #FF4343';
 		return;
 	}
 	if(pw.length < 1 && pwcheck.length < 1) {
 		check_pw.innerHTML = '비밀번호 또는 비밀번호 확인을 입력해주세요.';
-		check_pw.style.color = 'red';
+		check_pw.style.color = '#FF4343';
 		check_pw.style.fontSize = '15px';
-		check_pw.style.textAlign = 'center';
-		text_pw[0].style.border = '2px solid red';
-		text_pw2[0].style.border = '2px solid red';
+		check_pw.style.textAlign = 'right';
+		text_pw[0].style.border = '5px solid #FF4343';
+		text_pw2[0].style.border = '5px solid #FF4343';
 		return;
 	}
 }
@@ -169,14 +179,14 @@ function checkName() {
 	var text_name = document.getElementsByName('name');
 	if (name.length < 1) {
 		check_name.innerHTML = '이름을 입력해주세요.';
-		check_name.style.color = 'red';
+		check_name.style.color = '#FF4343';
 		check_name.style.fontSize = '15px';
-		check_name.style.textAlign = 'center';
-		text_name[0].style.border = '2px solid red';
+		check_name.style.textAlign = 'right';
+		text_name[0].style.border = '5px solid #FF4343';
 		return;
 	} else {
 		check_name.innerHTML = '';
-		text_name[0].style.border = 'none';
+		text_name[0].style.border = '5px solid #1E6CFF';
 	}
 	console.log(name);
 	console.log(check_name);
@@ -195,9 +205,9 @@ function checkSex() {
 
 	if (!genderSelected) {
 		check_sex.innerHTML = "성별을 선택해주세요.";
-		check_sex.style.color = 'red';
+		check_sex.style.color = '#FF4343';
 		check_sex.style.fontSize = '15px';
-		check_sex.style.textAlign = 'center';
+		check_sex.style.textAlign = 'right';
 		return;
 	} else {
 		check_sex.innerHTML = "";
@@ -209,14 +219,14 @@ function checkNickName() {
 	var text_nickname = document.getElementsByName('nickname');
 	if (name.length < 1) {
 		check_nickname.innerHTML = '활동명을 입력해주세요.';
-		check_nickname.style.color = 'red';
+		check_nickname.style.color = '#FF4343';
 		check_nickname.style.fontSize = '15px';
-		check_nickname.style.textAlign = 'center';
-		text_nickname[0].style.border = '2px solid red';
+		check_nickname.style.textAlign = 'right';
+		text_nickname[0].style.border = '5px solid #FF4343';
 		return;
 	} else {
 		check_name.innerHTML = '';
-		text_nickname[0].style.border = 'none';
+		text_nickname[0].style.border = '5px solid #1E6CFF';
 	}
 }
 function checkAddr() {
@@ -230,20 +240,20 @@ function checkAddr() {
 	var text_addr4= document.getElementsByName('reference');
 	if (addr1.length < 1 || addr2.length < 1 || addr3.length < 1) {
 		check_addr.innerHTML = '주소를 입력해주세요.';
-		check_addr.style.color = 'red';
+		check_addr.style.color = '#FF4343';
 		check_addr.style.fontSize = '15px';
-		check_addr.style.textAlign = 'center';
-		text_addr1[0].style.border = '2px solid red';
-		text_addr2[0].style.border = '2px solid red';
-		text_addr3[0].style.border = '2px solid red';
-		text_addr4[0].style.border = '2px solid red';
+		check_addr.style.textAlign = 'right';
+		text_addr1[0].style.border = '5px solid #FF4343';
+		text_addr2[0].style.border = '5px solid #FF4343';
+		text_addr3[0].style.border = '5px solid #FF4343';
+		text_addr4[0].style.border = '5px solid #FF4343';
 		return;
 	} else {
 		check_addr.innerHTML = '';
-		text_addr1[0].style.border = 'none';
-		text_addr2[0].style.border = 'none';
-		text_addr3[0].style.border = 'none';
-		text_addr4[0].style.border = 'none';
+		text_addr1[0].style.border = '5px solid #1E6CFF';
+		text_addr2[0].style.border = '5px solid #1E6CFF';
+		text_addr3[0].style.border = '5px solid #1E6CFF';
+		text_addr4[0].style.border = '5px solid #1E6CFF';
 	}
 }
 function checkPhone() {
@@ -253,14 +263,14 @@ function checkPhone() {
 	var text_phone = document.getElementsByName('input_phone');
 	if (input_phone.length < 1) {
 		check_phone.innerHTML = '전화번호를 입력해주세요.';
-		check_phone.style.color = red;
+		check_phone.style.color = '#FF4343';
 		check_phone.style.fontSize = '15px';
-		check_phone.style.textAlign = 'center';
-		text_phone.style.border = '2px solid red';
+		check_phone.style.textAlign = 'right';
+		text_phone.style.border = '5px solid #FF4343';
 		return;
 	} else {
 		check_phone.innerHTML = '';
-		text_phone.style.border = 'none';
+		text_phone.style.border = '5px solid #1E6CFF';
 	}
 }
 function checkEmail() {
@@ -269,15 +279,15 @@ function checkEmail() {
 	var text_email = document.getElementsByName('email');
 	if (email.length < 1) {
 		check_email.innerHTML = '이메일을 입력해주세요.';
-		check_email.style.color = 'red';
+		check_email.style.color = '#FF4343';
 		check_email.style.fontSize = '15px';
-		check_email.style.textAlign = 'center';
+		check_email.style.textAlign = 'right';
 		check_email.style.width = '150px';
-		text_email[0].style.border = '2px solid red';
+		text_email[0].style.border = '5px solid #FF4343';
 		return;
 	} else {
 		check_email.innerHTML = '';
-		text_email[0].style.border = 'none';
+		text_email[0].style.border = '5px solid #1E6CFF';
 	}
 }
 function checkForm() {

@@ -77,7 +77,7 @@
 			<input type="text" class="input_info2" name="email"
 				onblur="checkEmail();" maxlength="32">
 			<p id="check_email"></p>
-			<div class="input_info">카테고리</div>
+			<div class="input_infoca">카테고리 선택</div>
 			<div>
 				<table id="input_info3">
 					<tr>
