@@ -9,6 +9,8 @@ import java.util.ArrayList;
 
 import com.project.DTO.AdstoreDTO;
 
+
+
 public class Adstore {
 	Connection connection = null;
 	Statement statement = null;

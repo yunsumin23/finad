@@ -1,4 +1,4 @@
-package com.project.jjj;
+package com.project.finad;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

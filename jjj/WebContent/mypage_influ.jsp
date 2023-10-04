@@ -1,9 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ page import="com.project.jjj.Influ_info"%>
-<%@ page import="com.project.jjj.Mypage_influ"%>
+
+<%@ page import="com.project.finad.Influ_info" %>
+
+
+<%@ page import="com.project.finad.Mypage_influ" %>
+
 <%@ page import="java.util.HashMap" %>
-<jsp:useBean id="session1" class="com.project.jjj.Mypage"></jsp:useBean>
+<jsp:useBean id="session1" class="com.project.finad.Mypage"></jsp:useBean>
 <!DOCTYPE html>
 <html>
 <head>
