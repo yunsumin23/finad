@@ -79,11 +79,11 @@
             <p>가입하시는 분 명의로 개설된 휴대폰으로 인증이 가능합니다. (만 15세 미만 가입불가)</p> -->
 		<div class="btn_div">
 			<input type="button" value="일반 회원" id="btn_agree"
-				onclick="location.href='signup_nomal.html'"> <input
+				onclick="location.href='sign_nomal.jsp'"> <input
 				type="button" value="인플루언서 회원" id="btn_agree1"
-				onclick="location.href='signup_influencer.html'"> <input
+				onclick="location.href='sign_influencer.jsp'"> <input
 				type="button" value="기업 회원" id="btn_agree2"
-				onclick="location.href='signup_company.html'">
+				onclick="location.href='sign_company.jsp'">
 		</div>
 	</div>
 
