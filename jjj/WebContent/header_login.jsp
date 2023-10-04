@@ -38,13 +38,13 @@
 						<li class="nav_li02"><a href="">크리에이터 게시판</a></li>
 						<li class="nav_li03"><a href="free_board.jsp">자유게시판</a></li>
 						<li class="nav_li04"><a href="">광고현황</a></li>
-						<li class="nav_li05"><a href="adstore_login.jsp">ADStore</a></li>
+						<li class="nav_li05"><a href="adstore.jsp">ADStore</a></li>
 					</ul>
 				<div class="category_div">
 					<div class="gnb_div">
 						<ul class="gnb">
-							<li onmouseenter="zoomIn(event)" onmouseleave="zoomOut(event)"><a
-								href="categori.jsp" target="_blank">
+							<li onmouseenter="zoomIn(event)" onmouseleave="zoomOut(event)">
+							<a href="categori.finad?type=beauty" target="_blank">
 									<div>
 										<img src="img/beauty_img.png" alt="">
 										<div class="li_text">뷰티 * 패션</div>

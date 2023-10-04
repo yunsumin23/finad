@@ -59,7 +59,7 @@
 						<li class="nav_li02"><a href="">크리에이터 게시판</a></li>
 						<li class="nav_li03"><a href="free_board.jsp">자유게시판</a></li>
 						<li class="nav_li04"><a href="">광고현황</a></li>
-						<li class="nav_li05"><a href="adstore_login.jsp">ADStore</a></li>
+						<li class="nav_li05"><a href="adstore.jsp">ADStore</a></li>
 					</ul>
 					<div class="category_div">
 						<div class="gnb_div">

@@ -15,7 +15,7 @@
 
 <servlet-name>finad</servlet-name>
 
-<url-pattern></url-pattern>
+<url-pattern> *.finad</url-pattern>
 
 </servlet-mapping>
 

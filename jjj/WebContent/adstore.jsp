@@ -31,8 +31,7 @@
         <%
     }
 %>
-	<jsp:useBean id="adstorelist" class="com.project.jjj.Adstore"
-		scope="page" />
+	<jsp:useBean id="adstorelist" class="com.project.jjj.Adstore" scope="page" />
 	<%
 		ArrayList<AdstoreDTO> jjj = adstorelist.getAdstoreList();
 	%>
