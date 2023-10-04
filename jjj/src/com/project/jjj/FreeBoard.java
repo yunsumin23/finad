@@ -7,6 +7,8 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 
+import com.project.DTO.BoardDTO;
+
 public class FreeBoard {
 	
 	public Connection con() {

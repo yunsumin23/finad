@@ -4,6 +4,8 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.Statement;
 
+import com.project.DTO.BoardDTO;
+
 public class FreeBoardWrite {
 	public void freeBoardWrite(BoardDTO boardDTO) {
 		Connection connection = null;

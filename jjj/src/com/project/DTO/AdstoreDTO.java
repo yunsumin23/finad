@@ -1,4 +1,4 @@
-package com.project.jjj;
+package com.project.DTO;
 
 public class AdstoreDTO {
 	private int itemNumber;

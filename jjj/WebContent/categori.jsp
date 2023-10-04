@@ -14,8 +14,10 @@
 		String id = (String) session.getAttribute("id");
 		String password = (String) session.getAttribute("password");
 		String type = (String) session.getAttribute("type");
-		if (id == null && password == null && type.equals("nomal")) {
-			response.sendRedirect("main.jsp");
+		if (id == null && password == null) {
+	%>
+	<jsp:include page="header_login.jsp"></jsp:include>
+	<%
 		} else {
 	%>
 	<jsp:include page="header_logout.jsp"></jsp:include>
@@ -87,7 +89,7 @@
 					</div>
 					<div>
 						<div class="submit_div">
-							<input type="submit" name="submit" value="적용하기" class="submit">
+							<input type="submit" name="submit" value="적용하기" class="check_sub">
 						</div>
 					</div>
 				</div>

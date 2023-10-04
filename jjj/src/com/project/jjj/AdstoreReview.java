@@ -7,6 +7,8 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 
+import com.project.DTO.AdstoreReviewDTO;
+
 public class AdstoreReview {
 	Connection connection = null;
 	Statement statement = null;

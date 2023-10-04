@@ -90,14 +90,16 @@
     border: 1px solid #FF766B;
 }
 
-.submit {
+.check_sub {
+	margin: 0 auto;
+    width: 200px;
+    height: 61px;
+    font-size: 25px;
     color: white;
-    width: 168px;
-    height: 50px;
-    font-size: 20px;
-    background-color: #FF766B;
-    border: none;
-    border-radius: 15px;
+    border: 1px solid #346aff;
+    border-radius: 3px;
+    background-color: #346aff;
+    cursor: pointer;
 }
 
 .rignt_contents {
@@ -113,6 +115,8 @@
     width: 200px;
     height: 30px;
     font-size: 18px;
+    padding: 5px;
+    border-radius: 10px;
 }
 
 .view {
