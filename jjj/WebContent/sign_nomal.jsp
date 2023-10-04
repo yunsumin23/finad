@@ -17,6 +17,7 @@
 
 <body>
 
+
 	<jsp:include page="header_login.jsp"></jsp:include>
 
 	<form action="signup_nomal.jsp" name="form" method="post"
