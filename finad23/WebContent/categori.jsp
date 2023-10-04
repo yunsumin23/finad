@@ -10,6 +10,7 @@
 <script src="js/categori01.js"></script>
 </head>
 <body>
+
 	<%
 		String id = (String) session.getAttribute("id");
 		String password = (String) session.getAttribute("password");
