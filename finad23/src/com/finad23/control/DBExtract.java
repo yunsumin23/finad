@@ -1,7 +1,11 @@
 package com.finad23.control;
 
+import java.util.List;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import com.finad23.DTO.CompanyBoardDTO;
 
 public class DBExtract implements ConInter {
 
@@ -11,6 +15,10 @@ public class DBExtract implements ConInter {
 	}
 	@Override
 	public String FinAD(HttpServletRequest rq, HttpServletResponse rs) throws Exception {
+		Select select = Select.instance();
+		List<CompanyBoardDTO> list = select.dbSelect();
+		rq.setAttribute("List", list);
+		
 		return null;
 	}
 }

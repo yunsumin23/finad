@@ -4,4 +4,7 @@
     <select id="categoryId" resultType="com.finad23.jjj.Mypage_influ">
         select * from project.user_mypage;
     </select>
+    <select id="companyWriteID" resultType="com.finad23.DTO.CompanyBoardDTO">
+        select * from project.companyboard;
+    </select>
 </mapper>

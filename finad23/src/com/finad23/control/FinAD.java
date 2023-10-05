@@ -17,7 +17,7 @@ public class FinAD extends HttpServlet{ // 서블릿 페이지 입니다.
 		// 설정 해둔거임
 		
 		ConInter inter = null;
-		// 인터페이스용 주머니 입니다. 확인하시고 또 다시 만들지 마요
+		// 인터페이스용 주머니 입니다. 확인하시고 또 다시 만들지 마요    /  싫은데요?
 		
 		try {
 			if(category.equals("beauty")) {
