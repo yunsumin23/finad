@@ -1,0 +1,36 @@
+$(document).ready(function() {
+    $(".gnb").hide();
+    $(".gnbbox").hide();
+    $(".category_text").mouseenter(function() {
+        $(".gnb").stop().slideDown();
+        $(".gnbbox").stop().slideDown();
+    });
+    $(".category_div").mouseleave(function() {
+        $(".gnb").stop().slideUp();
+        $(".gnbbox").stop().slideUp();
+    });
+});
+
+
+function zoomIn(event) {
+    event.target.style.transform = "scale(1.2)";
+    event.target.style.zIndex = "1";
+    event.target.style.transition = "all 0.5s";
+}
+
+function zoomOut(event) {
+    event.target.style.transform = "scale(1)";
+    event.target.style.zIndex = 0;
+    event.target.style.transition = "all 0.5s"
+}
+
+
+
+setInterval(function(){
+    $('.right_div_div > ul').delay(2500);
+    $('.right_div_div > ul').animate({marginLeft: "-630px"})
+    $('.right_div_div > ul').delay(2500);
+    $('.right_div_div > ul').animate({marginLeft: "-1260px"})
+    $('.right_div_div > ul').delay(2500);
+    $('.right_div_div > ul').animate({marginLeft: "0px"})
+});
