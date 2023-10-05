@@ -1,17 +1,68 @@
 @import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
 
-#banner {
+/*#banner {
   background: url(../img/banner.jpg);
   height: 300px;
   width: 1300px;
   background-repeat: no-repeat;
   background-size: 100%;
   margin-top: 80px;
+}*/
+
+#contain {
+	width: 1300px;
+	margin: 0 auto;
+}
+
+#hhh {
+	margin-top: 40px;
+	width: 1300px;
+	overflow: hidden;
+}
+
+.Slidesbackground {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    
+}
+.slideshow-image{
+    width: 1300px;
+    height: 500px;
+    overflow: hidden;
+    
+}
+.mySlides {
+    width: 1300px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slideshow-container {
+    position: relative;
+    margin: auto;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
 }
 
 .h1 {
+	margin-top: 20px;
   font-size: 30px;
-  color: #ff0080;
+  color: #808080;
   font-weight: 500;
 }
 
@@ -124,7 +175,7 @@
   width: 630px;
   height: 300px;
   font-size: 40px;
-  color: #ff0080;
+  color: #6C97CF;
 }
 
 .right_div_div {
@@ -144,14 +195,13 @@
 .right_div_div img {
   width: 630px;
   height: 450px;
-  border-radius: 30px;
 }
 
 .left_div {
   width: 630px;
   height: 300px;
   font-size: 40px;
-  color: #ff0080;
+  color: #664033;
 }
 
 .m_div {
