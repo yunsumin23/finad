@@ -65,7 +65,7 @@
 						<div class="gnb_div">
 							<ul class="gnb">
 								<li onmouseenter="zoomIn(event)" onmouseleave="zoomOut(event)"><a
-									href="categori01.html" target="_blank">
+									href="categori.finad?type=beauty" target="_blank">
 										<div>
 											<img src="img/beauty_img.png" alt="">
 											<div class="li_text">뷰티 * 패션</div>

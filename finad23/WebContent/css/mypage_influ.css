@@ -3,7 +3,7 @@
 .main {
 	width: 1300px;
 	margin: 80px auto;
-	height: 1200px;
+	height: 1300px;
 }
 
 .main li {
@@ -109,6 +109,7 @@ h2 {
 
 .div_category ul {
 	display: flex;
+	overflow: auto;
 }
 
 .div_category li{
@@ -190,29 +191,3 @@ h2 {
     cursor: pointer;
 }
 
-
-
-footer {
-    position: absolute;
-    width: 100%;
-    margin-top: 100px;
-    background-color: #014D81;
-}
-
-.footer_class {
-    width: 1300px;
-    height: 200px;
-    margin: 0 auto;
-    padding-top: 50px;
-}
-
-footer a {
-    text-decoration: none;
-    color: #aaa;
-    font-weight: 400;
-}
-
-footer p {
-    color: #aaa;
-    font-weight: 400;
-}

@@ -42,7 +42,10 @@
 
 			<div class="top_info">
 				<div class="user_img">
-					<img alt="img/user.png" src="img/user.png">
+				<%
+					out.println("<img src='img/" + user1.getImage() + "'>");
+				%>
+					<!-- <img alt="img/user.png" src="img/user.png"> -->
 				</div>
 				<div class="div_ul">
 					<button id="showInfo">정보 확인하기</button>
@@ -160,8 +163,8 @@
 					categoryName.put("food", "먹방");
 					categoryImages.put("BJ", "img/BJ.png");
 					categoryName.put("BJ", "BJ *엔터테이너");
-					categoryImages.put("vlog", "img/vlog.png");
-					categoryName.put("vlog", "vlog");
+					categoryImages.put("vlog", "img/vLog.png");
+					categoryName.put("vlog", "vLog");
 					categoryImages.put("game", "img/game.png");
 					categoryName.put("game", "게임");
 					categoryImages.put("IT", "img/IT.png");

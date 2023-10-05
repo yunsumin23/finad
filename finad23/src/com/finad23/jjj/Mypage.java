@@ -72,6 +72,7 @@ public class Mypage {
 			statement = connection.createStatement();
 			resultSet = statement.executeQuery("select * from user_mypage where influUserId = '" + id + "';");
 			if(resultSet.next()) {
+				mypage_influ.setImage(resultSet.getString("image"));
 				mypage_influ.setSubscri(resultSet.getInt("subscribers"));
 				mypage_influ.setYoutuLink(resultSet.getString("youtubeLink"));
 				mypage_influ.setLiveBcLink(resultSet.getString("liveBroadcastLink"));
