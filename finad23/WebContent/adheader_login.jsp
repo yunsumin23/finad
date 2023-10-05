@@ -28,6 +28,7 @@
 			<input type="search" class="form-control" placeholder="search">
 		</div>
 	</header>
+	
 	<div class="nav_div">
 		<nav>
 			<p class="gnbbox"></p>
