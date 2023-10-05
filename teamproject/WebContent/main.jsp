@@ -15,6 +15,7 @@
 <script type="text/javascript" src="js/main.js"></script>
 </head>
 <body>
+
 	<%
 		String id = (String) session.getAttribute("id");
 		String password = (String) session.getAttribute("password");
