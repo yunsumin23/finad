@@ -48,7 +48,7 @@
                         <input type="checkbox" value=""><span>1회성 컨텐츠</span><br>
                         <input type="checkbox" value=""><span>1 ~ 7일</span><br>
                         <input type="checkbox" value=""><span>7 ~ 14일</span><br>
-                        <input type="checkbox" value=""><span>14 ~ 30일</span>/<br>
+                        <input type="checkbox" value=""><span>14 ~ 30일</span><br>
                         <input type="checkbox" value=""><span>30 ~ 60일</span><br>
                         <input type="checkbox" value=""><span>60 ~ 90일</span><br>
                         <input type="checkbox" value=""><span>90일 이상</span>

@@ -1,7 +1,9 @@
+<%@ page import="com.project.DTO.BoardDTO" %>
+<%@ page import="com.project.jjj.FreeBoard" %>
+
 <%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ page import="com.project.DTO.BoardDTO"%>
 <!-- 1 - 글제목, 글내용 입력안했을때 alert -->
 <!-- 2 - 글 작성일에는 작성 시간이 작성일 다음날부터는 작성일이 표기되게 -->
 <!-- 7 - 글쓴이, 글쓴날, 조회수, 추천수, 댓글수, 밑줄 한줄로 만들기 -->
