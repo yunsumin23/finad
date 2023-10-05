@@ -16,7 +16,7 @@
 	</environments>
 
 	<mappers>
-		<mapper resource=""/>
+		<mapper resource="com/finad23.mybatis/mybatis.xml"/>
 	</mappers>
 
 </configuration>

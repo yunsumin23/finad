@@ -1,7 +1,7 @@
 package com.finad23.DTO;
 
 public class CompanyBoardDTO {
-	private int id;
+	private int companyBoardNum;
 	private String title, companyName, companyInfo1, companyInfo2, companyInfo3; //제목, 마케팅 담당자 정보
 	private String recruitmentDate1, recruitmentDate2, promotionDate1, promotionDate2; //모집 기간, 광고기간
 	private String recruitmentNum, avgViewers, subscribers, sex; //모집인원, 평균 시청자 , 최소 구독자수
@@ -9,11 +9,11 @@ public class CompanyBoardDTO {
 	private int promotionMoney; //총 광고 진행비
 	private String promotionType, previousPromotion1, previousPromotion2, previousPromotion3; //광고 유형, 이전 광고 사례
 	private String text; //광고 내용
-	public int getId() {
-		return id;
+	public int getCompanyBoardNum() {
+		return companyBoardNum;
 	}
-	public void setId(int id) {
-		this.id = id;
+	public void setCompanyBoardNum(int id) {
+		this.companyBoardNum = id;
 	}
 	public String getTitle() {
 		return title;
